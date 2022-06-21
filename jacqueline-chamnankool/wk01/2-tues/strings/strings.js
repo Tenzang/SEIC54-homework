@@ -70,6 +70,17 @@ substring with 'good' and return the result.
 If it doesn't find 'not' and 'bad' in the right sequence (or at all), 
 just return the original sentence. */
 function notBad(str) {
+    //let re = /(not).*(?= bad)/g;
+    let not = "not";
+    let bad = "bad";
+    let re = new RegExp(`${not}.*${bad}`, "g");
+    let result = str.replace(re, "good");
+
+    console.log(result);
+}
+
+/* the junk i was trying
+function notBad(str) {
     //holy shit this is ugly
     let notExists = false;
     let badExists = false;
@@ -109,7 +120,7 @@ function notBad(str) {
     
     console.log(result);
 }
-
+*/
 
 console.log(DrEvil(1000000));
 console.log(mixUp("mix", "pod"));
