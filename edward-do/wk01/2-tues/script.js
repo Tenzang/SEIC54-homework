@@ -26,7 +26,7 @@ const bonus = function(num1) {
     resultHalf = halfNumber(num1);
     resultSquare = squareNumber(resultHalf);
     resultArea = areaOfCircle(resultSquare);
-    resultFinal = percentOf(resultArea, resultArea ** 2);
+    resultFinal = percentOf(resultArea, resultSquare);
     return resultHalf, resultSquare, resultArea, resultFinal;
 }
 
@@ -38,6 +38,7 @@ const DrEvil = function(amount) {
     }
 }
 
+/* not my work
 const mixUp = function(stringA, stringB) {
     const sliceA = stringA.slice(0,2), sliceB = stringB.slice(0,2);
     return (sliceB + stringA.substring(2) + " " + sliceA + stringB.substring(2));
@@ -70,3 +71,4 @@ function notBad(sentence) {
     if (notIndex == -1 || badIndex == -1 || badIndex < notIndex) return sentence;
     return sentence.slice(0, notIndex) + 'good' + sentence.slice(badIndex + 3);
 }
+not my work */ 
