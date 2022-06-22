@@ -58,15 +58,18 @@ const multiplyArray = function(array){
 // Define a function reverseString that computes the reversal of a string. For example, reverseString("jag testar") should return the string "ratset gaj".
 
 const reverseString = function(string){
-    let reversed = string.reverse;
-    return reversed;
+    return string.split("").reverse().join("");
 }
-
-
+//split() splits a string into an array of substrings
+    // "" is used as a seperator
+//reverse() method reverses an array 
+// join ("") joins arrays into string
 
 // Write a function findLongestWord that takes an array of words and returns the length of the longest one.
 
-
+const findLongestWord = function(word) {
+    
+}
 
 
 
