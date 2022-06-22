@@ -117,6 +117,7 @@ const fixStart2 = function (str) {
 
 fixStart2('babble');
 
+
 // ## Verbing
 
 // Create a function called verbing. It should take a single argument, a string. If its length is at least 3, it should add 'ing' to its end, unless it already ends in 'ing', in which case it should add 'ly' instead. If the string length is less than 3, it should leave it unchanged. For example:
@@ -152,3 +153,8 @@ verbing('go');
 //   notBad('This movie is not so bad!'): 'This movie is good!'
 //   notBad('This dinner is bad!'): 'This dinner is bad!'
 // ```
+
+    if (str.indexOf('not') < str.indexOf('bad')) {
+        let newStr = str.replace('not')
+    };
+};
