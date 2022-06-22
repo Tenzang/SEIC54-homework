@@ -2,6 +2,7 @@
 
 // Define a function maxOfTwoNumbers that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript. You'll have to remember your pre-work, or do some googling to figure this out.
 
+//1.
 const maxOfTwoNumbers = function (a, b) {
   if (a > b) {
     return a;
@@ -14,6 +15,7 @@ console.log(`This is the max of the two numbers ${maxOfTwoNumbers(100, 9)}`);
 console.log(`This is the max of the two numbers ${maxOfTwoNumbers(199, 88)}`);
 // Define a function maxOfThree that takes three numbers as arguments and returns the largest of them.
 
+//2.
 const maxOfThree = function (a, b, c) {
   if (a > b && a > c) {
     return a;
@@ -29,6 +31,8 @@ console.log(maxOfThree(9000, 5736, 2));
 console.log(maxOfThree(1, 2, 10));
 
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
+
+//3.
 const vowelOrNot = function (x) {
   let vowel = ["a", "e", "i", "o", "u"];
   let answer;
@@ -46,6 +50,7 @@ vowelOrNot("a");
 
 // Define a function sumArray and a function multiplyArray that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sumArray([1,2,3,4]) should return 10, and multiplyArray([1,2,3,4]) should return 24.
 
+//4. 
 const sumArray = function (array1) {
   //I don't know why this works. I stole it from mozilla and tinkered with it, broke it and fixed it a few times and then decided this version would do fine.
   const initialValue = 0;
@@ -59,6 +64,7 @@ const sumArray = function (array1) {
 };
 sumArray([1, 2, 3, 4]);
 
+//5. 
 const multiplyArray = function (array) {
   // I don't understand how it works this time either but it took a lot of tinkering to make it work so I'm still proud of it.
   sum = array.reduce((accumulator, currentValue) => {
@@ -72,6 +78,7 @@ multiplyArray([1, 2, 3, 4]);
 
 // Define a function reverseString that computes the reversal of a string. For example, reverseString("jag testar") should return the string "ratset gaj".
 
+//6. 
 const reverseString = function (str) {
   let newString = ""; // hmm.. let newString on it's own breaks this.
   for (let i = str.length - 1; i >= 0; i--) {
@@ -86,6 +93,7 @@ console.log(`Reversed string = ${reverseString("hello world")}`); //yay?!
 
 // Write a function findLongestWord that takes an array of words and returns the length of the longest one.
 
+//6.
 const findLongestWord = function (array) {
   // i remember doing this once before. I need to define the first item in the array as the longest word and then compare every new item to it and replace it if its longer
   let longestWord = "";
@@ -107,6 +115,8 @@ const names = [
 console.log(findLongestWord(names));
 
 // Write a function filterLongWords that takes an array of words and an number i and returns the array of words that are longer than i.
+
+//8. 
 const filterLongWords = function (array) {
   //Bones of the function I would write if I were a better programmer
   //
