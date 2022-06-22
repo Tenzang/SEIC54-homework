@@ -30,7 +30,7 @@ _'Cloning' takes your 'forked' repository on GitHub and creates a local copy - o
 _Adding an upstream repository links the local repository on your computer to the original repository on Github (i.e. mine, the one from which you created the fork)_
 
 - `cd SEIC54-homework`
-- `git remote add upstream https://github.com/carterdeacon/SEIC54-homework.git`
+- `git remote add upstream https://github.com/Tenzang/SEIC54-homework.git`
 - `git pull upstream main`
 
 ### Do your homework
