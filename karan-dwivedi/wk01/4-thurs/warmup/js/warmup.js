@@ -16,4 +16,3 @@ else {
 }
 }
 console.log(simonSays("6"));
-
