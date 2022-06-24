@@ -42,20 +42,20 @@ const triangleA = {
 ///Equilateral Triangle
 
 const isEquilateral = function(triDimensions) {
-    if (triangleA.sideA === triangleA.sideB && triangleA.sideA === triangleA.sideC) {
+    if (triDimensions.sideA === triDimensions.sideB && triDimensions.sideA === triDimensions.sideC) {
         return true;
     } else {
         return false;
     }
 }
 
-///Isosceles Triangle
-
 console.log(isEquilateral(triangleA));
 
+///Isosceles Triangle
+
 const isIsosceles = function(triDimensions) {
-    if ((triangleA.sideA === triangleA.sideB && triangleA.sideA !== triangleA.sideC) || (triangleA.sideA === triangleA.sideC && triangleA.sideA !== triangleA.sideB) || (triangleA.sideB === triangleA.sideC && triangleA.sideA !== triangleA.sideC)) {
-        return true;
+    if ((triDimensions.sideA === triDimensions.sideB && triDimensions.sideA !== triDimensions.sideC) || (triDimensions.sideA === triDimensions.sideC && triDimensions.sideA !== triDimensions.sideB) || (triDimensions.sideB === triDimensions.sideC && triDimensions.sideA !== triDimensions.sideC)) {
+        return true;–
     } else {
         return false;
     }
@@ -67,13 +67,13 @@ console.log(isIsosceles(triangleA));
 
 const areaOfTri = function(triDimensions) {
           //Calculation of the semiperimeter
-        const semiP = (triangleA.sideA + triangleA.sideB + triangleA.sideC) / 2;
+        const semiP = (triDimensions.sideA + triDimensions.sideB + triDimensions.sideC) / 2;
           //Calculation of the area from formula
-        const areaTriangle = Math.sqrt(semiP * (semiP - triangleA.sideA) * (semiP-triangleA.sideB) * (semiP - triangleA.sideC));
+        const areaTriangle = Math.sqrt(semiP * (semiP - triDimensions.sideA) * (semiP-triDimensions.sideB) * (semiP - triDimensions.sideC));
         return areaTriangle;
     }
  
-console.log(areaOfTri(triangleA));
+console.log(areaOfTri(triDimensions));
 
 
 ////Obtuse Triangle
@@ -127,5 +127,5 @@ const validateCreditCard = function(validate) {
 }
 console.log(validateCreditCard(9999-9999-9999-9998));
 
-
+// => Insufficient funds
 
