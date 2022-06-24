@@ -58,9 +58,18 @@ function multiNumber(numbers) {
 console.log(multiNumber([3,7,1,2]));
 
 
+//3. Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 
+const vowelCheck= function(chr){
+    if(chr=="a" ||chr=="e" || chr=="i" || chr=="o" ||chr=="u"){
+    return true
+ }
+    return false
+ }
 
-
+console.log(vowelCheck("a"));
+console.log(vowelCheck("b"));
+console.log(vowelCheck("e"));
 
 
 
