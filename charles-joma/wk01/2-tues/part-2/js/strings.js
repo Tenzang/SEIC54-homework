@@ -51,10 +51,11 @@ const fixStart = function(string){
     let firstCharacter = stringSplit[0];
     //use replace on the first character
     let replacementString = string.replaceAll(firstCharacter, "*");
-    
+
     for( let i = 0; i < stringSplit.length;i++){
         if(stringSplit[i] === firstCharacter){
             replacementString = stringSplit[0] + replacementString
+            break;
         } 
     }
     
