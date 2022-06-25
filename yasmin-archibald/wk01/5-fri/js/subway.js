@@ -1,35 +1,90 @@
-//make an array for one line then look at the requrements, do not make more lines now
+const lines = [
+  (nLine = ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"]),
+];
+const reverseLines = [
+  (nLine = ["8th", "Union Square", "23rd", "28th", "34th", "Times Square"]),
+];
 
-// The N line has the following stops: Times Square, 34th, 28th, 23rd, Union Square, and 8th
-
-const nLine = ["Times Square", "34th", "28th", "23th", "Union Square", "8th"];
-
-const planTrip = function (startingStation, line, destinationStation) {
-  // starting station = "Times Square" array indecies 0, and destinationStation is array indecies 5.
-  // count all stations from starting station up to and including destinationStation
-  for (let i = 0; i < line.length; i++) {
-    if (line[i] === 0 && line[i] === startingStation) {
-      //I want to start counting from whenever the user's starting station comes up in this array and I'm not sure how to reassign i to be the array indecies of the users input starting station so i'm going to do it this way so that we only continue if the user's starting station is nLine[0];
-      console.log()
-    }
-    console.log(line[i]);
+const planTrip = function (lines, pointAStation, pointBStation) {
+  if (lines[0].indexOf(pointAStation) < lines[0].indexOf(pointBStation)) {
+    return myTrip(lines, pointAStation, pointBStation);
+  } else {
+    return myReverseTrip(lines, pointAStation, pointBStation);
   }
 };
-planTrip("Times Square", nLine, "8th");
-nLine.find;
-console.log(nLine["startingStation"].find);
-//The program takes the line and stop that a user is getting on at and the line and stop that user is getting off at and prints the journey and the total number of stops for the trip in the console:
 
-// const planTrip = function(startingStation, line, destinationStation){
-//
+const reverseStops = function (pointAStation, pointBStation) {
+  return (
+    reverseLines[0].indexOf(pointBStation) -
+    reverseLines[0].indexOf(pointAStation)
+  );
+};
+const stops = function (pointAStation, pointBStation) {
+  return lines[0].indexOf(pointBStation) - lines[0].indexOf(pointAStation);
+};
+
+const travelThrough = function (pointAStation, pointBStation) {
+  return lines[0].indexOf(pointBStation) - lines[0].indexOf(pointAStation) - 1; // b goes first bc when going forward a will always be the smaller number, so this prevents the stops from being in the negatives for forward trips
+};
+
+const reverseTravelThrough = function (pointAStation, pointBStation) {
+  return (
+    reverseLines[0].indexOf(pointBStation) -
+    reverseLines[0].indexOf(pointAStation) -
+    1
+  );
+};
+
+const myReverseTrip = function (reverseLines, pointAStation, pointBStation) {
+  return (
+    "You travel from " +
+    pointAStation +
+    " to " +
+    pointBStation +
+    " on " +
+    reverseLines +
+    "." +
+    " You will travel past " +
+    reverseTravelThrough(pointAStation, pointBStation) +
+    " stations. " +
+    reverseStops(pointAStation, pointBStation)
+  );
+};
+// Test case 1 reverse Dusty is traveling from Union Square to 34th // expected output "You will travel from Union Square to 34th on nLineRev. You will travel past 2 stations. 3 stops in total to reach your destination"
+console.log(
+  "Reverse test 1 " + myReverseTrip("nLineRev", "Union Square", "34th")
+);
+const myTrip = function (lines, pointAStation, pointBStation) {
+  return (
+    "You travel from " +
+    pointAStation +
+    " to " +
+    pointBStation +
+    " on " +
+    lines +
+    "." +
+    " You will travel past " +
+    travelThrough(pointAStation, pointBStation) +
+    " stations. " +
+    stops(pointAStation, pointBStation) +
+    " stops in total to reach your destination."
+  );
+};
+
+// test case 1
+console.log("Test one " + myTrip("nLine", "Times Square", "34th")); //expected output "you travel from times square to 34th on nline. You travel through 0 stops. 1 stops in total to reach your destination"
+
+// const stops = function (pointAStation) {
+//   return "this is an indexOf test " + lines[0].indexOf(pointAStation);
 // };
-// planTrip
 
-// planTrip (Times Square, nLine, 8th) // console.log should output "You must travel through the following stops on the N line: 34th, 28th, 23th, Union Square."
-// "5 stops in total"  // this does NOT include the first stop, but DOES include the last stop
+// test case 2: Ben travels from times square to 8th // expected output "you travel from Times Square to 8th on nLine. You travel through 4 stations. 5 stops in total"
+console.log("test two " + myTrip("nLine", "Times Square", "8th"));
 
-// console.log() shows output similar to this:
-// "You must travel through the following stops on the N line: 34th, 28th, 23rd, Union Square."
-// "Change at Union Square."
-// "Your journey continues through the following stops: 23rd, 28th, 33rd."
-// "7 stops in total."
+//test case 3: Jacklyn travels from 8th to 34th // expected output "You travel from 8th to 34th on nLine. You travel through 3 stations. 4 stops in total"
+console.log(
+  "!!test three plan trip test 1 " + planTrip("nLine", "8th", "34th")
+);
+
+//test case 5: Boo travels from 34th to union square // expected output "You travel from 34th to Union Square on nLine. You travel through 2 stations. 3 stops in total"
+console.log("test five " + myTrip("nLine", "34th", "Union Square"));
