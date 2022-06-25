@@ -18,4 +18,6 @@ const cashRegister = function(x){
 };
 
 
+console.log(`-------------------------`);
+
 console.log(cashRegister(shoppingCart));
