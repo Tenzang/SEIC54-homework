@@ -90,16 +90,16 @@ const poopyButt = function(startLine, startStop, destLine, destStop) {
     console.log(`${stopsTotal} stops in total.`);
 }
 
-poopyButt('L', '1st', 'L', '8th');
-poopyButt('L', '8th', 'L', '1st');
-poopyButt('6', 'Astor Place', '6', 'Grand Central');
-poopyButt('6', 'Grand Central', '6', 'Astor Place');
-poopyButt('N', '8th', 'N', 'Times Square');
-poopyButt('N', 'Times Square', 'N', '8th');
-poopyButt('L', '1st', '6', 'Grand Central');
-poopyButt('L', '1st', 'N', '8th');
-poopyButt('N', 'Times Square', '6', 'Grand Central');
-poopyButt('6', 'Grand Central', 'N', '8th');
+// poopyButt('L', '1st', 'L', '8th');
+// poopyButt('L', '8th', 'L', '1st');
+// poopyButt('6', 'Astor Place', '6', 'Grand Central');
+// poopyButt('6', 'Grand Central', '6', 'Astor Place');
+// poopyButt('N', '8th', 'N', 'Times Square');
+// poopyButt('N', 'Times Square', 'N', '8th');
+// poopyButt('L', '1st', '6', 'Grand Central');
+// poopyButt('L', '1st', 'N', '8th');
+// poopyButt('N', 'Times Square', '6', 'Grand Central');
+// poopyButt('6', 'Grand Central', 'N', '8th');
 
 /*
 const sameLine = function(startLine, startStop, destLine, destStop) {
