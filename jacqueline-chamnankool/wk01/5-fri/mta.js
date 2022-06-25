@@ -2,6 +2,7 @@
 
 function planTrip(startLine, startStation, endLine, endStation) {
     //output stuff
+    console.log("-".repeat(100));
     let firstJourneyMessage = `You must travel through the following stops on the ${startLine} line: `;
     let transferMessage = "Change at Union Square.";
     let secondJourneyMessage = "Your journey continues through the following stops: ";
@@ -139,25 +140,18 @@ function printStationsTraveled(stationsTraveled) {
 }
 
 //RESULTS
-console.log("-".repeat(100));
 //same line, going forward
 planTrip("N", "Times Square", "N", "23rd"); //=> 3 stops total
-console.log("-".repeat(100));
 //same line, going backwards
 planTrip("N", "8th", "N", "34th"); //=> 4 stops total
-console.log("-".repeat(100));
 //different line, going forward to union sq , then backward (homework example)
 planTrip("N", "Times Square", "6", "33rd"); //=> 7 stops total
-console.log("-".repeat(100));
 //different line, going forward to union sq , then forward
 planTrip("6", "Grand Central", "L", "1st"); //=> 6 stops total
-console.log("-".repeat(100));
 //different line, going backwards to union sq first, then forward
 planTrip("L", "1st", "6", "Astor Place"); //=> 3 stops total
-console.log("-".repeat(100));
 //different line, going backwards to union sq first, then backward
 planTrip("L", "1st", "6", "Grand Central"); //=> 6 stops total
-console.log("-".repeat(100));
 //me going home :)
 planTrip("6", "Grand Central", "N", "Broadway"); //=> 9 stops total
 console.log("-".repeat(100));
