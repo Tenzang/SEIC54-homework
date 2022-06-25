@@ -62,7 +62,28 @@ console.log(multiplyArray([1, 2, 3, 4]));
 // ## Bonus
 
 // 5. Define a function `reverseString` that computes the reversal of a string. For example, reverseString("jag testar") should return the string "ratset gaj".
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+reverseString("hello");
+
+
 // 6. Write a function `findLongestWord` that takes an array of words and returns the length of the longest one.
+const findLongestWord = function (x) {
+    let result='';
+    for (let i = 0; i < x.length; i++) {
+        if (x[i].length >= result[0].length) {
+            result[0] = x[i];
+        } else {
+            continue;
+        }
+    }
+    return result
+}
+
+console.log(result);
+
+
 // 7. Write a function `filterLongWords` that takes an array of words and an number `i` and returns the array of words that are longer than i.
 
 
@@ -84,17 +105,31 @@ console.log(multiplyArray([1, 2, 3, 4]));
 // - It should also figure out if there are any more letters that need to be guessed,
 // and if not, it should congratulate the user for winning the game.
 // - Pretend you don't know the word, and call guessLetter multiple times with various letters to check that your program works.
-let word = '';
-let lettersOfWord = split(word);
-let currentGuessedLetters = [Array(word.length)];
 
 
-const guessLetter = function (char) {
+let word = 'guesser';
+let lettersOfWord = Array(word.length);
+let currentGuessedLetters = Array();
+
+const guessLetter = function (char) {  
+    currentGuessedLetters.push(char); 
     if (word.includes(char)) {
-        
+        for (let i = 0; i < word.length; i++) {
+            if (char === word[i]) {
+                lettersOfWord[i] = char;
+            } else if () {
+
+            }
+                continue;
+            }
+        }
+        console.log(`Current guessed letters: ${}`)
+    } else {
+        console.log('Sorry, the word does not contain ' + char)
     }
 }
 
+Array.from({length: 5}, (v, i) => i);
 
 
 
