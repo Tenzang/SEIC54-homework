@@ -7,6 +7,11 @@ function validateCreditCard (num) {
     if (!Number(num)) {
         return false;
     }
+    //check if 16 diits are entered
+    //changed < to !== as u want to check exactly 16 not just less than
+    if (num.length!==16) {
+        return false;
+    }
     for (i=0 ; i<num.length ; i++){
         //logs each digit into total
         total += + num[i]; 
@@ -38,3 +43,4 @@ console.log(validateCreditCard('a92332119c011112')); //RETURNS FALSE
 console.log(validateCreditCard('4444444444444444')); //RETURNS FALSE
 console.log(validateCreditCard('1111111111111110')); //RETURNS FALSE
 console.log(validateCreditCard('6666666666666661')); //RETURNS FALSE
+console.log(validateCreditCard('999999999999999')); //RETURNS FALSE
