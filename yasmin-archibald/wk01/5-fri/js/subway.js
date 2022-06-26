@@ -1,90 +1,62 @@
-const lines = [
-  (nLine = ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"]),
+const linesArray = [
+  //1st is nLine 2nd is lLine 3rd is 6line
+  ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
+  ["8th", "6th", "Union Square", "3rd", "1st"],
+  ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"],
 ];
-const reverseLines = [
-  (nLine = ["8th", "Union Square", "23rd", "28th", "34th", "Times Square"]),
-];
-
-const planTrip = function (lines, pointAStation, pointBStation) {
-  if (lines[0].indexOf(pointAStation) < lines[0].indexOf(pointBStation)) {
-    return myTrip(lines, pointAStation, pointBStation);
+const whichLine = function (lineName, aFunction) {
+  if (lineName === "nLine") {
+    return linesArray[0];
+  } else if (lineName === "lLine") {
+    return linesArray[1];
   } else {
-    return myReverseTrip(lines, pointAStation, pointBStation);
+    return linesArray[2];
+  }
+};
+const stops = function (lineName, pointAStation, pointBStation) {
+  let line = whichLine(lineName);
+  if (line.indexOf(pointAStation) < line.indexOf(pointBStation)) {
+    return line.indexOf(pointBStation) - line.indexOf(pointAStation); // for forward trips
+  } else {
+    return line.indexOf(pointAStation) - line.indexOf(pointBStation); //for reverse trips
   }
 };
 
-const reverseStops = function (pointAStation, pointBStation) {
-  return (
-    reverseLines[0].indexOf(pointBStation) -
-    reverseLines[0].indexOf(pointAStation)
-  );
-};
-const stops = function (pointAStation, pointBStation) {
-  return lines[0].indexOf(pointBStation) - lines[0].indexOf(pointAStation);
-};
-
-const travelThrough = function (pointAStation, pointBStation) {
-  return lines[0].indexOf(pointBStation) - lines[0].indexOf(pointAStation) - 1; // b goes first bc when going forward a will always be the smaller number, so this prevents the stops from being in the negatives for forward trips
+const travelThrough = function (lineName, pointAStation, pointBStation) {
+  let line = whichLine(lineName);
+  if (line.indexOf(pointAStation) < line.indexOf(pointBStation)) {
+    return line.indexOf(pointBStation) - line.indexOf(pointAStation) - 1;
+  } else if (line.indexOf(pointAStation) > line.indexOf(pointBStation)) {
+    return line.indexOf(pointAStation) - line.indexOf(pointBStation) - 1;
+  } // b goes first bc when going forward a will always be the smaller number, so this prevents the stops from being in the negatives for forward trips // however i can use this to show the correct number for reverse trips by swapping them
 };
 
-const reverseTravelThrough = function (pointAStation, pointBStation) {
-  return (
-    reverseLines[0].indexOf(pointBStation) -
-    reverseLines[0].indexOf(pointAStation) -
-    1
-  );
-};
-
-const myReverseTrip = function (reverseLines, pointAStation, pointBStation) {
+const myTrip = function (lineName, pointAStation, pointBStation) {
+  let travelPast = travelThrough(lineName, pointAStation, pointBStation);
+  let stop = stops(lineName, pointAStation, pointBStation);
   return (
     "You travel from " +
     pointAStation +
     " to " +
     pointBStation +
     " on " +
-    reverseLines +
+    lineName +
     "." +
     " You will travel past " +
-    reverseTravelThrough(pointAStation, pointBStation) +
+    travelPast +
     " stations. " +
-    reverseStops(pointAStation, pointBStation)
-  );
-};
-// Test case 1 reverse Dusty is traveling from Union Square to 34th // expected output "You will travel from Union Square to 34th on nLineRev. You will travel past 2 stations. 3 stops in total to reach your destination"
-console.log(
-  "Reverse test 1 " + myReverseTrip("nLineRev", "Union Square", "34th")
-);
-const myTrip = function (lines, pointAStation, pointBStation) {
-  return (
-    "You travel from " +
-    pointAStation +
-    " to " +
-    pointBStation +
-    " on " +
-    lines +
-    "." +
-    " You will travel past " +
-    travelThrough(pointAStation, pointBStation) +
-    " stations. " +
-    stops(pointAStation, pointBStation) +
+    stop +
     " stops in total to reach your destination."
   );
 };
 
-// test case 1
-console.log("Test one " + myTrip("nLine", "Times Square", "34th")); //expected output "you travel from times square to 34th on nline. You travel through 0 stops. 1 stops in total to reach your destination"
+console.log(myTrip("nLine", "8th", "34th")); //expected output, travel past 3 stations // 4 stops
 
-// const stops = function (pointAStation) {
-//   return "this is an indexOf test " + lines[0].indexOf(pointAStation);
-// };
+console.log(myTrip("nLine", "Union Square", "28th")); //expected output travel past 1 station // 2 stops
 
-// test case 2: Ben travels from times square to 8th // expected output "you travel from Times Square to 8th on nLine. You travel through 4 stations. 5 stops in total"
-console.log("test two " + myTrip("nLine", "Times Square", "8th"));
+console.log(myTrip("nLine", "34th", "Union Square")); //expected output travel past 2 stations // 3 stops
 
-//test case 3: Jacklyn travels from 8th to 34th // expected output "You travel from 8th to 34th on nLine. You travel through 3 stations. 4 stops in total"
-console.log(
-  "!!test three plan trip test 1 " + planTrip("nLine", "8th", "34th")
-);
+console.log(myTrip("lLine", "6th", "3rd")); //expected output travel past 1 2 stops in total
+console.log(myTrip("lLine", "3rd", "6th"));
 
-//test case 5: Boo travels from 34th to union square // expected output "You travel from 34th to Union Square on nLine. You travel through 2 stations. 3 stops in total"
-console.log("test five " + myTrip("nLine", "34th", "Union Square"));
+console.log(myTrip("6Line", "Astor Place", "33rd")); //expected output past 3 4 stops total
