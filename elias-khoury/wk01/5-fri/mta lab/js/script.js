@@ -7,7 +7,7 @@ const trainLines = {
 };
 
 
-// ---------------------------- stop array calculator and bringer ------------------------------------
+// ---------------------------- stop array calculator and bringerer ------------------------------------
 
 let stopsCount = 0;
 const stopStation = function(lines, beginStop, endStop) {
@@ -31,7 +31,7 @@ const stopStation = function(lines, beginStop, endStop) {
     return stops;
 }
 
-// /* --------TEST 1------- */   console.log(stopStation(`lLine`, `1st`, `8th`))   /* ----------------------- */
+/* --------TEST 1------- */   console.log(stopStation(`lLine`, `1st`, `8th`))   /* ----------------------- */
 
 
 
