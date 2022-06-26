@@ -12,36 +12,36 @@ const planTrip = function(startLine, startStop, destLine, destStop) {
     const firstMessage = `You must travel through the following stops on the ${startLine} line: `;
     const secondMessage = `Your journey continues through the following stops: `;
     const changeAtUS = `Change at Union Square.`;
-    const sameLineStopsA = startLineArray.slice(startStopIndex + 1, sameDestStopIndex +1); // slices the array of stops on a line if the destination is also on the same line, based on the index position of the starting stop and the destination stop, to ouput the stops of the journey until the destination, excluding the starting stop 
+    const sameLineStopsA = startLineArray.slice(startStopIndex + 1, sameDestStopIndex +1);
     const sameLineStopsB = startLineArray.slice(sameDestStopIndex, startStopIndex);
-    const firstStops = startLineArray.slice(startStopIndex + 1, startLineArray.indexOf('Union Square') + 1); // outputs the array of stops on the starting line from the starting stop until Union Square, where passangers will need to change lines
-    const secondStopsA = startLineArray.slice(startLineArray.indexOf('Union Square'), startStopIndex); // outputs the array of stops on the destination line from Union Square until the destination stop
+    const firstStops = startLineArray.slice(startStopIndex + 1, startLineArray.indexOf('Union Square') + 1);
+    const secondStopsA = startLineArray.slice(startLineArray.indexOf('Union Square'), startStopIndex); 
     const secondStopsB = destLineArray.slice(destLineArray.indexOf('Union Square') + 1, diffDestStopIndex + 1);
     const secondStopsC = destLineArray.slice(diffDestStopIndex, destLineArray.indexOf('Union Square'));
     let stopsTotal = 0;
     if (startLine === destLine) {
-        if (startStopIndex < sameDestStopIndex) { // if the index of the starting stop is less than the index of the destination stop on the same line, the passengers will be moving 'forward' on the line and thus the array stays in the same order
+        if (startStopIndex < sameDestStopIndex) {
           console.log(`${firstMessage + sameLineStopsA.join(', ')}.`);
-          stopsTotal += sameLineStopsA.length; // sums the array of stops
+          stopsTotal += sameLineStopsA.length;
         } else {
-            console.log(`${firstMessage + sameLineStopsB.reverse().join(', ')}.`); // the array of stops is reversed if the index of the starting stop is larger than the index of the destination stop on the same line because passangers will be moving 'backwards' on the line/array
+            console.log(`${firstMessage + sameLineStopsB.reverse().join(', ')}.`);
             stopsTotal += sameLineStopsB.length;
         }
     } else {
-        if (startStopIndex < startLineArray.indexOf('Union Square')) { // moving 'forward'
-          console.log(`${firstMessage + firstStops.join(', ')}.`); // logs the stops on the starting line until Union Square
-          console.log(changeAtUS); // change at Union Square
+        if (startStopIndex < startLineArray.indexOf('Union Square')) { 
+          console.log(`${firstMessage + firstStops.join(', ')}.`);
+          console.log(changeAtUS);
           stopsTotal += firstStops.length;
         } else {
-            console.log(`${firstMessage + secondStopsA.reverse().join(', ')}.`); // otherwise, they are moving 'backwards' on the starting line
+            console.log(`${firstMessage + secondStopsA.reverse().join(', ')}.`);
             console.log(changeAtUS);
             stopsTotal += secondStopsA.length;
         }
-        if (destLineArray.indexOf('Union Square') < diffDestStopIndex) { // if they're moving 'forwards' on the destination line
+        if (destLineArray.indexOf('Union Square') < diffDestStopIndex) { 
             console.log(`${secondMessage + secondStopsB.join(', ')}.`);
             stopsTotal += secondStopsB.length;
         } else {
-            console.log(`${secondMessage + secondStopsC.reverse().join(', ')}.`); // if they're moving 'backwards' on the destination line
+            console.log(`${secondMessage + secondStopsC.reverse().join(', ')}.`); 
             stopsTotal += secondStopsC.length;
         }
     }
