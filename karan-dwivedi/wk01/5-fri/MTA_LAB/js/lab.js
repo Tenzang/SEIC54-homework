@@ -1,63 +1,118 @@
-const nStops = ["Times Square", "34th", "28th", "23rd", "Union Square", "3rd", "1st"];
+const nStops = ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"];
+const lStops = ["8th", "6th", "Union Square", "3rd", "1st"];
+const sixStops = ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"];
+
 
 const planTrip = function(lineOn,stopOn,lineOff,stopOff){
-// will call / loop through all the functions with if / else statements
-// 
+
 };
 
-// if lineOn = N. Call this function, else if line on = 6, call this function. else if line on = L, call this function. 
+// "7 stops in total." - 
 
-// function NStartingJourneys(stopOn,stopOff)
-// let stopOn;
-// let stopOff;
-// var startingStop = 0
-// var totalStops = difference b/w index of starting stop and ending stop
-//console.log(totalStops)
-// for (i=0;i<nStops.length;i++){
-    //var totalStops = 
-    break;
-
-//}
-
-// function to calculate number of stops if getting on any stop from line N
+// SMALLER FUNCTIONS TO GET JOURNEYS FROM N,L AND 6
 
 const journeysFromN = function(stopOn,stopOff){
     var stopOnIndex = (nStops.indexOf(stopOn));
     var stopOffIndex = (nStops.indexOf(stopOff));
-    var totalStops = Math.abs(stopOnIndex - stopOffIndex);
-    return totalStops;
+    var totalStopsFromN = Math.abs(stopOnIndex - stopOffIndex);
+    return totalStopsFromN;
 }
-console.log(journeysFromN("Times Square","23rd"));
-
-
-//Will have three 
-const initialJourney = function (lineOn, allStops, stopOn){
-const journeyStops = //will this be a function?
-    console.log("You must travel through the following stops ${totalStops}, ${stop on} and change at Union Square. Your journey continues through ${moreStops}. You have ${totalStops}in total" )
+const journeysFromL = function(stopOn,stopOff){
+    var stopOnIndex = (lStops.indexOf(stopOn));
+    var stopOffIndex = (lStops.indexOf(stopOff));
+    var totalStopsFromL = Math.abs(stopOnIndex - stopOffIndex);
+    return totalStopsFromL;
+}
+const journeysFromSix = function(stopOn,stopOff){
+    var stopOnIndex = (sixStops.indexOf(stopOn));
+    var stopOffIndex = (sixStops.indexOf(stopOff));
+    var totalStopsFromSix = Math.abs(stopOnIndex - stopOffIndex);
+    return totalStopsFromSix;
 }
 
-//out of the above we need to find:
-//1. totalStops 
-//2. Stop on / Last stop / Change stop(Union Square)
-//3. Additional stops after changing
-//4. find Total Stops
+const journeyFromNOn = function(stopOn){
+    varStopOnIndex = (nStops.indexOf(stopOn));
+    varTotalStopsFromNOn = Math.abs(varStopOnIndex - 4);
+    return varTotalStopsFromNOn;
+}
 
-// 4. Finding Total Stops 
+const journeyFromNOff = function(stopOff){
+    varStopOffIndex = (nStops.indexOf(stopOff));
+    varTotalStopsFromNOff = Math.abs(varStopOffIndex - 4);
+    return varTotalStopsFromNOff;
+}
+const journeyFromLOn = function(stopOn){
+    varStopOnIndex = (lStops.indexOf(stopOn));
+    varTotalStopsFromLOn = Math.abs(varStopOnIndex - 2);
+    return varTotalStopsFromLOn;
+}
 
-const totalStops = function(lineOn,stopOn,lineOff,stopOff){
-    if (lineOn === "N" && stopOn === "Times Square")
-    var firstStop = nstops[0];}
-    if (stopOff === "34th");{
-        console.log("You will travel two stops");
-    }
-        else{
-            console.log("undefined stops")
+const journeyFromLOff = function(stopOff){
+    varStopOffIndex = (lStops.indexOf(stopOff));
+    varTotalStopsFromLOff = Math.abs(varStopOffIndex - 2);
+    return varTotalStopsFromLOff;
+}
+const journeyFromSixOn = function(stopOn){
+    varStopOnIndex = (sixStops.indexOf(stopOn));
+    varTotalStopsFromSixOn = Math.abs(varStopOnIndex - 4);
+    return varTotalStopsFromSixOn;
+}
+
+const journeyFromSixOff = function(stopOff){
+    varStopOffIndex = (sixStops.indexOf(stopOff));
+    varTotalStopsFromSixOff = Math.abs(varStopOffIndex - 4);
+    return varTotalStopsFromSixOff;
+}
+// TOTAL TRIPS FUNCTION - BIGGER FUNCITON CALLING SMALLER FUNCTIONS 
+
+const totalStops = function (lineOn,stopOn,lineOff,stopOff){
+    if(lineOn === "N" && lineOff ==="N"){
+        return (journeysFromN(stopOn, stopOff));
+    } // This can be shorter if we say both are equal, will clean this up later.
+        else if(lineOn === "L" && lineOff ==="L"){
+            return (journeysFromL(stopOn, stopOff));
         }
-    }
-}
+        else if(lineOn === "6" && lineOff ==="6"){
+            return "You are travelling a total of " + journeysFromSix(stopOn, stopOff) + " stops";
+        }
+        else if(lineOn === "6" && lineOff ==="N"){
+            return "You are travelling a total of " + ( journeyFromSixOn(stopOn) + journeyFromNOff(stopOff) ) + " stops";
+        }
+        else if(lineOn === "6" && lineOff ==="L"){
+            return "You are travelling a total of " + ( journeyFromSixOn(stopOn) + journeyFromLOff(stopOff) ) + " stops";
+        }
+        else if(lineOn === "N" && lineOff ==="L"){
+            return "You are travelling a total of " + ( journeyFromNOn(stopOn) + journeyFromLOff(stopOff) ) + " stops";
+        }
+        else if(lineOn === "N" && lineOff ==="6"){
+            return "You are travelling a total of " + ( journeyFromNOn(stopOn) + journeyFromSixOff(stopOff) ) + " stops";
+        }
+        else if(lineOn === "L" && lineOff ==="6"){
+            return "You are travelling a total of " + ( journeyFromLOn(stopOn) + journeyFromSixOff(stopOff) ) + " stops";
+        }
+        else if(lineOn === "L" && lineOff ==="N"){
+            return "You are travelling a total of " + ( journeyFromLOn(stopOn) + journeyFromNOff(stopOff) ) + " stops";
+        }
+        
+    };
 
-planTrip('N', 'Times Square', 'N', '8th');
+    console.log(totalStops("6","Grand Central", "6", "Union Square"));
+    console.log(totalStops("6","33rd", "N", "Times Square"));
+    console.log(totalStops("N","Times Square", "L", "8th"));
+    console.log(totalStops("L","1st", "6", "23rd"));
 
+
+
+    
+    
+
+//
+// console.log() shows output similar to this:
+// "You must travel through the following stops on the N line: 34th, 28th, 23rd, Union Square."
+
+// "Change at Union Square."
+
+// "Your journey continues through the following stops: 23rd, 28th, 33rd."
 
 // planTrip('L', '1st', 'N', '8th');
 // planTrip('6', 'Times Square', '6', '33rd');
