@@ -39,7 +39,7 @@ const character = function(x){
 const sumArray = function(array){
     let total = 0;
     for (i = 0; i < array.length; i++) {
-        total = total + array[i];
+        total += array[i];
     }
     return total;
 }
@@ -48,7 +48,7 @@ const multiplyArray = function(array){
     let total = 1;
     for (i = 0; i < array.length; i++){
         console.log(i);
-        total = total * array[i];
+        total *= array[i];
     }
     return total; 
 }
