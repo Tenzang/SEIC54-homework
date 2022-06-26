@@ -14,7 +14,7 @@ const planTrip = function(startLine, startStop, destLine, destStop) {
     const changeAtUS = `Change at Union Square.`;
     const sameLineStopsA = startLineArray.slice(startStopIndex + 1, sameDestStopIndex +1); // slices the array of stops on a line if the destination is also on the same line, based on the index position of the starting stop and the destination stop, to ouput the stops of the journey until the destination, excluding the starting stop 
     const sameLineStopsB = startLineArray.slice(sameDestStopIndex, startStopIndex);
-    const firstStopsC = startLineArray.slice(startStopIndex + 1, startLineArray.indexOf('Union Square') + 1); // outputs the array of stops on the starting line from the starting stop until Union Square, where passangers will need to change lines
+    const firstStops = startLineArray.slice(startStopIndex + 1, startLineArray.indexOf('Union Square') + 1); // outputs the array of stops on the starting line from the starting stop until Union Square, where passangers will need to change lines
     const secondStopsA = startLineArray.slice(startLineArray.indexOf('Union Square'), startStopIndex); // outputs the array of stops on the destination line from Union Square until the destination stop
     const secondStopsB = destLineArray.slice(destLineArray.indexOf('Union Square') + 1, diffDestStopIndex + 1);
     const secondStopsC = destLineArray.slice(diffDestStopIndex, destLineArray.indexOf('Union Square'));
@@ -29,9 +29,9 @@ const planTrip = function(startLine, startStop, destLine, destStop) {
         }
     } else {
         if (startStopIndex < startLineArray.indexOf('Union Square')) { // moving 'forward'
-          console.log(firstMessage + firstStopsC.join(', ')); // logs the stops on the starting line until Union Square
+          console.log(firstMessage + firstStops.join(', ')); // logs the stops on the starting line until Union Square
           console.log(changeAtUS); // change at Union Square
-          stopsTotal += firstStopsC.length;
+          stopsTotal += firstStops.length;
         } else {
             console.log(firstMessage + secondStopsA.reverse().join(', ')); // otherwise, they are moving 'backwards' on the starting line
             console.log(changeAtUS);
