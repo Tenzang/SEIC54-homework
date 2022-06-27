@@ -32,10 +32,8 @@ const stopStation = function(lines, beginStop, endStop) {
 }
 
 /* --------TEST 1------- */   console.log(stopStation(`lLine`, `1st`, `8th`))   /* ----------------------- */
-
-
-
-const planTrip = function(beginLine, beginStop, endLine, endStop) {
+       
+const planTrip = function(beginLine, beginStop, endLine, endStop) {}
     stopsCount = 0;
     if (beginLine === endLine) {
        let travel1 = stopStation(beginLine, beginStop, endStop);
