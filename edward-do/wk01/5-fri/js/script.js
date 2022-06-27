@@ -19,6 +19,7 @@ const planTrip = function(startLine, startStop, destLine, destStop) {
     const secondStopsB = destLineArray.slice(destLineArray.indexOf('Union Square') + 1, diffDestStopIndex + 1);
     const secondStopsC = destLineArray.slice(diffDestStopIndex, destLineArray.indexOf('Union Square'));
     let stopsTotal = 0;
+
     if (startLine === destLine) {
         if (startStopIndex < sameDestStopIndex) {
           console.log(`${firstMessage + sameLineStopsA.join(', ')}.`);
@@ -46,7 +47,7 @@ const planTrip = function(startLine, startStop, destLine, destStop) {
         }
     }
     console.log(`${stopsTotal} stops in total.`);
-}
+};
 
 // tests
 // planTrip('L', '1st', 'L', '8th');
