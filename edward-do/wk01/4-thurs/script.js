@@ -70,7 +70,6 @@ const areaTriangle = function(triangle) {
 }
 
 // If the sum of the squares of the two shorter sides of a triangle is smaller than the square of the longest side, the triangle is obtuse.
-
 const isObtuse = function(triangle) {
     const sides = Object.values(triangle); // turns object values into an array
     const longestSideSquared = Math.max(...sides) ** 2;
@@ -111,6 +110,7 @@ const cashRegister = function(shoppingCartObject) {
 
 console.log(cashRegister(cartForParty));
 
+/*
 const validateCreditCard = function(cardNumber) {
     for (let i = 0; i < cardNumber.length; i++) {
         let sum = 0;
@@ -122,3 +122,5 @@ const validateCreditCard = function(cardNumber) {
         return false;
     }
 }
+*/
+
