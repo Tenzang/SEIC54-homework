@@ -1,34 +1,34 @@
 
 
-// const twoNumbers = function (a,b){
-//     if(a>b){
-//         return a;
-//     }
-//     if(b>a){
-//         return b;
-//     }
-// }
+const twoNumbers = function (a,b){
+    if(a>b){
+        return a;
+    }
+    if(b>a){
+        return b;
+    }
+}
 
-// console.log(twoNumbers(5,6));
+console.log(twoNumbers(5,6));
 
 //****************************************
 
 //MAX THREE ****
 
-// const maxThree = function (e,f,g){
-//     if (e>f && e>g){
-//         return e;
-//     }
-//     {
-//     if (f>e && f>g)
-//             return f;
-//         }
-//     if (g>e && g>f){
-//         return g;
-//     }
-// }
+const maxThree = function (e,f,g){
+    if (e>f && e>g){
+        return e;
+    }
+    {
+    if (f>e && f>g)
+            return f;
+        }
+    if (g>e && g>f){
+        return g;
+    }
+}
 
-// console.log(maxThree(7,8,9));
+console.log(maxThree(7,8,9));
 
 //****************************************
 
