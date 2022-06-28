@@ -20,7 +20,7 @@ li a {
     text-decoration: none;
 }
 li a:hover {
-    background-color: #0b364d;
+    background-image: url("../images/bg_nav_rollover.png")
 }
 
 li {
@@ -33,7 +33,7 @@ li {
     right: 100px;
 }
 .main {
-    display: inline-block;
+    display: block;
     width: 100%;
 }
 .blurb {
