@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    text-align: center;
+    font-family: 'Rubik Moonrocks', cursive;;
+    font-size: 2em;
+    transition: transform .5s;
+    background-color: aliceblue;
+    animation: fadeBackground 180s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeBackground {
+    from { background-color: #FCE97F;}
+    to { background-color: #2EB07B;}
+}
+
+body:hover{
+    background-color: cyan;
+}
+
+h3{
+    color: black;
+    transition: transform 1.9s;
+}
+
+h3:hover{
+    color: aliceblue;
+    background-color: blue;
+    transform: scale(1.25);
+}
+
+p img{
+    max-width: 600px;
+    max-height: 600px;
+}
+
