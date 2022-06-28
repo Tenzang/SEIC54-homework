@@ -90,9 +90,10 @@ const areaTri = function (triangle) {
     const a = triangle.sideA
     const b = triangle.sideB
     const c = triangle.sideC
-    const s = (a + b + c)/2
-    return (s*(s - a)*(s - b)*(s - c))**0.5
-}
+    const s = (a + b +c)/2
+    return (s*(s - a)*(s - b)*(s - c))*0.5
+};
+
 console.log(`Area?`);
 console.log(areaTri(triangleA));
 console.log(areaTri(triangleB));

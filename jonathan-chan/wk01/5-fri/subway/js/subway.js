@@ -3,7 +3,8 @@ const lLine = ['8th', '6th', 'Union Square', '3rd', '1st']
 const sixLine = ['Grand Central', '33rd', '28th', '23rd', 'Union Square', 'Astor Place']
 
 //test choo chooooooooooooooooooo
-console.log(planTrip(nLine, 'Times Square', lLine, '8th'))
+// console.log(planTrip(nLine, 'Times Square', lLine, '8th'))
+console.log (nLine)
 //chooooooooooooooooooooooooooooo
 
 function checkStart (startLine, startStation) {
