@@ -4,6 +4,7 @@ const planTrip = function(startLine, startStop, destLine, destStop) {
         '6': ['Astor Place', 'Union Square', '23rd', '28th', '33rd', 'Grand Central'],
         'N': ['8th', 'Union Square', '23rd', '28th', '34th', 'Times Square']
     };
+    
     const startLineArray = lines[startLine];
     const destLineArray = lines[destLine];
     const startStopIndex = startLineArray.indexOf(startStop);
