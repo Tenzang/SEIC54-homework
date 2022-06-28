@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,600&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+body{
+    background-color: rgb(228, 220, 220);
+    margin:0;
+    padding: 0;
+}
+.container{
+    max-width: 960px; /*TODO: Improve this*/
+    margin: 0 auto;   /*centers container*/
+    background-color: #ccc;
+    padding: 1em; /* a chunky pixel */
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+h1{
+    text-align: center;
+    background-color: #222;
+    color: #ccc;
+    font-size: 400%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-family: 'Poiret One', cursive;
+}
+
+main{
+    display: inline-block;
+    width: 75%;
+}
+h2{
+    font-family: 'Playfair Display', serif;
+}
+
+main img{
+    display: block; /* you cant set margins on display: inline (which is the default of img)*/
+    margin: 0 auto;
+    width: 400px;
+    float: left;
+    padding: 1em;
+}
+
+p{
+    padding: 1em;
+}
+
+
+aside{
+    display: inline-block;
+    width: 21%;
+    vertical-align: top;
+    background-color: rgb(241, 190, 145);
+    padding: 1em;
+    box-shadow: 0px 15px 35px black;
+    border-radius: 0.5em;
+}
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+iframe{
+    text-align: right;
+}
