@@ -9,7 +9,7 @@ const ufo = document.getElementById('ufo');
 ufo.style.position = 'absolute';
 ufo.style.left = '-4500px';
 ufo.style.bottom = '475px';
-ufo.style.width = '800px'
+ufo.style.width = '800px';
 ufo.style.zIndex = 100;
 
 let thirdTimerId = undefined;
@@ -17,6 +17,7 @@ let fourthTimerId = undefined;
 let fifthTimerId = undefined;
 let sixthTimerId = undefined;
 let seventhTimerId = undefined;
+let eigthTimerId = undefined;
 
 const catWalk = function () {
     const oldLeft = parseInt(cat.style.left);
@@ -25,11 +26,24 @@ const catWalk = function () {
     if (cat.style.left === '800px') {
         clearInterval(timerID);
         thirdTimerId = setInterval(catUFOAbduct, 15);
-        fourthTimerId = setInterval(fadeAway, 30);
-        fifthTimerId = setInterval(rotateCat, 60);
+        fourthTimerId = setInterval(fadeAway, 35);
+        fifthTimerId = setInterval(rotateCat, 70);
+        eigthTimerId = setInterval(catShrink, 200);
     }
 };
 const timerID = setInterval(catWalk, 25);
+
+const catShrink = function () {
+    const oldWidth = parseInt(cat.style.width);
+    const newWidth = oldWidth - 2;
+    cat.style.width = newWidth + 'px';
+    const oldLeft = parseInt(cat.style.left);
+    const newLeft = oldLeft + 1;
+    cat.style.left = newLeft + 'px';
+    if (cat.style.width === '1px') {
+        clearInterval(eigthTimerId);
+    }
+};
 
 const catUFOAbduct = function () {
     const oldBottom = parseInt(cat.style.bottom);
@@ -55,7 +69,7 @@ const rotateCat = function () {
         clearInterval(fifthTimerId);
         sixthTimerId = setInterval(ufoFlyAway, 5);
     } 
-}
+};
 
 const ufoFly = function () {
     const oldLeft = parseInt(ufo.style.left);
