@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+/* Never use more than three */
+
+body {
+    background-color: #222; /*123 => 112233 shortcut*/
+    margin:0;
+    padding:0; /*normalise css or reset css does this.. this gives us access to the full page..
+    
+    padding applied to the body never casscades.. some things dont*/
+    font-family: 'PT Sans';
+}
+.container {
+    background-color: rgb(255, 255, 255);
+    max-width: 960px; 
+    
+    /*this is a lazy responsive container for small screens.. not great but its better than nothing, text wraps for ex*/
+    
+    /*v common width
+    to-do: improve this for small screens*/
+
+    margin: 0 auto; 
+
+    /*this centers the container!!*/
+    padding: 1em; 
+    /*this makes it the width of the current font-size's letter m... instead of sizing by pixels you're sizing by m.. for whatever font size*/
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    /*css didn't use to include this and people would photoshop it and then include it as an img*/
+
+}
+nav a {
+    text-align: right;
+    color: green;
+
+}
+h1 {
+    font-family: 'PT Sans';
+    text-align: center;
+    background-color: #222;
+    color: #ccc;
+    font-size: 300%;
+    padding: 0.5em;
+    text-transform: uppercase; /*this is how you make an all uppercase word screen reader friendly*/
+}
+main {
+    display: inline-block;
+    width: 75%; /*this lets the browswer take over*/
+}
+
+main img {
+    display: inline-block;
+    width: 24%;
+    background-color: #ccc;
+    padding: 1em;
+}
+aside {
+    display: inline;
+    width: 10%; 
+    vertical-align: top;
+    /*25 + 75 is not quite 100% bc css is not perfectly accurate*/
+    background-color: green;
+    box-shadow: 0px 15px 15px black; /*when a client asks you to make it 'pop'.. do this*/
+    border-radius: 1em;
+}
+aside ul {
+    padding-left: 16px;
+}
