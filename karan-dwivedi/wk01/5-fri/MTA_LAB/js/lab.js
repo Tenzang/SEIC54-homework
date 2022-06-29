@@ -107,10 +107,24 @@ const totalStops = function (lineOn,stopOn,lineOff,stopOff){
     
 
 //
-// console.log() shows output similar to this:
-// "You must travel through the following stops on the N line: 34th, 28th, 23rd, Union Square."
+// ******"You must travel through the following stops on the N line: 34th, 28th, 23rd, Union Square."
 
-// "Change at Union Square."
+//IF stop on lineN and stop off line N - BOTH SAME LINES
+
+const lineNstartforward = function (stopOn){
+for(i=[stopOn];i<nStops.length;i++){
+    return ("On the N line, you will stop on" + nStops[stopOn]+nStops[i])
+if ([i]===stopOff){
+    break;
+}
+}
+}
+
+//IF i = "stopOff, break function"
+//IF i = "union square, you break"
+
+
+// ****************"Change at Union Square."
 
 // "Your journey continues through the following stops: 23rd, 28th, 33rd."
 
