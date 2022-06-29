@@ -39,11 +39,17 @@ const ufoBeamAppear = function (){
 }
 setTimeout(ufoBeamAppear, 20000);
 
+const img = document.getElementsByTagName('img')[0]; 
+img.style.opacity = 1.0;
+
 
 const catUFOAbduct = function (){
     const oldBottom = parseInt(cat.style.bottom);
     const newBottom = oldBottom + 1;
     cat.style.bottom = newBottom + 'px';
+    setInterval(function() {
+        img.style.opacity = img.style.opacity - 0.005;
+    }, 5000);
     let deg = 0;
     setInterval(function() {
         cat.style.transform = 'rotate(' + deg + 'deg)';
