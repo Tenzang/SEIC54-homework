@@ -23,7 +23,7 @@ $(`#checking-withdraw`).on(`click`, function (event) {
     if (input > both) {
         event.preventDefault();
         alert(`You broke`)
-    } else if (input < both && input > balance) {
+    } else if (input <= both && input > balance) {
             let balance1 = 0;
             $(`#checking-balance`).html(`$${balance1}`);
             let input2 = input - balance;
@@ -34,7 +34,7 @@ $(`#checking-withdraw`).on(`click`, function (event) {
             total = 0;
             $(`#checking`).addClass(`zero`);
             $(`#checking-balance`).html(`$${total}`);
-    } else {3
+    } else {
             let total = balance - input;
             $(`#checking-balance`).html(`$${total}`);
     };
@@ -66,7 +66,7 @@ $(`#savings-withdraw`).on(`click`, function (event) {
     if (input > balance + checkingBalance) {
         event.preventDefault();
         alert(`You broke`); 
-    } else if (input < both && input > balance) {
+    } else if (input <= both && input > balance) {
             let balance1 = 0;
             $(`#savings-balance`).html(`$${balance1}`);
             let input2 = input - balance;
