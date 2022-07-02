@@ -29,6 +29,9 @@ $(`#checking-withdraw`).on(`click`, function (event) {
             let input2 = input - balance;
             let balance2 = savingsBalance - input2;
             $(`#savings-balance`).html(`$${balance2}`);
+                if (balance2 === 0){
+                    $(`#savings`).addClass(`zero`);
+                }
     } else if (total <= 0) {
             let total = balance - input;
             total = 0;
@@ -40,7 +43,7 @@ $(`#checking-withdraw`).on(`click`, function (event) {
     };
 })
 
-// ////////////////----SAVINGS CHECKING----///////////////
+// ////////////////----DEPOSIT SAVINGS----///////////////
 $(`#savings-deposit`).on(`click`, function () {
     let balance = parseInt($(`#savings-balance`).html().replace(`$`, ``));
     let input = parseInt($(`#savings-amount`).val())
@@ -72,6 +75,9 @@ $(`#savings-withdraw`).on(`click`, function (event) {
             let input2 = input - balance;
             let balance2 = checkingBalance - input2;
             $(`#checking-balance`).html(`$${balance2}`);
+            if (balance2 === 0){
+                $(`#checking`).addClass(`zero`);
+            }
     } else if (total <= 0) {
             let total = balance - input;
             total = 0;
