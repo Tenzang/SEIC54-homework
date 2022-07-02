@@ -21,8 +21,8 @@ $("document").ready(function () {
 });
 
 
-const isItANumber = function ($("#checking-balance")) {
-  return isNaN($("#checking-balance").text);
+const isItANumber = function ($("#checking-amount")) {
+  return isNaN($("#checking-amount").text);
   //is NOT a NUMBER
 };
 
