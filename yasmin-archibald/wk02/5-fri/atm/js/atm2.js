@@ -2,25 +2,54 @@
 
 $("document").ready(function () {
   let total = 0;
-  // $("#savings-deposit").on("click", function () {
-  //   let savingsInputAmount = $("#savings-amount").val();
-  //   const numSavingsInputStr = checkInputStr(savingsInputAmount);
-  //   if (numSavingsInputStr) {
-  //     const deStrSavingsNum = deString(savingsInputAmount);
-  //     whichAccount(accounts.savings);
-  //     // const newTotal = addToTotal(deStrSavingsNum);
-  //   }
-  // });
+  let checkingTotal = 0;
+  let savingsTotal = 0;
+
+  $("#savings-deposit").on("click", function () {
+    let savingsInput = $("#savings-amount").val();
+    const savingsInputStr = checkInputStr(savingsInput);
+    if (savingsInputStr) {
+      const deStringSavingsInput = deString(savingsInput);
+      addToTotal(deStringSavingsInput);
+      const savingsTotal = addToSavings(deStringSavingsInput);
+      updateSavingsDisplay(savingsTotal);
+      inputResetSaving();
+      if (zeroBalanceSaving !== 0) {
+        $("#savings-balance").removeClass("zero");
+      }
+    }
+    console.log(total);
+  });
+
+  $("#savings-withdraw").on("click", function () {
+    let savingsInput = $("#savings-amount").val();
+    const savingsInputStr = checkInputStr(savingsInput);
+    if (savingsInputStr) {
+      const deStringSavingsInput = deString(savingsInput);
+      const hadEnoughFunds = enoughFundsOrNoSaving(deStringSavingsInput);
+      if (hadEnoughFunds) {
+        subFrmTotal(deStringSavingsInput);
+        const newTotal = subFrmSaving(deStringSavingsInput);
+        updateSavingsDisplay(newTotal);
+        inputResetSaving();
+        if (zeroBalanceSaving()) {
+          $("#savings-balance").addClass("zero");
+        }
+      }
+    }
+    console.log(total);
+  });
 
   $("#checking-deposit").on("click", function () {
     let inputAmount = $("#checking-amount").val();
     const numInputStr = checkInputStr(inputAmount); //is it a number or not?
     if (numInputStr) {
       const deStrNumInput = deString(inputAmount); //ok now let's unstring it
-      const newTotal = addToTotal(deStrNumInput);
-      updateDisplay(newTotal);
+      addToTotal(deStrNumInput);
+      const checkingTotal = addToChecking(deStrNumInput);
+      updateCheckingDisplay(checkingTotal);
       inputReset();
-      if (zeroBalance !== 0) {
+      if (zeroBalanceChecking !== 0) {
         $("#checking-balance").removeClass("zero");
       }
     }
@@ -31,17 +60,37 @@ $("document").ready(function () {
     const numInputStr = checkInputStr(inputAmount);
     if (numInputStr) {
       const deStrNumInput = deString(inputAmount);
-      const hadEnoughFunds = enoughFundsOrNo(deStrNumInput);
+      const hadEnoughFunds = enoughFundsOrNoChecking(deStrNumInput);
       if (hadEnoughFunds) {
-        const newTotal = subFrmTotal(deStrNumInput);
-        updateDisplay(newTotal);
+        subFrmTotal(deStrNumInput);
+        const newTotal = subFrmChecking(deStrNumInput);
+        updateCheckingDisplay(newTotal);
         inputReset();
-        if (zeroBalance()) {
+        if (zeroBalanceChecking()) {
           $("#checking-balance").addClass("zero");
         }
       }
     }
   });
+
+  const subFrmSaving = function (deStringSavingsInput) {
+    savingsTotal -= deStringSavingsInput;
+    return savingsTotal;
+    //
+  };
+  const addToSavings = function (deStringSavingsInput) {
+    savingsTotal += deStringSavingsInput;
+    return savingsTotal;
+  };
+  const addToChecking = function (deStrNumInput) {
+    checkingTotal += deStrNumInput;
+    return checkingTotal;
+  };
+
+  const subFrmChecking = function (deStrNumInput) {
+    checkingTotal -= deStrNumInput;
+    return checkingTotal;
+  };
 
   const addToTotal = function (deStrNumInput) {
     total += deStrNumInput;
@@ -54,12 +103,19 @@ $("document").ready(function () {
     return total;
   };
 
-  const updateDisplay = function (total) {
-    $("#checking-balance").text("$" + total);
+  const updateCheckingDisplay = function (checkingTotal) {
+    $("#checking-balance").text("$" + checkingTotal);
+  };
+
+  const updateSavingsDisplay = function (savingsTotal) {
+    $("#savings-balance").text("$" + savingsTotal);
   };
 
   const inputReset = function () {
     $("#checking-amount").val("");
+  };
+  const inputResetSaving = function () {
+    $("#savings-amount").val("");
   };
 
   const checkInputStr = function (input) {
@@ -67,6 +123,7 @@ $("document").ready(function () {
       alert(
         "Check input for typos. You have included letters or symbols. Please only enter numbers"
       );
+
       return false;
     } else {
       return true;
@@ -78,17 +135,44 @@ $("document").ready(function () {
     return numInput;
   };
 
-  const enoughFundsOrNo = function (numInput) {
-    if (numInput <= total) {
+  const enoughFundsOrNoChecking = function (numInput) {
+    if (numInput <= checkingTotal) {
       return true;
     } else if (numInput > total) {
       alert("Insufficient Funds");
+
       return false;
     }
   };
 
-  const zeroBalance = function () {
-    if (total === 0) {
+  const zeroBalanceChecking = function () {
+    if (checkingTotal === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const enoughFundsOrNoSaving = function (numInput) {
+    if (numInput <= savingsTotal) {
+      return true;
+    } else if (numInput > savingsTotal) {
+      alert("Insufficient Funds");
+
+      return false;
+    }
+  };
+
+  const zeroBalanceSaving = function () {
+    if (savingsTotal === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const overDraftSavings = function () {
+    if (numInput > savingsTotal && numInput <= total) {
       return true;
     } else {
       return false;
