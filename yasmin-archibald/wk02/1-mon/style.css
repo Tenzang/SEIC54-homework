@@ -1,0 +1,81 @@
+/* 
+
+## Style Hints: 
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+/* centered container !! delete reset.css do not use for any hw */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+} 
+#container {
+	display: table;
+	max-width: 500px;
+	margin: 0 auto;
+
+}
+body {
+	font-family: ui-monospace;
+}
+
+h1 {
+    height: fit-content;
+    font-size: 2.5em;
+    margin: 0.67em 0;
+    letter-spacing: 1.5px;
+    color: #9f9f9f;
+}
+a {
+	margin: 1em 0;
+    color: #07afd5;
+    font-family: serif;
+}
+article {
+	color: grey;
+    font-weight: initial;
+    font-stretch: extra-expanded;
+    font-size: 15px;
+	
+}
+h2 {    
+	font-weight: 550;
+    font-size: 25px;
+    color: #575656;
+}
+p {
+	margin: 30px
+}
+button {
+		background-color: Transparent;
+		background-repeat:no-repeat;
+		border: none;
+		cursor:pointer;
+		overflow: hidden;
+		outline:none;
+		color: #07afd5;
+}
+
+img {
+	border: #c7c7c7;
+    border-style: solid;
+    border-width: 5px;
+}
+#no-border-img {
+	border: none;
+}
+
+h3 {
+    color: #6d6d6d;
+    font-weight: inherit;
+    font-size: 0.8em;
+    margin: 1em 0;
+    letter-spacing: 0.5px;
+}

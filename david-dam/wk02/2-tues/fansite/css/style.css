@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap');
+
+body {
+    color: aliceblue;
+    font-family: 'Alegreya', serif;;
+    background-image: url('18SCI-KNUTH5-superJumbo.png');
+}
+
+
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    /* background-color: rgb(255, 255, 255); */
+    padding: 1em;
+    background-size: cover;
+    padding-bottom: 15em;
+}
+
+nav {
+    text-align: left;
+    /* border: 1px solid black; */
+    margin-left: -2em;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: green;
+    font-size: 25px;
+    margin: 0px 5px;
+    box-shadow: inset 0 0 0 0 white;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+nav a:hover {
+    font-size: 25px;
+    margin: 0px 5px;
+    font-weight: bolder;
+    box-shadow: inset 100px 0 0 0 green;
+    color: white;
+}
+
+main {
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 75px;
+}
+
+h3 {
+    font-size: 50px;
+    opacity: .75;
+}
+
+h3:hover {
+    font-size: 50px;
+    color: antiquewhite;
+    font-weight: bold;
+    font-size: 60px;
+    transition: all .3s;
+}
+
+.box {
+    display: inline-block;
+}
+
+.bio {
+    display: inline-flex;
+}
+
+p {
+    margin: 15px;
+    padding: 3em;
+}
+
+p:hover {
+    color: green;
+    transition: 1s;
+    margin: 15px;
+    padding: 0.75em;
+    font-size: 25px;
+    background-color: black;
+    opacity: 0.7;
+    border-radius: 20px;
+}
+
+
+.donald-knuth {
+    max-width: 200px;
+    border-style: inset;
+}
+
+/* aside {
+    display: block;
+    text-align: center;
+    margin: 2em 0em;
+} */
+
+aside li a {
+    text-decoration: none;
+    color: green;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+.factbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.facts {
+    color: black;
+    display: flex;
+    width: 225px;
+}
+

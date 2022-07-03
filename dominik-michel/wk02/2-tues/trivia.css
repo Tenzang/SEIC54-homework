@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,600&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+body{
+    background-color: rgb(228, 220, 220);
+    margin:0;
+    padding: 0;
+}
+.container{
+    max-width: 960px; /*TODO: Improve this*/
+    margin: 0 auto;   /*centers container*/
+    background-color: #ccc;
+    padding: 1em; /* a chunky pixel */
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+h1{
+    text-align: center;
+    background-color: #222;
+    color: #ccc;
+    font-size: 400%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-family: 'Poiret One', cursive;
+}
+
+main{
+    width: 100%;
+    text-align: center;
+}
+label{
+    font-size: 200%;
+}
+input{
+    height: 30px;
+    background-color: #b6b3ae;
+    border-radius: 10px;
+}
+select{
+    height: 30px;
+    width: 200px;
+    background-color: #b6b3ae;
+    border-radius: 5px;
+    
+}
+option{
+    text-align: center;
+}
+footer{
+    place-content: flex-end;
+}
