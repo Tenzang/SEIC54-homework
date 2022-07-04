@@ -1,0 +1,46 @@
+body {
+    background-image: url(../images/Full\ Moon\ -\ background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(64, 42, 28);
+}
+
+.trees {
+    position: absolute;
+    bottom: 0px;
+}
+
+.tree {
+    position: absolute;
+    bottom: 30px;
+    width: 300px;
+    height: 700px;
+}
+
+.front {
+    z-index: 1000;
+}
+
+.behind {
+    z-index: -100;
+    left: 300px;
+}
+
+#ufo-beam {
+    visibility: hidden;
+    position: absolute;
+    left: 775px;
+    bottom: 30px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 675px solid rgba(149, 255, 253, 0.799);
+    opacity: 0.3;
+    z-index: 99;
+}
+
+#hidden {
+    visibility: hidden;
+}
