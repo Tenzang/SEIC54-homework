@@ -65,6 +65,18 @@ let lines = {
 //Any line's stop to the other line's stop//
 
 const planTrip = function (line1, stop1, line2, stop2){
+    const startLineArray = lines[startLine];
+    const destLineArray = lines[destLineArray];
+    const startStopIndex = startLineArray.indexOf(startStop);
+    const sameLineDSIndex = startLineArray.indexOf(destStop);
+    const diffLineDSIndex = destLineArray.indexOf(destStop);
+
+    const firstMessage = `Your journey is through the following stops on the ${startLine}.`;
+    const secondMessage = `Your journey continues through the following stops: `;
+
+        let totalStops = 0;
+
+
 
 
 
@@ -73,7 +85,3 @@ const planTrip = function (line1, stop1, line2, stop2){
 
     console.log(`Travel from ${line1},  ${stop1} and getoff at ${line2} , ${stop1}.`)
 };
-
-
-
-
