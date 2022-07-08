@@ -21,16 +21,16 @@ img.style.width = `50%`
 
       
         if (newLeft > 400) {
-            document.querySelector(`.homer`).style.visibility = `visible`;
+            $(`.homer`).css(`visibility`, `visible`);
         }
         if (newLeft > 600) {
-            document.querySelector(`.homer2`).style.visibility = `visible`;
+            $(`.homer2`).css(`visibility`, `visible`);
         }
         if (newLeft > 800) {
-            document.querySelector(`.homer3`).style.visibility = `visible`;
+            $(`.homer3`).css(`visibility`, `visible`);
         }
         if (newLeft > 1000) {
-            document.querySelector(`.homer4`).style.visibility = `visible`;
+            $(`.homer4`).css(`visibility`, `visible`);
         }
          if (newLeft >1500) {
             clearInterval(id);
