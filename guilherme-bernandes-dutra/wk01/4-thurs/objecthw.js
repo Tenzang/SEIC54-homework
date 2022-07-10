@@ -76,3 +76,66 @@ const isObtuse =  function(triangle){
     }
 }
 
+
+
+// // The Cash Register
+// Write a function called cashRegister that takes a shopping cart object. The object contains item names and prices (itemName: itemPrice). The function should return the total price of the shopping cart. Example
+
+// // Input
+// const cartForParty = {  
+//   banana: "1.25",
+//   handkerchief: ".99",
+//   Tshirt: "25.01",
+//   apple: "0.60",
+//   nalgene: "10.34",
+//   proteinShake: "22.36"
+// };
+
+// // Output
+// cashRegister(cartForParty)); // 60.55
+
+const cartForParty = {  
+      banana: 1.25,
+      handkerchief: .99,
+      Tshirt: 25.01,
+      apple: 0.60,
+      nalgene: 10.34,
+      proteinShake: 22.36
+    };
+    
+
+    const cartTotal = function(objectSum){
+
+        var shoppingTotal= 0  
+        for( let key in objectSum ) {
+             shoppingTotal= (objectSum[key] + shoppingTotal) 
+            console.log(shoppingTotal) 
+
+         } 
+    }
+       
+
+
+
+    
+
+
+    const cartForBarbecue = {
+        rumpSteak: 29.5,
+        chorizoSausage: 15.0,
+        caseOfBeer: 49.99,
+        chickenWings: 12.99,
+        kebabsSkewers: 22.75,
+        bottleOfJack: 55.,
+
+    }
+
+    const barbecueTotal= function(objectSum){
+
+        let barbecueSum= 0                    //this is equal to zero to begin with because we havent added nothing to it yet, as we loop and add the numbers in the list we will later change the value of this function to the acctual total.
+
+        for( let key in objectSum ) {           // this is an special way to write an loop used only to loop tru OBJECTS only.
+            barbecueSum = (objectSum[key] + barbecueSum)
+        }          
+        return 'the total shopping value for the barbeque is ' + barbecueSum + ' dollars.'
+    };
