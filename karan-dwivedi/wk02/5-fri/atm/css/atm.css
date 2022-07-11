@@ -7,11 +7,11 @@ body{
 }
 #container{
   margin: auto;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   width: 71%;
   /* border: 3px solid #73AD21; */
   padding: 15px;
-  padding-bottom: 1000px;
+  padding-bottom: 1px;
   text-align: center;
   background-color: #ffffff;
   /* font-family: 'Karla', sans-serif; */
@@ -93,14 +93,23 @@ justify-content: center;*/
 
 .gif1{
   margin-bottom: 200px;
+  margin-left: 4px;
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  /* display: none; */
+}
+
+.gif2{
+  margin-bottom: 200px;
   margin-left: 15px;
   position: relative;
   z-index: 2;
   width: 300px;
-  display: none;
+  /* display: show; */
 }
-
 #savings-deposit, #checking-deposit, #savings-withdraw, #checking-withdraw, #savings-amount, #checking-amount{
 font-family: 'Karla', sans-serif;
 /* font-family: 'Space Grotesk', sans-serif; */
 }
+
