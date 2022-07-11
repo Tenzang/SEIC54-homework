@@ -1,0 +1,7 @@
+div p {
+    transition: .3s;
+}
+
+div p:hover{
+    transform: scaleX(-1.5)
+}

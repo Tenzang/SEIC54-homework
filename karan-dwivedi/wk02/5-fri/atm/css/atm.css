@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
+@import url(http://fonts.googleapis.com/css?family=Ruluko);
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Space+Grotesk:wght@700&display=swap');
+
+body{
+  background-color:  #f6dfc0;
+}
+#container{
+  margin: auto;
+  margin-bottom: 100px;
+  width: 71%;
+  /* border: 3px solid #73AD21; */
+  padding: 15px;
+  padding-bottom: 1000px;
+  text-align: center;
+  background-color: #ffffff;
+  /* font-family: 'Karla', sans-serif; */
+font-family: 'Space Grotesk', sans-serif;
+}
+
+#content {
+  /* margin: 100 right; */
+  /* display: flex;
+align-items: center;
+justify-content: center;*/
+  text-align: center;
+  width: 1000px;
+}
+
+#nav {
+  margin: 50px 0px;
+}
+
+#title {
+  color: #000000;
+  /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-size: 50px;
+}
+
+#checking {
+  float: left;
+  margin-right:700px ;
+}
+
+#savings {
+  float: right;
+  margin-left: 685px;
+}
+
+.account {
+  background-color: #e0a455;
+  border: 1px solid #ffffff;
+  padding: 15px;
+  position: absolute;
+}
+
+.balance {
+  background-color: #e0a455;
+  border: 2px solid #ffffff;
+  font-family: 'Ruluko', sans-serif;
+  font-size: 50px;
+  padding: 30px;
+  margin: 5px;
+}
+
+.transactions {
+  background-color:  #047938;
+  border: 1px solid #676767;
+  /* font-family: 'Ruluko', sans-serif; */
+  font-size: 23px;
+  padding: 25px 0;
+  position: absolute;
+  margin-top: 300px;
+  width: 1000px;
+
+}
+
+#transactionheading{
+  font-size : 40px;
+  
+}
+
+.clear {
+  clear: both;
+}
+
+.zero {
+  background-color: #F52F4F;
+  color: #FFF;  
+  
+
+}
+
+.gif1{
+  margin-bottom: 200px;
+  margin-left: 15px;
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  display: none;
+}
+
+#savings-deposit, #checking-deposit, #savings-withdraw, #checking-withdraw, #savings-amount, #checking-amount{
+font-family: 'Karla', sans-serif;
+/* font-family: 'Space Grotesk', sans-serif; */
+}
