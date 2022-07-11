@@ -50,7 +50,7 @@ vowelOrNot("a");
 
 // Define a function sumArray and a function multiplyArray that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sumArray([1,2,3,4]) should return 10, and multiplyArray([1,2,3,4]) should return 24.
 
-//4. 
+//4.
 const sumArray = function (array1) {
   //I don't know why this works. I stole it from mozilla and tinkered with it, broke it and fixed it a few times and then decided this version would do fine.
   const initialValue = 0;
@@ -62,9 +62,9 @@ const sumArray = function (array1) {
   console.log(`Your array summed togeter is ${sumWithInitial}`);
   // expected output: 10
 };
-sumArray([1, 2, 3, 4]);
+sumArray([1, 2, 3, 4, 5, 6]);
 
-//5. 
+//5.
 const multiplyArray = function (array) {
   // I don't understand how it works this time either but it took a lot of tinkering to make it work so I'm still proud of it.
   sum = array.reduce((accumulator, currentValue) => {
@@ -78,7 +78,7 @@ multiplyArray([1, 2, 3, 4]);
 
 // Define a function reverseString that computes the reversal of a string. For example, reverseString("jag testar") should return the string "ratset gaj".
 
-//6. 
+//6.
 const reverseString = function (str) {
   let newString = ""; // hmm.. let newString on it's own breaks this.
   for (let i = str.length - 1; i >= 0; i--) {
@@ -93,10 +93,10 @@ console.log(`Reversed string = ${reverseString("hello world")}`); //yay?!
 
 // Write a function findLongestWord that takes an array of words and returns the length of the longest one.
 
-//6.
+//7.
 const findLongestWord = function (array) {
   // i remember doing this once before. I need to define the first item in the array as the longest word and then compare every new item to it and replace it if its longer
-  let longestWord = "";
+  let longestWord = array[0];
   for (let i = 0; i < array.length; i++) {
     longestWord = 0;
     if (longestWord.length < array[i].length) {
@@ -116,7 +116,7 @@ console.log(findLongestWord(names));
 
 // Write a function filterLongWords that takes an array of words and an number i and returns the array of words that are longer than i.
 
-//8. 
+//8.
 const filterLongWords = function (array) {
   //Bones of the function I would write if I were a better programmer
   //

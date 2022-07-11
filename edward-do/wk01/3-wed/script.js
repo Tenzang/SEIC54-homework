@@ -65,7 +65,7 @@ const reverseString = function(string) {
 console.log(reverseString('generalAssembly'));
 
 const findLongestWord = function(str) {
-    let strSplit = str.split(' ');
+    let strSplit = str.split(' '); // .split splits a string entered as the paramater into an array of separate strings
     let longestWord = 0;
     for(var i = 0; i < strSplit.length; i++){
       if(strSplit[i].length > longestWord){

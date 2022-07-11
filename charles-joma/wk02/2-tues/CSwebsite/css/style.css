@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Diplomata SC', cursive;
+    font-size: 12px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+header {
+    
+}
+
+header img{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 150px 0 50px black, -141px 0 50px black;
+    transition: 10s;
+    border: 1px solid black;
+}
+
+header img:hover{
+    box-shadow: 150px 0 50px white, -141px 0 50px white;
+}
+
+h1 {
+    text-shadow: -4px 4px black;
+    margin-bottom: 25px;
+}
+
+nav {
+    display: inline
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul {
+    text-align: right;
+    line-height: 2em;
+    display: inline;
+}
+
+nav ul li {
+    list-style: none;
+    text-align: right;
+    transition: transform .2s;
+}
+
+nav ul li:hover {
+    transform: scale(-1.7);
+    color: rgb(255, 0, 191);
+}
+
+main {
+    display: inline-block;
+    width: 60%;
+    line-height: 2em;
+    letter-spacing: 0.1em;
+    margin-top: 25px;
+}
+
+main p{
+    transition: 2s;
+}
+
+main p:hover{
+    box-shadow: 50px 0 50px black, -51px 0 50px black;
+    border-radius: 12px;
+    background-color: black;
+    color: white;
+}
+
+
+aside {
+    display: inline-block;
+    width: 30%;
+    line-height: 10em;
+    vertical-align: top;
+    margin-top: 15px;
+}
+
+aside ul li{
+    list-style:armenian;
+    transition: .6s;
+}
+
+aside ul li:hover{
+    transform: scale(-2.5);
+    text-decoration: overline;
+    
+}
+
+aside p{
+    font-size: 2em;
+}
+
+span {
+    font-weight:600;
+    font-style: italic;
+    letter-spacing: 0.3em;
+    font-family: 'Smooch', cursive;
+    text-decoration: line-through;
+}
+
+
+
+span.crossedOut:hover{
+    text-decoration-color: whitesmoke;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    color: gold;
+}
+
+
+
+
+
+
+
+
+
+
+/*=========================H O M E ============T O W N=================================================================================*/
+
+
+

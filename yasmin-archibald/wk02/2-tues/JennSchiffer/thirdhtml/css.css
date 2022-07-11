@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300&family=Roboto+Slab:wght@200&display=swap');
+
+/* font-family: 'Anek Latin', sans-serif;
+this one for the title
+
+font-family: 'Roboto Slab', serif; this one for the body*/
+
+div.container {
+    max-width: 940px;
+    min-width: 720px;
+    margin: 10px auto 10px auto;
+    padding: 20px;
+    border: 4px double #000;
+    background-color: azure;
+    table-layout: fixed;
+}
+button {
+    position: fixed;
+    max-width: 4em;
+    margin-left: 77%;
+    position: fixed;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    
+}
+body {
+    background: linear-gradient(blue, pink);
+    font-family: 'Roboto Slab';
+}
+h1 {
+    font-family: "Anek Latin";
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 1em;
+}
+nav {
+    text-align: left;
+    background-color: white;
+}
+ul {
+    max-width: 950px;
+    height:max-content
+}
+img {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin: auto;
+    width: 900px;
+}
+a {
+    color: rgb(0, 12, 230);
+    font-style: italic;
+}
+

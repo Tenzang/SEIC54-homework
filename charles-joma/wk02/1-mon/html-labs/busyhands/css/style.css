@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url('../images/bg_body.jpg');
+    
+}
+.container {
+    width: 960px;
+    margin: 20px auto;
+}
+
+nav {
+    background-color: black; 
+    color: whitesmoke;
+    width: 100vw;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header img {
+    display: inline-flex;
+    justify-content: flex-start;
+}
+
+header ul {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+nav ul {
+    width: 960px;
+    margin: auto;
+}
+
+nav ul li{
+    /*This makes the header li items display inline */
+    display: inline-block;
+    
+    padding: 30px;
+    
+}
+
+nav ul li:hover {
+    background-image: url(../images/bg_nav_rollover.png);
+}
+
+.photoBanner {
+    
+    background-color: url(../images/shadow_slider.png);
+}
+
+.shadow-slider {
+    margin-top: -5px;
+}
+
+.requestQuoteDiv {
+    max-height: 100px;
+    z-index: -1;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-image: url(../images/bg_blurb.jpg);
+    margin-bottom: 15px;
+}
+
+.requestQuoteDiv p {
+   
+    display: flex;
+    width:100%;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    inline-size: 600px;
+} 
+/*
+.requestQuoteDiv .requestText {
+    border: 2px solid yellow;
+    display: inline-block;
+    inline-size: 500px;
+    width:70%;
+    margin-top: 20px;
+}
+*/
+
+.requestQuoteDiv button{
+    background-image: linear-gradient(rgb(19, 112, 198),rgb(70, 172, 181));
+    outline: none;
+    width: 160px;
+    height: 35px;
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: -200px;
+    border-radius: 2px;
+    color: white;
+}
+
+#homeBoxContainer {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    outline: none;
+    
+} 
+
+#homeBoxContainer img{
+    
+    border: 3px solid gray;
+    padding: 2px;
+    
+}
+
+#wrapper {
+    background-image: url(../images/bg_wrapper.png);
+    background-repeat: no-repeat;
+}
+
+.homeBoxes {
+    width: 30%;
+    
+}
+
+
+footer {
+    display: flex;
+    width: 100%;
+    
+}
+
+.box-footer {
+    width: 33%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+   display: flex;
+}
+
+header ul li{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+}
+
+header ul li.linkedIn{
+    background: url(../images/socialNav.png) 0px 64px;
+}
+
+header ul li.twitter{
+    background: url(../images/socialNav.png) -60px 64px;
+}
+
+header ul li.facebook{
+    background: url(../images/socialNav.png) -120px 64px;
+}
+
+header ul li.rss{
+    background: url(../images/socialNav.png) -180px 64px;
+}
+
+
+header ul li.linkedIn:hover{
+    background: url(../images/socialNav.png) 0px 0px;
+}
+
+header ul li.twitter:hover{
+    background: url(../images/socialNav.png) -60px 0px;
+}
+
+header ul li.facebook:hover{
+    background: url(../images/socialNav.png) -120px 0px;
+}
+
+header ul li.rss:hover{
+    background: url(../images/socialNav.png) -180px 0px;
+}
+
+
+

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap');
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+    max-width: 60%; /* poor person's lazy responsive container
+    TO DO: improve this */
+    margin: 0 auto; /* center */
+    background-color: white;
+    padding: 1em; /* a chunky pixel */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 1em;
+    font-size: 20px;
+    font-weight: 700;
+    word-spacing: 2em;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    max-width: 100%;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.space {
+    visibility: hidden;
+    position: block;
+    height: 66px;
+}
+
+header img {
+    max-width: 100%;
+}
+
+h1 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 400%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+}
+
+.aboutYuki {
+    background-color: black;
+    display: inline-flex;
+    justify-content: space-evenly;
+    color: white;
+    width: 100%;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.aboutLinks {
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    width: 170px;
+    height: 30px;
+    line-height: 1.9em;
+}
+
+.aboutLinks:hover {
+    transition: 0.1s;
+    background-color: rgba(255, 45, 45, 0.743);
+}
+
+.selected {
+    background-color: rgba(255, 45, 45, 0.743);
+}
+
+.content {
+    display: inline-flex;
+}
+
+main {
+    display: inline-block;
+    width: 75%;
+}
+
+main p {
+    margin-right: 1em;
+}
+
+.titleText {
+    background-color: rgba(255, 45, 45, 0.743);
+}
+
+main img {
+    display: block; /* Can't set margins on display: inline (which is the default for img) */
+    margin: 0 auto;
+}
+
+aside {
+    display: inline-block;
+    width: 30%; /* In CSS: 75% + 21% = 100% */
+    vertical-align: top;
+    background-color: white;
+    padding: 1em;
+    box-shadow:  0 15px 0px 0px white, 0 -9px 0px 0px white, 5px 0 15px -4px black, -5px 0 15px -4px black;
+    /* makes it pop */;
+}
+
+aside ul {
+    padding-left: 16px;
+}
+
+aside img {
+    max-width: 100%;
+}
+

@@ -1,0 +1,65 @@
+body {
+    background-color: pink;
+    min-height: 9999999999px;
+}
+.box {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    line-height: 300px;
+}
+.static {
+    /* position: static; this is the default position */
+    border: 1px solid black;
+    background-color: white;
+}
+.absolute {
+    position: absolute; 
+    /* avoid as much as possible because it breaks when someone resizes the page */
+    top: 300px;
+    right: 300px;
+    border: 1px solid black;
+    background-color: white;
+}
+.fixed {
+    position: fixed;
+    /* when i scroll somethibng with a fixed position will always stay in the same area of the screen */
+    top: 300px;
+    right: 300px;
+}
+.relative {
+    position: relative;
+    width: 900px;
+    height: 900px;
+    line-height: 900px;
+
+}
+
+/* the order of these following boxes really matters, if they overlap they overlap in order!! they are loaded in the order you have written them */
+.small {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: solid black;
+}
+.green {
+    background-color: green;
+    right:270px;
+    top:80px;
+    }
+.red {
+    background-color: red;
+    right: 260px;
+    top: 90px;
+}
+.blue {
+    background-color: blue;
+    top: 70px;
+    right:250px;
+    z-index: 100; 
+    /* the z inbdex makes it possible to order them manually whatever has the highest number z index gets top level, etc etc, if things are at the same level they're at the same z index and the default layout goes back to what order you've put them in */
+}
+
+

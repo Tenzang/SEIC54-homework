@@ -1,0 +1,242 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto;
+    background-image: url("/busyhands/images/bg_body.jpg");
+}
+
+nav {
+    background-color: black;
+    color: white;
+}
+
+nav ul {
+    margin: auto ;
+    max-width: 960px;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 30px 20px;
+}
+
+nav li:hover {
+    background-image: linear-gradient(rgb(65, 65, 65), black);
+    color: rgb(134, 171, 202);
+    border-top: solid 3px rgb(138, 138, 177);
+    
+}
+
+.secondBody {
+    margin: auto;
+    padding-top: 2vw;
+    max-width: 900px;
+}
+
+.logoSocial {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoSocial img {
+   width: 25%;
+   height: 25%;
+   margin: auto;
+   margin-left: 0px;
+    
+}
+
+.secondBody .bannerImg img  {
+    width: 100%;
+     box-shadow: 0 30px 5px -2px gray;
+}
+
+.quoteBox {
+    box-shadow: inset 0 0 5px;
+    margin-top: 40px;
+}
+
+.quoteBox p {
+    padding: 10px;
+    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.quoteBox p img {
+    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.quoteBox p a {
+    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.homeBox {
+    display: inline-block;
+    max-width: 33%;
+}
+
+.homeBox img {
+    padding: 1px;
+    border: 5px solid rgb(209, 209, 209);
+}
+
+.homeBox h3 {
+    font-weight: 500;
+    font-size: 150%;
+}
+
+.homeBox a {
+    text-decoration: none;
+}
+
+
+
+/* FOOTER STUFF ===================== */
+
+
+
+
+footer {
+    background-color: black;
+    
+}
+
+footer div {
+    margin: auto ;
+    max-width: 900px;
+}
+
+footer h2 {
+    color: white;   
+    border-bottom: solid 0.5px rgb(159, 158, 158);
+    padding: 4px;
+}
+
+footer div a {
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    border-bottom: solid 0.5px rgb(159, 158, 158);
+    padding: 4px;
+   
+}
+
+footer a, p {
+    color: rgb(148, 148, 148);
+    
+}
+
+footer .blogroll {
+    display: inline-block;
+    width: 25%;
+    padding-right: 30px;
+
+}
+
+footer .textWidget {
+    display: inline-block;
+    width: 45%;
+    padding-right: 30px;
+    
+    
+}
+
+footer .metaWidget {
+    display: inline-block;
+    width 29%;
+}
+
+
+
+ .bottomFooter  {
+    margin: auto ;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomFooter p {
+    display: inline-block;
+}
+
+.bottomFooter p a {
+    display: inline-block;
+    text-decoration: none;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------- 
+=05 SOCIAL MEDIA  
+-----------------------------------------------------------------------------*/
+
+
+
+#socialMedia ul {
+    
+}
+
+
+#socialMedia ul li {
+	 display:inline-block;
+	 width:60px;
+	 height:60px;
+	 background:blue;	
+	 text-indent:-9999em;
+     list-style: none;
+}
+
+#socialMedia ul li.linkedIn {
+	background:url(../images/socialNav.png) 0px 64px;
+}
+#socialMedia ul li.twitter {
+	background:url(../images/socialNav.png) -60px 64px; 
+}
+
+#socialMedia ul li.facebook {
+	background:url(../images/socialNav.png) -120px 64px; 
+}
+
+#socialMedia ul li.rss {
+	background:url(../images/socialNav.png) -180px 64px; 
+}
+
+
+
+#socialMedia ul li.linkedIn:hover {
+	background:url(../images/socialNav.png) 0px 0px; 
+}
+
+#socialMedia ul li.twitter:hover {
+	background:url(../images/socialNav.png) -60px 0px; 
+}
+
+#socialMedia ul li.facebook:hover {
+	background:url(../images/socialNav.png) -120px 0px; 
+}
+
+#socialMedia ul li.rss:hover {
+	background:url(../images/socialNav.png) -180px 0px; 
+}
+
+
