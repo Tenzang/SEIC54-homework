@@ -81,3 +81,12 @@ trip_choice = gets.chomp.downcase
 end
 
  binding.pry  
+
+ ## cases
+ # works! All single line trips forward and back
+
+ # works! 6Line 23rd nLine 28th
+
+
+ # broke lLine 8th to 6Line Grand Central, something gets funky when one is forward and one is backward .. odd because it was working fine when I had two lines but not three.
+ 
