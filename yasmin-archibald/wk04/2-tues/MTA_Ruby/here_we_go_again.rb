@@ -49,36 +49,51 @@ until trip_choice == 'q'
                 ## Union Sq index's
                 first_USR_index = lines[first_line][:stops].index("Union Square")
                 second_USR_index = lines[second_line][:stops].index("Union Square")
-                ## First Half Second Half Trip Variables
-                first_half = ""
-                second_half = ""
-                if first_USR_index < starting_index ##backward trip 1st half
+                puts "Your trips are as follows"
+                if first_USR_index < starting_index && second_USR_index < final_index ##backward trip 1st half ## forward trip 2nd half
                     reverse_line_stops = lines[first_line][:stops].reverse
                     reverse_starting_index = reverse_line_stops.index(starting)
                     reverse_USR_index = reverse_line_stops.index("Union Square")
-                    first_half = "Get on #{starting} traveling through #{reverse_line_stops[reverse_starting_index...reverse_USR_index]} change at Union Square"
-                    return first_half
+                    puts "Get on #{starting} traveling through #{reverse_line_stops[reverse_starting_index...reverse_USR_index]} change at Union Square"
+                    puts "Get on at Union Square traveling through #{lines[second_line][:stops][second_USR_index...final_index]} change at Union Square"
                     # puts "Your trip on #{first_line} #{first_half}."
-                else ##forwards trip first half
-                     first_half = "Get on #{starting} traveling through #{lines[first_line][:stops][starting_index...first_USR_index]} change at Union Square"
-                     return first_half
+                elsif first_USR_index > starting_index && second_USR_index > final_index ##forwards trip first half ##backward trip 2nd half
+                     puts first_half = "Get on #{starting} traveling through #{lines[first_line][:stops][starting_index...first_USR_index]} change at Union Square"
+                     reverse_line_stops = lines[second_line][:stops].reverse
+                    reverse_final_index = reverse_line_stops.index(final)
+                    reverse_USR_index = reverse_line_stops.index("Union Square")
+                    puts "Get on at Union Square travele through #{reverse_line_stops[reverse_USR_index...reverse_final_index]} change at Union Square"
                     #  puts "Your trip on #{first_line} #{first_half}."
-                if second_USR_index < final_index ##backwards trip 2nd half   
+                elsif first_USR_index > starting_index && second_USR_index < final_index #forward forward into the depths of broken code
+                    puts first_half = "Get on #{starting} traveling through #{lines[first_line][:stops][starting_index...first_USR_index]} change at Union Square"
+                    puts "Get on at Union Square traveling through #{lines[second_line][:stops][second_USR_index...final_index]} change at Union Square"
+                else
+                    reverse_line_stops = lines[first_line][:stops].reverse
+                    reverse_starting_index = reverse_line_stops.index(starting)
+                    reverse_USR_index = reverse_line_stops.index("Union Square")
+                    puts "Get on #{starting} traveling through #{reverse_line_stops[reverse_starting_index...reverse_USR_index]} change at Union Square"
                     reverse_line_stops = lines[second_line][:stops].reverse
                     reverse_final_index = reverse_line_stops.index(final)
                     reverse_USR_index = reverse_line_stops.index("Union Square")
-                    second_half = "Get on at Union Square travele through #{reverse_line_stops[reverse_USR_index...reverse_final_index]} change at Union Square"
-                    return second_half
-                    # "Your trip concludes on #{second_line} #{second_half}"
-                else ##forwards trip second half
-                    second_half = "Get on at Union Square traveling through #{lines[second_line][:stops][second_USR_index...final_index]} change at Union Square"
-                    return second_half
+                    puts "Get on at Union Square travele through #{reverse_line_stops[reverse_USR_index...reverse_final_index]} change at Union Square"
+
+
+                # if second_USR_index < final_index ##backwards trip 2nd half   
+                #     reverse_line_stops = lines[second_line][:stops].reverse
+                #     reverse_final_index = reverse_line_stops.index(final)
+                #     reverse_USR_index = reverse_line_stops.index("Union Square")
+                #     second_half = "Get on at Union Square travele through #{reverse_line_stops[reverse_USR_index...reverse_final_index]} change at Union Square"
+                #     return second_half
+                #     # "Your trip concludes on #{second_line} #{second_half}"
+                # else ##forwards trip second half
+                #     second_half = "Get on at Union Square traveling through #{lines[second_line][:stops][second_USR_index...final_index]} change at Union Square"
+                #     return second_half
                     # "Your trip concludes on #{second_line} #{second_half}"
                 # puts "Your trip on #{first_line} #{first_half}. Your trip concludes on #{second_line} #{second_half}"
         
                 # lines["nLine"][:stops]
             end
-        end
+        
         
     else puts "Invalid choice, invalid lifeform"
     end
