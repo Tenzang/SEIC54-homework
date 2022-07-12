@@ -7,19 +7,19 @@ $train_lines = {
 $stop_count = 0
 
 def stop_station(lines, begin_stop, end_stop)
-
+station = []
     if begin_stop < end_stop
         $train_lines[lines][begin_stop.to_i..end_stop.to_i].each do |n|
             $stop_count += 1
-            stops = n
-            puts stops
+            station << n
         end
     else
-        $train_lines[lines][end_stop.to_i..begin_stop.to_i].each do |n|
+        $train_lines[lines][end_stop.to_i..begin_stop.to_i].reverse_each do |n|
             $stop_count += 1
-            puts n
+            station << n
         end 
     end
+    return station
 end
 
 
@@ -48,5 +48,5 @@ puts "--"*40
 plan_trip("l_line", "1st", "l_line", "8th")
 puts "--"*40
 
-plan_trip("l_line", "Union Square", "l_line", "1st")
+plan_trip("l_line", "8th", "l_line", "1st")
 puts "--"*40
