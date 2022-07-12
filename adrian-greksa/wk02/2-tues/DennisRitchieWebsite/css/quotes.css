@@ -4,17 +4,9 @@ body {
     margin: 0;
     border: 0;
     font-family: 'Roboto', sans-serif;
-    background:
-    radial-gradient(circle at 50% 59%, #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54,78,39,0) 12%, rgba(54,78,39,0)) 50px 0,
-    radial-gradient(circle at 50% 41%, #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210,202,171,0) 12%, rgba(210,202,171,0)) 50px 0,
-    radial-gradient(circle at 50% 59%, #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54,78,39,0) 12%, rgba(54,78,39,0)) 0 50px,
-    radial-gradient(circle at 50% 41%, #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210,202,171,0) 12%, rgba(210,202,171,0)) 0 50px,
-    radial-gradient(circle at 100% 50%, #D2CAAB 16%, rgba(210,202,171,0) 17%),
-    radial-gradient(circle at 0% 50%, #364E27 16%, rgba(54,78,39,0) 17%),
-    radial-gradient(circle at 100% 50%, #D2CAAB 16%, rgba(210,202,171,0) 17%) 50px 50px,
-    radial-gradient(circle at 0% 50%, #364E27 16%, rgba(54,78,39,0) 17%) 50px 50px;
-    background-color:#63773F;
-    background-size:100px 100px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
 
 .container {
@@ -55,6 +47,7 @@ main {
     p {
         margin: 2px;
         padding: 5px;
+        float: left;
     }
 
     #firstquote:hover {
@@ -67,7 +60,7 @@ main {
 
     .quote {
         width: 300px;
-        height: 50px;
+        height: 200px;
         display: inline-block;
         overflow-wrap: break-word;
     }
@@ -83,9 +76,8 @@ main {
     }
 
     .thumbnail:hover { 
-        transform: scale(3);
+        transform: scale(2);
         background-color: #b5ff08;
-        z-index: 2333; 
     }
 
 aside ul {
@@ -94,4 +86,8 @@ aside ul {
 
 img {
     max-width: 50%;
+}
+a {
+    background-color: #effa1e;
+    border-style: dotted;
 }
