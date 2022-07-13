@@ -10,12 +10,12 @@
 // - Call that function every 50 milliseconds. Your cat should now be moving across the screen from left to right. Hurrah! 
 //////////////////////////////////ANSWER///////////////////////////////////////////////////
 
-// const body = document.body;
+const body = document.body;
 // body.width = '100%';
 // body.height = '100%';
 // body.margin = '0';
 // body.padding = '0';
-// body.backgroundColor = 'green';
+body.style.backgroundColor = 'green';
 
 // const container = document.getElementById('container');
 // container.width = 'inherit';
@@ -23,12 +23,12 @@
 // container.margin = '0';
 // container.padding = '0';
 // container.backgroundColor = 'pink';
-// FOR CAT 1
+// FOR CAT 1    
+
 const catImage1 = document.getElementById('cat1');
 catImage1.style.left = '0px';
 catImage1.style.top = '0px';
 catImage1.backgroundColor = 'red';
-catImage1.style.right = '4px';
 
 const watchCat1Walk = function () {
     let oldPosLeft = parseInt(catImage1.style.left);
@@ -36,38 +36,39 @@ const watchCat1Walk = function () {
     let newPosLeft = oldPosLeft + 5;
     let newPosTop = oldPosTop + 1;
 
-    if (parseInt(catImage1.style.right) > 1000) {
-        window.clearInterval(intervalID);
+    if (parseInt(catImage1.style.left) > (window.innerWidth - parseInt(catImage1.width)) ) {
+        clearInterval(intervalID);
+        console.log('cat offscreen');
     }
 
     catImage1.style.left = newPosLeft + 'px';
     catImage1.style.top = newPosTop + 'px';
 }
 
-setInterval(watchCat1Walk, 20);
+const intervalID = setInterval(watchCat1Walk, 20);
 
-// FOR CAT 2
-const catImage2 = document.getElementById('cat2');
-catImage2.style.left = '0px';
-catImage2.style.top = '0px';
+// // FOR CAT 2
+// const catImage2 = document.getElementById('cat2');
+// catImage2.style.left = '0px';
+// catImage2.style.top = '0px';
 
-const watchCat2Walk = function () {
-    let oldPosLeft = parseInt(catImage2.style.left);
-    let oldPosTop = parseInt(catImage2.style.top);
-    let newPosLeft = oldPosLeft + 5;
-    let newPosTop = oldPosTop + 1;
+// const watchCat2Walk = function () {
+//     let oldPosLeft = parseInt(catImage2.style.left);
+//     let oldPosTop = parseInt(catImage2.style.top);
+//     let newPosLeft = oldPosLeft + 5;
+//     let newPosTop = oldPosTop + 1;
 
-    if (parseInt(catImage2.style.right) === 1000 ) {
-        clearInterval(intervalID);
-        catImage2.style.
-        catImage2.style.transform = scaleX(-1);
-    }
+//     if (parseInt(catImage2.style.right) === 1000 ) {
+//         clearInterval(intervalID);
+//         catImage2.style.
+//         catImage2.style.transform = scaleX(-1);
+//     }
     
-    catImage2.style.left = newPosLeft + 'px';
-    catImage2.style.top = newPosTop + 'px';
-}
+//     catImage2.style.left = newPosLeft + 'px';
+//     catImage2.style.top = newPosTop + 'px';
+// }
 
-const intervalID = setInterval(watchCat2Walk, 200);
+// const intervalID = setInterval(watchCat2Walk, 200);
 
 // - Bonus #1: When the cat reaches the right-hand of the screen, restart them at the left hand side ("0px"). So they should keep walking from left to right across the screen, forever and ever. 
 

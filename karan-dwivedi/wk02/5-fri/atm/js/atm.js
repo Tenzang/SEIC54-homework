@@ -1,14 +1,3 @@
-// console.log("warmup");
-
-// const a = $('#checking-amount');
-
-// const value = a.html();
-
-// console.log(value);
-
-const a = $('h1');
-console.log(a);
-
 const withdrawButtonClick = function (){
     let balance = parseInt($('#checking-balance').html().replace('$',' '));
     let input = parseInt($('#checking-amount').val());
@@ -28,9 +17,8 @@ const withdrawButtonClick = function (){
     if (total>0) {
         $('#checking-balance').html(`$${total}`);
         $('#p1').html(`You withdrew $${input} from Checking A/C`)};
-
+        gifAnimate();
 }
-
 const depositButtonClick = function(){
     let balance = parseInt($('#checking-balance').html().replace('$',' '));
     let input = parseInt($('#checking-amount').val());
@@ -38,7 +26,6 @@ const depositButtonClick = function(){
     $('#checking-balance').html(`$${total}`);
     $('#p1').html(`You deposited $${input} into Checking A/C`)
 }
-
 const nDepositButtonClickSavings = function (){
     let balance = parseInt($('#savings-balance').html().replace('$',' '));
     let input = parseInt($('#savings-amount').val());
@@ -46,7 +33,6 @@ const nDepositButtonClickSavings = function (){
     $('#savings-balance').html(`$${total}`);
     $('#p1').html(`You deposited $${input} into Savings A/C`)
 }
-
 const withdrawButtonClickSavings = function (){ 
     let balance = parseInt($('#savings-balance').html().replace('$',' '));
     let input = parseInt($('#savings-amount').val());
@@ -62,14 +48,11 @@ const withdrawButtonClickSavings = function (){
         $('#savings-balance').html(`$${zero}`);
         $('#checking-balance').html(`$${checkingRemaining}`)
         $('#p1').html(`You overdrew $ ${input} from Savings and you have $ ${checkingRemaining} in your Checking`)
-
 }
 if (total>0) {
     $('#savings-balance').html(`$${total}`);
     $('#p1').html(`You withdrew $${input} from Savings A/C`)};
-
 }
-
 const withdrawErrorChecking = function(){
     let Checkingbalance = parseInt($('#checking-balance').html().replace('$',' ')) ;
     if(Checkingbalance === 0){
@@ -78,9 +61,7 @@ const withdrawErrorChecking = function(){
     else {
         $('#checking').removeClass("zero");
     };
-
 };
-
 const withdrawErrorSavings = function(){
     let Savingsbalance = parseInt($('#savings-balance').html().replace('$',' '));
     if(Savingsbalance === 0){
@@ -90,46 +71,39 @@ const withdrawErrorSavings = function(){
         $('#savings').removeClass("zero");
     };
 };
-
 const depositHistory = function(){
     let inputChecking = parseInt($('#checking-amount').val());
-   const output = "You deposited $" + inputChecking + " into your checking account"
-   console.log(output);
-   $('#p1').html(`${output}`)
-
+const output = "You deposited $" + inputChecking + " into your checking account"
+console.log(output);
+$('#p1').html(`${output}`)
 }
-
 const errorMessage = function (){
    const output = "Error: Insufficient funds/ Overdraw limit reached"
    console.log(output);
    $('#p1').html(`${output}`)
 }
 
-
-
 // BIG FUNCTION!!!!!    
 $('#checking-deposit, #checking-withdraw, #savings-deposit, #savings-withdraw').click(function () {
-    
-    if (this.id === 'checking-deposit') {
+     if (this.id === 'checking-deposit') {
        depositButtonClick();
-    //    depositHistory();
     }
     else if (this.id === 'checking-withdraw'){
-       withdrawButtonClick()
+       withdrawButtonClick();
     }
     else if (this.id === 'savings-deposit'){
         nDepositButtonClickSavings()
      }
      else withdrawButtonClickSavings();
-
      withdrawErrorChecking();
-     withdrawErrorSavings();
-     
+     withdrawErrorSavings();   
  });
 
 
-
-
+ 
+   
+ 
+ 
 
 // const userDepositAmount = function(){
 //     console.log('deposit!')
