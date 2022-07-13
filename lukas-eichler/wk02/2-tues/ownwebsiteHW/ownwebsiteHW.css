@@ -1,0 +1,152 @@
+/*## Requirements
+- At least 3 pages (example: biography, trivia, hometown)
+- At least 1 Google Font
+- Whatever HTML and CSS you desire
+- Keep your code clean and DRY
+- Start working with semantic elements: http://html5doctor.com/lets-talk-about-semantics/
+- No Javascript! Even if you know how to use jQuery, see how far you can push this with pure HTML + CSS
+- Don't worry about responsiveness -- desktop resolution is fine
+
+## Your research should aim to reveal at least two things about each person:
+- Why Joel admires them
+- Something Joel doesn't already know about them
+
+## Optional extras
+- Experiment with http://fortawesome.github.io/Font-Awesome/
+- Record and embed a short podcast or vlog about your favourite scientist
+- Try embedding other media (YouTube or Vimeo video, Soundcloud)
+- Try embedding a Google map (for their hometown and/or alma mater)
+
+## Helpful resources
+- sites like https://wireframe.cc/ are helpful to come up with the rough design for your fansite
+- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients pretty backgrounds
+- https://projects.verou.me/css3patterns/ dazzlingly rich backgrounds */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&family=M+PLUS+1+Code&display=swap');
+
+body {
+    background-color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1em; 
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    color: #ccc;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 25px;
+}
+
+h1 {
+    text-align: center;
+    background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    color: #ccc;
+    font-size: 300%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-family: 'Diplomata SC', cursive;
+}
+
+h2 {
+    font-family: 'Diplomata SC', cursive;
+    color: #ccc;
+    font-size: 150%;
+
+}
+
+h3 {
+    font-family: 'Diplomata SC', cursive;
+    color: #ccc;
+    font-size: 110%;
+
+}
+
+p {
+    color: #ccc;
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+main {
+    display: inline-block;
+    width: 75%;
+}
+
+main img {
+    margin: 0 auto;
+    display: block; /* Can't set margins on display: inline (which is the default for an img) */
+    border-radius: 1em;
+    box-shadow: 1px 5px 15px black;
+}
+
+OGside {
+    display: inline-block;
+    width: 21%; /* In CSS: 75% + 21% + 1em padding == 100% */
+    vertical-align: top;
+    padding: 1em;
+    box-shadow: 0px /* left and right */ 15px 15px black; /* makes it pop */
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+OGside ul {
+    padding-left: 16px;
+}
+
+.aside {
+    border-radius: 0.5em;
+    color: #ccc;
+    
+}
+
+.bside {
+    margin-top: 50px;
+    border-radius: 0.5em;
+    color: #ccc;
+    text-decoration: none;
+}
+.bside a {
+    color: whitesmoke;
+}
+
+.cside {
+    margin-top: 50px;
+    color: #ccc;
+    border-radius: 0.5em;
+}
+
+.cside img {
+    width: 200px;
+    height: 200px;
+}
+
+li {
+    margin: 2px 0px;
+}

@@ -17,13 +17,13 @@ const stopStation = function(lines, beginStop, endStop) {
     let startStopIndex = linesArray.indexOf(beginStop);
     let endStopIndex = linesArray.indexOf(endStop);
 
-    if (startStopIndex < endStopIndex) { //for the train stop to move forward // so if the start stop is less on the array than the end stop
-        for (let i = startStopIndex + 1; i <= endStopIndex; i++) { // +1 to the starStopIndex so it doesnt include the inital stop
+    if (startStopIndex < endStopIndex) { 
+        for (let i = startStopIndex + 1; i <= endStopIndex; i++) { 
             stops = stops + linesArray[i] +`, `;
-            stopsCount++; // from 0 (the value of stopsCount) the array keeps adding
+            stopsCount++; 
         }
-    } else { //if the startstop is towards the end of the array and the endstop is towards the front
-        for (let i = startStopIndex - 1; i >= endStopIndex; i--) { // for the train stop to move backward
+    } else { 
+        for (let i = startStopIndex - 1; i >= endStopIndex; i--) { 
             stops = stops + linesArray[i] + `, `;
             stopsCount++;
         }

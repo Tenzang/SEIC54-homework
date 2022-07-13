@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://www.teaching-materials.org/_deprecated/jquery2/#/7 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>More jQuery</title>
+		
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<link href="./More jQuery_files/reveal.min.css" rel="stylesheet">
+		<link href="./More jQuery_files/gdilight.css" id="theme" rel="stylesheet">
+
+		<!-- For syntax highlighting -->
+		<!-- dark editor -->
+		<link href="./More jQuery_files/dark.css" rel="stylesheet">
+
+		<!-- If use the PDF print sheet so students can print slides-->
+
+		<link href="./More jQuery_files/pdf.css" media="print" rel="stylesheet" type="text/css">
+		<link rel="icon" type="image/x-icon" href="https://www.teaching-materials.org/common/favicon.ico">
+
+	</head>
+	<body style="transition: -webkit-transform 0.8s ease 0s;">
+    <div class="reveal default center ready" role="application" data-transition-speed="default" data-background-transition="fade">
+			<div class="slides" style="width: 960px; height: 700px; zoom: 1.04366;">
+
+				<section hidden="" aria-hidden="true" class="past" style="top: 350px; display: none;">
+					<h1 class="center">More jQuery</h1>
+					<div class="content">
+						<p align="center">
+						Slides: <a href="http://www.teaching-materials.org/jquery2/">http://www.teaching-materials.org/jquery2/</a>
+						</p>
+					</div>
+        </section><!--/jquery title slide-->
+
+
+        <section hidden="" aria-hidden="true" class="past" style="top: 350px; display: none;">
+        	<header><h2>Review: JS Functions</h2></header>
+        	<div class="content">
+        		<pre><code class="javascript"><span class="comment">//define a function</span>
+<span class="keyword">var</span> sayHello = <span class="function"><span class="keyword">function</span> <span class="params">(name)</span> {</span>
+  console.log(<span class="string">"Hello, "</span> + name + <span class="string">"!"</span>);
+}
+
+<span class="comment">//call a function </span>
+sayHello(<span class="string">"Girl Develop It"</span>);
+        		</code></pre>
+        	</div>
+        </section>
+
+
+        <section hidden="" aria-hidden="true" class="past" style="top: 350px; display: none;">
+			<header><h2>Remember: Callbacks</h2></header>
+				<img src="./More jQuery_files/ryan-gosling-callback.jpg" style="width:100%;">
+
+		</section><!--/hey girl meme-->
+
+		<section hidden="" aria-hidden="true" class="past" style="top: 350px; display: none;">
+        	<header><h2>Review: JS Callbacks</h2></header>
+        	<div class="content">
+<pre><code class="javascript"><span class="keyword">var</span> sayHello = <span class="function"><span class="keyword">function</span> <span class="params">(name)</span> {</span>
+  console.log(<span class="string">"Hello, "</span> + name + <span class="string">"!"</span>);
+}
+
+<span class="keyword">var</span> textAFriend = <span class="function"><span class="keyword">function</span> <span class="params">(name, callback)</span> {</span>
+  callback(name);
+}
+
+<span class="comment">//call the function with a named callback function</span>
+textAFriend(<span class="string">"Girl Develop It"</span>, sayHello);
+        		</code></pre>
+        	</div>
+        </section>
+
+        <section hidden="" aria-hidden="true" class="past" style="top: 171px; display: none;">
+        	<header><h2>Review: JS Callbacks</h2></header>
+        	<div class="content">
+<pre><code class="javascript"><span class="keyword">var</span> sayAwesome = <span class="function"><span class="keyword">function</span> <span class="params">(name, callback)</span> {</span>
+  callback(name);
+}
+
+<span class="comment">//call the function with an anonymous callback function</span>
+sayAwesome(<span class="string">"Girl Develop It"</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  console.log(<span class="string">"You are awesome "</span> + name + <span class="string">"!"</span>);
+});
+        		</code></pre>
+        	</div>
+        </section>
+
+        		<section hidden="" aria-hidden="true" class="past" style="top: 0px; display: block;">
+					<header><h2>Events</h2></header>
+					<div class="content">
+<pre><code class="javascript"><span class="comment">// First Example, with named callback &amp; .on</span>
+<span class="keyword">var</span> onButtonClick = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  console.log(<span class="string">'clicked!'</span>);
+};
+
+$(<span class="string">'button'</span>).on(<span class="string">'click'</span>, onButtonClick);
+
+
+<span class="comment">// Second Example, with anonymous callback &amp; .on</span>
+$(<span class="string">'button'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+  console.log(<span class="string">'clicked!'</span>);
+});
+
+
+<span class="comment">// Third Example, with .click (&amp; a named callback)</span>
+$(<span class="string">'button'</span>).click(onButtonClick)
+</code></pre>
+<small><ul>
+						<li><a href="http://api.jquery.com/category/events/keyboard-events/">Keyboard Events</a>
+							<code>'keydown'</code>
+							<code>'keypress'</code>
+							<code>'keyup'</code>
+						</li>
+						<li><a href="http://api.jquery.com/category/events/mouse-events/">Mouse Events</a>
+							<code>'click'</code>
+							<code>'mousedown'</code>
+							<code>'mouseup'</code>
+							<code>'mousemove'</code>
+						</li>
+						<li><a href="http://api.jquery.com/category/events/form-events/">Form Events</a>
+							<code>'change'</code>
+							<code>'focus'</code>
+							<code>'blur'</code>
+						</li>
+        </ul></small>
+            <p>Follow along: <a href="http://jsbin.com/jiwoxef/edit">http://jsbin.com/jiwoxef/edit</a></p>
+					</div>
+				</section><!--/events1-->
+
+
+
+				<section class="past" style="top: 111px; display: block;" hidden="" aria-hidden="true">
+					<header><h2>Events</h2></header>
+					<p>
+						<br>
+						</p><p>Preventing Default Events</p>
+<pre><code class="javascript"><span class="comment">//default event for clicking on link is to go to new page</span>
+$(<span class="string">'a'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(event)</span> {</span>
+  event.preventDefault();
+  console.log(<span class="string">'Not going there!'</span>);
+});</code></pre>
+<pre><code class="javascript"><span class="comment">//default event is to submit form and reload page</span>
+$(<span class="string">'form'</span>).on(<span class="string">'submit'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(event)</span> {</span>
+  event.preventDefault(); 
+  console.log(<span class="string">'Not submitting, time to validate!'</span>);
+});</code></pre>
+
+					<p></p>
+				</section><!--/events2-->
+
+
+
+
+				<section class="present" style="top: 105px; display: block;">
+					<header><h2>Effects &amp; Animation</h2></header>
+					<p>
+						<br>
+</p><pre><code class="javascript"><span class="comment">//on page load</span>
+$(<span class="string">'.kitty-image'</span>).show(<span class="number">3000</span>);
+
+$(<span class="string">'.kitty-image'</span>).fadeIn(<span class="number">3000</span>);
+
+<span class="comment">//with an event handler, as a callback</span>
+$(<span class="string">'button'</span>).click(<span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  $(<span class="string">'.kitty-image'</span>).show();
+});
+
+$(<span class="string">'button'</span>).mouseover(<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+  $(<span class="keyword">this</span>).css(<span class="string">'color'</span>, <span class="string">'red'</span>);
+});</code></pre>
+
+					<p>
+				</p></section><!--/effects and animation-->
+
+
+
+
+
+				<section hidden="" aria-hidden="true" class="future" style="top: 273px; display: block;">
+					<header><h2><a href="https://www.teaching-materials.org/_deprecated/jquery2/exercises/exercise_events">Exercise Time!</a></h2></header>
+					<p><a href="https://www.teaching-materials.org/_deprecated/jquery2/exercises/exercise_events">click here!</a> </p>
+				</section><!--/exercise3-->
+
+				<section hidden="" aria-hidden="true" class="future" style="top: 138.5px; display: block;">
+					<header><h2>jQuery Plugins</h2></header>
+					<p>
+						<br>
+<cite>"If you want to create an animation, effect, or UI component, chances are pretty good that someone has done the work for you already."</cite>
+						</p><h3 style="text-align:center"><a href="http://plugins.jquery.com/">plugins.jquery.com</a></h3>
+						<br><br>
+						<p><a href="http://blog.pamelafox.org/2013/07/which-javascript-library-should-i-pick.html">Which plugin should you pick?</a></p>
+<aside class="notes">shorter, cross-browser
+					<p></p>
+				</aside></section><!--/jquery plugins-->
+
+				<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+					<h2>jQuery Plugin Usage</h2>
+						<ul>
+							<li>Download the plugin and associated files from the site or github repo.</li>
+							<li>Copy them into your project folder.</li>
+							<li>In the HTML, reference any associated CSS files.</li>
+<pre><code class="xml"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"type/stylesheet"</span> <span class="attribute">type</span>=<span class="value">"text/css"</span> <span class="attribute">href</span>=<span class="value">"tablesorter.css"</span>&gt;</span></code></pre>
+							<li>In the HTML, add a &lt;script&gt; tag for the jQuery plugin itself.</li>
+<pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"lib/tablesorter.js"</span>&gt;</span><span class="javascript">&lt;script&gt;</span></code></pre>
+							<li>In the JavaScript, call the jQuery plugin on your DOM.</li>
+<pre><code class="ruby"><span class="variable">$(</span><span class="string">'table'</span>).tableSorter();</code></pre>
+            </ul>
+<aside class="notes">shorter, cross-browser</aside>
+				</section><!--/jquery plugin usage-->
+
+
+				<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+					<header><h2><a href="https://www.teaching-materials.org/_deprecated/jquery2/exercises/exercise_plugin">Exercise Time!</a></h2></header>
+            <p><a href="https://www.teaching-materials.org/_deprecated/jquery2/exercises/exercise_plugin">click here!</a></p>
+        </section><!--/exercise3-->
+
+
+				<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+					<header><h2>jQuery Patterns and Anti-Patterns</h2></header>
+					<p>
+						<br>
+						</p><p><strong>Pattern: </strong>name variables with $
+</p><pre><code class="javascript"><span class="keyword">var</span> $myVar = $(<span class="string">'#myNode'</span>);</code></pre>
+						<p></p>
+						<!--<br>
+						<p><strong>Pattern: </strong>bind events to the document
+						<pre><code class="javascript">$(document).on('click', 'a', myCallback);</code></pre>
+						</p>--> 
+
+					<p></p>
+				</section><!--/jquery patterns and anti-patterns-->
+
+
+
+
+				<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+					<header><h2>Storing References</h2></header>
+					<p>
+						</p><p><strong>Pattern: </strong>store references to callback functions
+</p><pre><code class="javascript"><span class="keyword">var</span> myCallback = <span class="function"><span class="keyword">function</span><span class="params">(argument)</span> {</span>
+  <span class="comment">// do something cool</span>
+};
+
+$(document).on(<span class="string">'click'</span>, <span class="string">'p'</span>, myCallback);
+</code></pre>
+						<p></p>
+						<p><strong>Anti-pattern: </strong>anonymous functions
+</p><pre><code class="javascript">
+$(document).on(<span class="string">'click'</span>, <span class="string">'p'</span>, <span class="function"><span class="keyword">function</span><span class="params">(argument)</span> {</span>
+  <span class="comment">// do something anonymous</span>
+});
+</code></pre>
+					<p></p>
+				</section><!--/storing references-->
+
+
+
+
+				<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+					<header><h2>Chaining</h2></header>
+					<p>
+						<br>
+</p><pre><code class="javascript">banner.css(<span class="string">'color'</span>, <span class="string">'red'</span>);
+banner.html(<span class="string">'Welcome!'</span>);
+banner.show();</code></pre>
+						<p>Is the same as:</p>
+
+<pre><code class="javascript">banner.css(<span class="string">'color'</span>, <span class="string">'red'</span>).html(<span class="string">'Welcome!'</span>).show();</code></pre>
+
+						<p>Is the same as:</p>
+
+<pre><code class="javascript">banner.css(<span class="string">'color'</span>, <span class="string">'red'</span>)
+       .html(<span class="string">'Welcome!'</span>)
+       .show();</code></pre>
+
+					<p></p>
+				</section><!--/chaining-->
+
+
+				<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+					<header><h2>DOM Readiness</h2></header>
+					<p>
+
+					</p><p><strong>Broken code: </strong>DOM manipulation and event binding in the <code>&lt;head&gt;</code>
+
+</p><pre><code class="html xml"><span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+    $(<span class="string">'body'</span>).append( myNode );
+  </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+</code></pre>
+					<p></p>
+				</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+					<header><h2>DOM Readiness</h2></header>
+<p><strong>Pattern: </strong>If you <em>need</em> to load a script in the <code>&lt;head&gt;</code>, wait for the rest of the DOM to be ready before executing
+</p><pre><code class="html xml"><span class="tag">&lt;<span class="title">body</span>&gt;</span>
+  //all your other HTML code
+  <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+    $(document).ready(<span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+      <span class="comment">// do something when the DOM is fully loaded</span>
+    });
+  </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+</code></pre>
+						<p></p>
+
+
+					<p></p>
+				</section><!--/DOM readiness-->
+
+
+				<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+					<header><h2>jQuery</h2></header>
+					<p>
+						<br>
+						</p><h4 style="text-align:center">...is great.
+						<br><br>
+						But do not become a jQuery-dependant!</h4>
+					<p></p>
+				</section><!--don't become a jquery dept-->
+
+				<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;">
+					<header><h2>jQuery</h2></header>
+					<p>
+						<br>
+						</p><h3 style="text-align:center">
+							<a href="http://docs.jquery.com/">docs.jquery.com</a>
+						</h3>
+					<p></p>
+				</section><!--docs.jquery.com-->
+
+			</div><!--/slides-->
+      <footer>
+        <div class="copyright">
+    More jQuery -- San Francisco --
+          <a rel="license" href="https://www.teaching-materials.org/common/http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="./More jQuery_files/80x15.png"></a>
+        </div>
+      </footer>
+
+		<div class="backgrounds"><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" style="display: none;"></div><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" data-loaded="true" style="display: block;"></div><div class="slide-background past" data-loaded="true" style="display: block;"></div><div class="slide-background present" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-loaded="true" style="display: block;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div></div><div class="progress" style="display: block;"><span style="width: 560px;"></span></div><aside class="controls" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"></button><button class="navigate-right enabled" aria-label="next slide"></button><button class="navigate-up" aria-label="above slide" disabled="disabled"></button><button class="navigate-down" aria-label="below slide" disabled="disabled"></button></aside><div class="slide-number" style="display: none;"></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">
+					Effects &amp; Animation
+					
+						
+//on page load
+$('.kitty-image').show(3000);
+
+$('.kitty-image').fadeIn(3000);
+
+//with an event handler, as a callback
+$('button').click(function() {
+  $('.kitty-image').show();
+});
+
+$('button').mouseover(function(){
+  $(this).css('color', 'red');
+});
+
+					
+				</div></div><!--/presentation-->
+    <script src="./More jQuery_files/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="./More jQuery_files/a6f3450c0fd5b00731d8ecb150a5a8c1e59680c1.js"></script>
+
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../../common/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../../common/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../../common/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../../common/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../../common/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../../common/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script><script type="text/javascript" src="./More jQuery_files/highlight.js"></script><script type="text/javascript" src="./More jQuery_files/zoom.js"></script><script type="text/javascript" src="./More jQuery_files/notes.js"></script>
+	
+
+</body></html>

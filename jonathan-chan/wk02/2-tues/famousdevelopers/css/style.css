@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
+
+body {
+    background-color: #d54b1a;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant', serif;
+    color:#503d2e;
+}
+
+.container {
+    max-width: 960px; 
+    margin: 0 auto; 
+    background-color: #f0ecc9;
+    padding: 1em; 
+    border-radius: 1em;
+}
+
+h1 {
+    text-align: center;
+    background-color: #503d2e;
+    color: 	#e3a72f;
+    font-size: 400%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    margin: 0;
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+h2 ,h3, p {
+    color: #3e2c1e;
+}
+
+nav {
+    text-align: center;
+    background-color: #058789;
+    padding: 1em;
+    text-transform: uppercase;
+    border-bottom-left-radius: 0.75em;
+    border-bottom-right-radius: 0.75em;
+    font-size: 110%;
+}
+
+nav a {
+    color: #e3a72f;
+    margin: 2.5em;  
+    text-decoration: none;
+}
+
+nav a:hover {
+    color:#d54b1a
+}
+
+main {
+    display: inline-block;
+    width: 27%;
+    text-align: center;
+    margin: 3em;
+}
+
+main img {
+    display: block;
+    border-radius: 1em;
+    border: 0.25em solid #503d2e;
+    width: 98%;
+}
+
+aside {
+    display: inline-block;
+    width: 55%;
+    vertical-align: top;
+    padding: 2em;
+}
+
+
+.map {
+    width: 100%;
+}
+
+.wrapper {
+    border: 0.4em solid #503d2e;
+    border-radius: 0.5em;
+}
+
+main p {
+    font-size: 125%;
+    margin: 2em;
+}
+
