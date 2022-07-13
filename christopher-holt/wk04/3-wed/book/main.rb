@@ -1,3 +1,5 @@
+# This is Wednesday Night book search homework
+
 require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty'
