@@ -1,0 +1,28 @@
+body {
+    background-color: #cca;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: rbga(255, 255, 255, 0.8);
+    padding: 1em;
+    min-height: 90vh;
+}
+
+.titles {
+    display: inline-block;
+    width: 400px;
+    vertical-align: middle;
+    height: 160px;
+    margin: 0 auto;
+}
+
+.pictures {
+    display: inline-block;
+    border: solid 5px black;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: white;
+    margin: 20px;
+}
