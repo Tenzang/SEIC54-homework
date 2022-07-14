@@ -1,0 +1,16 @@
+<h1>
+    <%= @shark["name"] %>
+</h1>
+
+<h2>
+    Family: <em><%=@shark["family"]%></em>
+</h2>
+
+<% unless @shark["image"].nil? || @shark["image"].empty?%>
+<img class="feature" src="<%=@shark["image"]%>" alt="<%=@shark["name"]%>">
+<% end %>
+
+<div class="controls">
+    <a href="/sharks/<%= @shark["id"] %>/edit">Edit Shark</a>
+    <a href="/sharks/<%= @shark["id"] %>/delete">Delete Shark</a>
+</div>
