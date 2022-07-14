@@ -44,7 +44,7 @@ def plan_trip(begin_line, begin_stop, end_line, end_stop)
         puts "Your journey continuues through the follow stops: #{$travel3}"
      
         else 
-            travel2 = first_line.reverse.slice(first_line.index(begin_stop)-1.. first_line.index("Union Square")).join ', '
+            travel2 = first_line.slice(first_line.index("Union Square")+1.. first_line.index(begin_stop)).join ', '
         
         puts "you must travel through the following stops on the #{ begin_line }: #{travel2}"
         puts "change at union square"
