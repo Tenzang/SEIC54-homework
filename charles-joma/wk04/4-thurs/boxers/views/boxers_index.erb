@@ -1,0 +1,10 @@
+<h1> Boxers </h1>
+
+<!-- This non-echoing tag does rubyb code behind the scenes-->
+<% @boxers.each do |boxer| %>
+    <p>
+        <a href="/boxers/<%= boxer["id"]%>">
+            <%= boxer["name"] %>
+        </a>
+    </p>
+<% end %>
