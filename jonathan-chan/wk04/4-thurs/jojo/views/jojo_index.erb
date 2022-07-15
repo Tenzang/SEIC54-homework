@@ -1,0 +1,10 @@
+<h1>Jojo Characters</h1>
+
+<% @jojo.each do |jojo| %>
+    <p>
+        <a href="/jojo/<%= jojo["id"]%>">
+        <%= jojo["first_name"]%>
+        <%= jojo["last_name"]%>
+        </a>
+    </p>
+<% end %>
