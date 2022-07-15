@@ -7,37 +7,35 @@ const bankAccount = {
 //jQuery
 $(document).ready(function(){
     //initial balance
+    const refresh = function () {
     $('div#savings-balance').html('$' + bankAccount.savings);
     $('div#checking-balance').html('$' + bankAccount.checking);
-
+    };
+    refresh();
     //checking deposit button
     $("#checking-deposit").click(function(){
         var cDeposit = $("#checking-amount").val();
         deposit (cDeposit, 'checking');
         //honestly I can probably make a function to update the divs every click but it works
-        $('div#checking-balance').html('$' + bankAccount.checking);
-        $('div#savings-balance').html('$' + bankAccount.savings);
+        refresh();
     });
     //checking withdraw button
     $("#checking-withdraw").click(function(){
         var cWithdraw = $("#checking-amount").val();
         withdraw (cWithdraw, 'checking');
-        $('div#checking-balance').html('$' + bankAccount.checking);
-        $('div#savings-balance').html('$' + bankAccount.savings);
+        refresh();
     });
     //saving deposit button
     $("#savings-deposit").click(function(){
         var sDeposit = $("#savings-amount").val();
         deposit (sDeposit, 'savings');
-        $('div#savings-balance').html('$' + bankAccount.savings);
-        $('div#checking-balance').html('$' + bankAccount.checking);
+        refresh();
     });
     //saving withdraw button
     $("#savings-withdraw").click(function(){
         var sWithdraw = $("#savings-amount").val();
         withdraw (sWithdraw, 'savings');
-        $('div#savings-balance').html('$' + bankAccount.savings);
-        $('div#checking-balance').html('$' + bankAccount.checking);
+        refresh();
     });
     //balance = 0 > background = red
     $(':button').click(function() {
@@ -86,8 +84,7 @@ const withdraw = function (amount,account) {
         else if (bankAccount.checking-Number(amount)<0) {
             let tempAcc = bankAccount.checking - Number(amount);
             bankAccount.savings += tempAcc;
-        }
-        
+        }      
     } else {
         alert (`Warning: Insufficient funds`)
     }
