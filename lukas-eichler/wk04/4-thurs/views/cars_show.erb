@@ -1,0 +1,16 @@
+<h1>
+    <%= @car["make"] %>
+</h1>
+
+<h2>
+    Model: <em><%= @car["model"] %></em>
+</h2>
+
+<% unless @car["image"].nil? || @car["image"].empty?%>
+    <img class="feature" src="<%= @car["image"] %>" alt="<%= @car["make"] %>">
+<% end %>
+
+<div class="controls">
+    <a style="margin-left: 1em; border: 2.5px solid rgba(60, 155, 228, .8); padding: 4.5px; padding-top: 1px; padding-bottom: 1px;" href="/cars/<%= @car["id"] %>/edit">Edit car</a>
+    <a style="margin-left: 1em; border: 2.5px solid rgba(60, 155, 228, .8); padding: 4.5px; padding-top: 1px; padding-bottom: 1px;" href="/cars/<%= @car["id"] %>/delete">Delete car</a>
+</div>

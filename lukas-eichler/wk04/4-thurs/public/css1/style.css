@@ -1,0 +1,12 @@
+. container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+nav {
+    text-align: right;
+}
+
+#id {
+    border: 1px solid red;
+}
