@@ -1,0 +1,19 @@
+<h1>Edit waifu/husbando</h1>
+<form action="/spouses/<%= @spouse.id %>" method="post">
+    <label>
+    <span class="field-title">Name:</span><br/>
+    <input name="name" class="input-field" value="<%= @spouse.name %>" required>
+    </label><br/>
+
+    <label>
+    <span class="field-title">Description:</span><br/>
+    <textarea name="description" class="input-field" style="height: 200px;" required><%= @spouse.description %></textarea>
+    </label><br/>
+
+    <label>
+    <span class="field-title">Image URL:</span><br/>
+    <input name="image" class="input-field" type="url" value="<%= @spouse.image %>" required>
+    </label><br/>
+
+    <button>Edit waifu/husbando</button>
+</form>
