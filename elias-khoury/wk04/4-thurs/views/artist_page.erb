@@ -1,0 +1,11 @@
+<h1><%= @artist["name"] %></h1>
+
+<h2><%= @artist["genre"] %></h2>
+
+<h3> Spotify:  </h3>
+<%=@artist["spotify"]%>
+
+    <a href="/artist/<%= @artist["id"] %>/edit">EDIT</a>
+    <a style="background-color: red;" class="delete" href="/artist/<%= @artist["id"] %>/delete">DELETE</a>
+
+   
