@@ -1,0 +1,34 @@
+<h1>Edit song</h1>
+<form action="/songs/<%= @song["id"] %>" method="post">
+    <label>
+    <span class="field-title">Title:</span><br/>
+    <input name="title" class="input-field" value="<%= @song["title"] %>" required>
+    </label><br/>
+
+    <label>
+    <span class="field-title">Artist(s):</span><br/>
+    <input name="artist" class="input-field" value="<%= @song["artist"] %>" required>
+    </label><br/>
+
+    <label>
+    <span class="field-title">BPM:</span><br/>
+    <input name="bpm" class="input-field" value="<%= @song["BPM"] %>" required>
+    </label><br/>
+
+    <label>
+    <span class="field-title">Level:</span><br/>
+    <input name="level" class="input-field" value="<%= @song["level"] %>" required>
+    </label><br/>
+
+    <label>
+    <span class="field-title">Jacket URL:</span><br/>
+    <input name="jacket" class="input-field" type="url" value="<%= @song["jacket"] %>" required>
+    </label><br/>
+
+    <label>
+    <span class="field-title">Video URL:</span><br/>
+    <input name="video" class="input-field" type="url" value="<%= @song["video"] %>" required>
+    </label><br/>
+
+    <button>Edit song</button>
+</form>
