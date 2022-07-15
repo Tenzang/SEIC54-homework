@@ -1,0 +1,22 @@
+<h1>Edit Shark</h1>
+
+<form action="/sharks/<%= @shark["id"]%>" method="post">
+    <label>
+        Name:
+        <input name="name" value="<%= @shark["name"]%>">
+    </label>
+    <label>
+    Family:
+    <input name="family" value="<%=@shark["family"]%>">
+    </label>
+    <label>
+    Region:
+    <input name="region" value="<%=@shark["region"]%>">
+    </label>
+    <label>
+    Image:
+    <input type="url" name="image" value="<%=@shark["image"]%>">
+    </label>
+    <button>Update Shark</button>
+</form>
+
