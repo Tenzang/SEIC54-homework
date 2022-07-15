@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight:900;
+    text-align: center;
+    background-color: rgb(189, 189, 189);
+    font-size: 20.5px;
+}
+nav {
+    text-align: left;
+    padding-top: 3em;
+    
+}
+button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3em;
+    padding: 2em;
+    border: crimson solid;
+    background-color: crimson;
+    color: aliceblue;
+    border-radius: 70px;
+    font-size: 0.5;
+}
+.container {
+    margin: 0 auto;
+    max-width: 950px;
+}
+
+.middling_container {
+    padding: 10em;
+}
+
+.special {
+background-color: pink;
+text-shadow: 0 -1px 0 rgba(87, 73, 73, 0.25);
+
+}

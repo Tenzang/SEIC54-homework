@@ -1,0 +1,21 @@
+<h1>
+    <%= @coolbird["name"].inspect %>
+</h1>
+<h2>How Cool: <%= @coolbird["coolness"] %>
+</h2>
+<h3>
+     Reason I Think They're Cool: <%= @coolbird["reason"] %> 
+</h3>
+
+<p> 
+     Image coming soon
+</p>
+
+<% unless @coolbird["image"].nil? || @coolbird["image"].empty? %>
+<img class="feature" src="<%= @coolbird["image"] %>" alt="<%= @coolbird["name"]%>">
+<% end %>
+
+<div class="controls">
+    <a href="/butterflies/<%= @coolbird["id"] %>/edit">Edit Bird</a>
+    <a href="/butterflies/<%= @coolbird["id"] %>/delete">Delete Bird at Own Risk</a>
+</div>
