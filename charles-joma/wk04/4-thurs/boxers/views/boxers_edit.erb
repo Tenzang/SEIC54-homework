@@ -1,0 +1,18 @@
+<form action="/boxers/<%= @boxers["id"]%>" method='post' >
+<label>
+    Name:
+    <input name="name" required>
+</label>
+
+<label>
+    weight_division:
+    <input name="weight_division">
+</label>
+
+<label>
+    Image:
+    <input type="url" name="image" value="<%= @boxers["image"]%>" >
+</label>
+
+<button> Create Boxer </button>
+</form>

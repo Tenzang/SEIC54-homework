@@ -1,0 +1,17 @@
+<h1>
+    <%= @boxers["name"]%>
+</h1>
+
+<h2>
+    Weight Division: <%= @boxers["weight_division"]%>
+</h2>
+
+
+<% unless @boxers["image"].nil? || @boxers["image"].empty? %>
+    <img class="feature" src="<%= @boxers["image"]%>" alt="<%= @boxers["name"] %>" >
+<% end %> 
+
+<div class="controls">
+    <a href="/boxers/<%= @boxers["id"]%>/edit"> Edit Boxer </a>
+    <a href="/boxers/<%= @boxers["id"]%>/delete"> Delete Boxer </a>
+</div>
