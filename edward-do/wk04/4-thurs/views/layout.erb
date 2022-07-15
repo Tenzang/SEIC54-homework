@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries!</title>
+    <link rel="stylesheet" type="text/css" href="<%= url('/css/style.css') %>">
+</head>
+<body>
+
+        <header>
+            <div class="space"></div>
+            <nav>
+                <img src="<%= url('/img/galogo.png') %>" alt="General Assembly logo">
+                <div class="navLinks">
+                    <a href="/">Home</a>
+                    <a href="/countries">Countries</a>
+                    <a href="/countries/new">Add</a>
+                    <a href="#">Contact</a>
+                </div>
+            </nav>
+            <img class="banner" src="<%= url('/img/flags.jpg') %>" alt="flags">
+        </header>
+
+    <div class="container"> 
+        <%= yield %>
+    </div>
+</body>
+</html>
