@@ -1,0 +1,11 @@
+<h1>
+    <%= @driver["name"]%>
+</h1>
+<h2> Podiums: <%= @driver["podiums"]%> </h2>
+<% unless @driver["image"].nil? || @driver["image"].empty? %> 
+<img class ='feature' src="<%= @driver["image"]%>" alt ="<%= @driver["name"]%>">
+<% end %>
+<div class ="controls">
+    <a href="/drivers/<%= @driver["id"] %> /edit"> Edit driver</a>
+    <a href="/drivers/<%= @driver["id"] %> /delete"> Delete driver</a>
+    </div>
