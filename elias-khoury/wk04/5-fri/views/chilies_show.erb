@@ -1,0 +1,19 @@
+
+<div class="showPage">
+    <h1><%= @chili.name.upcase %></h1>
+    <h2>Rating: <%= @chili.rating %></h2>
+
+    <div class="chiliImage">
+        <img src="<%= @chili.image %>" alt="<%= @chili.name %>">
+    </div>
+
+    
+    <div class = "video" ><%= @chili.video %></div>
+
+</div>
+
+<div class="form">
+    <a href="/chilies/<%= @chili.id %>/edit">Edit</a>
+    <a class="delete" href="/chilies/<%= @chili.id %>/delete">Delete</a>
+</div>
+<br><br>
