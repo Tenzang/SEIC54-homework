@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1440px;
+    background-image: url("background.jpeg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.gifs{
+    position:absolute;
+}
+
+#black-cat{
+    z-index: 5;
+    margin-top: 29em;
+}
+
+#giphy{
+    z-index: 2;
+    margin-top: 17em;
+    left: 1200px;
+}
+
+#original {
+    left:1200px;
+}
+
+#pika{
+    z-index: 3;
+    transform: scaleX(-1);
+    left: 1200px;
+    margin-top: 29em;
+}
+
+#shrek{
+    margin-top: 40em;
+    left: 630px;
+}
+
+#spirit{
+    transform: scaleY(-1);
+    margin-top: -1em;
+    left: -600px;
+}
+
+#sunset{
+    margin-top: 24em;
+    left: 520px;
+}
+
+#pepe{
+    margin-top: 19.5em;
+}
+
+#spiderman{
+    transform: scaleX(-1);
+    left: -75px;
+    margin-top: 20em;
+}
+
+.fishes{
+    z-index: 1;
+    height: 1200px;
+    width: 1600px;
+}
+
+#fishie{
+    z-index: 1;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}

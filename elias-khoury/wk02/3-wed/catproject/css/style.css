@@ -1,0 +1,33 @@
+body {
+    background-color: antiquewhite;
+}
+
+
+.catPic {
+    position: absolute;
+     
+}
+
+.road {
+    transform: rotate(270deg);
+    position: absolute;
+    width: 600px;
+}
+
+.homer {
+    visibility: hidden;
+}
+
+.homer2 {
+    visibility: hidden;
+}
+
+
+.homer3 {
+    visibility: hidden;
+}
+
+.homer4 {
+    visibility: hidden;
+}
+

@@ -1,0 +1,10 @@
+<h1>Cheese</h1>
+<h2>Lists of cheese</h2>
+
+<% @cheese.each do |curd| %> 
+    <p>
+        <a href="/cheese/<%= curd["id"] %>">
+            <%= curd["name"] %>
+        </a>
+    </p>
+<% end %>

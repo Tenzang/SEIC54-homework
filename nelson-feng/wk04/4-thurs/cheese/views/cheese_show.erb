@@ -1,0 +1,13 @@
+<h1><%= @cheese["name"] %> </h1>
+<h2>Region: <%= @cheese["region"]%> </h2>
+
+<p class="blurb"> <%= @cheese["blurb"] %> </p>
+
+<% unless @cheese["image"].nil? || @cheese["image"].empty? %>
+    <img class="feature" src="<%= @cheese["image"] %>" alt="<%= @cheese["name"]%>">
+<% end %>
+
+<div class="controls">
+    <a href="/cheese/<%= @cheese["id"] %>/edit"> Edit Cheese</a>
+    <a href="/cheese/<%= @cheese["id"] %>/delete"> Delete Cheese</a>
+</div>

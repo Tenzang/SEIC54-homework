@@ -56,7 +56,7 @@ function planTrip(startLine, startStation, endLine, endStation) {
 
 //returns the corresponding array to the train line
 function getTrainLine(lineName) {
-    //fun fact: Broadway is my home station on the N train line back in NY, so I've decided to add it to the array hehe
+    //fun fact: Broadway is my home station on the N line back in NY, so I've decided to add it to the array hehe
     let lineN = ["Broadway", "Times Square", "34th", "28th", "23rd", "Union Square", "8th"];
     let lineL = ["8th", "6th", "Union Square", "3rd", "1st"];
     let lineSix = ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"];
@@ -162,4 +162,10 @@ console.log("-".repeat(100));
     * have to check indexOf() destination station in order to know which direction
     * basically counting how many to union sq first, then again after transfer
     * keep track of position in array for punctuation in printing the list
+*/
+
+/* For improvement:
+    * input validation
+    * reverse array rather than decrementing indices
+    * check direction by checking negatives (?)
 */

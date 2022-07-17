@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+   <title>Video Watcher</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <h2 class="page-header">Best Videos Ever ❤</h1> 
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=TddFnTB_7IM">Trip through the 80s</a></li>
+        <li><a href="https://www.youtube.com/watch?v=epUk3T2Kfno">Otters Holding Hands</a></li>
+        <li><a href="https://www.youtube.com/watch?v=il2IrgFHfsg">The Ooooh Cat</a></li>
+      </ul>
+    </div>
+
+
+  </body>
+  <script type="text/javascript" src="http://www.teaching-materials.org/common/youtube.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src= script.js></script>
+    
+
+
+</html>
+
+<!-- Step by Step:
+Create an array of every link on the page using document.querySelectorAll(cssSelector)
+
+Iterate through the array. In each iteration of the loop:
+
+Find the current href using element.getAttribute(name), and store into a variable
+Generate a thumbnail URL using youtube.generateThumbnailUrl(videoUrl)
+Create an IMG element using document.createElement(tagName)
+Set the "src" of the IMG element using element.setAttribute(name, value)
+Append the IMG to the link using element.appendChild(element)
+Quick Tip: If you need a refresher on the DOM API, check out slides 1-12 from the DOM Review here
+ -->

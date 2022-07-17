@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    background:
+    radial-gradient(circle at 50% 59%, #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54,78,39,0) 12%, rgba(54,78,39,0)) 50px 0,
+    radial-gradient(circle at 50% 41%, #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210,202,171,0) 12%, rgba(210,202,171,0)) 50px 0,
+    radial-gradient(circle at 50% 59%, #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54,78,39,0) 12%, rgba(54,78,39,0)) 0 50px,
+    radial-gradient(circle at 50% 41%, #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210,202,171,0) 12%, rgba(210,202,171,0)) 0 50px,
+    radial-gradient(circle at 100% 50%, #D2CAAB 16%, rgba(210,202,171,0) 17%),
+    radial-gradient(circle at 0% 50%, #364E27 16%, rgba(54,78,39,0) 17%),
+    radial-gradient(circle at 100% 50%, #D2CAAB 16%, rgba(210,202,171,0) 17%) 50px 50px,
+    radial-gradient(circle at 0% 50%, #364E27 16%, rgba(54,78,39,0) 17%) 50px 50px;
+    background-color:#63773F;
+    background-size:100px 100px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #ccc;
+    padding: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+nav {
+    text-align: right;
+}
+
+nav a {
+    color: rgb(18, 6, 255);
+}
+
+h1 {
+    text-align: center;
+    background: linear-gradient(-45deg, #000, #e73c7e, #ff0808, #23d5ab);
+    color: rgb(45, 23, 210);
+    font-size: 400%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-family: 'Diplomata SC', cursive;
+    box-shadow: 0px 15px 15px black;
+    border-radius: 1em;
+    text-shadow: 2px 2px #ff0000;
+}
+
+main {
+    display: inline-block;
+    width: 75%;
+}
+
+main img {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 50%;
+}
+a {
+    background-color: #effa1e;
+    border-style: dotted;
+}

@@ -1,0 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap');
+
+
+body {
+    background-color: rgb(218, 183, 183);
+    margin:0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    height: 26em;
+    width: 21em;
+}
+
+.container {
+    max-width: 960px;
+    background-color: rgb(182, 196, 164);
+    padding: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+nav {
+    text-align: center;
+    font-size: 1.5em;
+}
+h1 {
+    text-align: right;
+    background-color: #222;
+    color: #ccc;
+    font-size: 16px;
+    padding: 3px;
+    text-transformation: shadow;
+    font-family: 'Rubik Moonrocks', cursieve;
+}
+main {
+    display: inline;
+    margin: auto;
+}
+
+aside {
+
+    display:inline-block;
+    width: 75%;
+    verticle-align: top;
+    background-color: grey;
+    padding: 1em;
+    box-shadow: 0px 15px 15px rgb(233, 53, 53);
+    border-radius: 0.5em;
+}
