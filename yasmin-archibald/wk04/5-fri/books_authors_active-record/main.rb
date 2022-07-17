@@ -49,14 +49,19 @@ end
 
 get '/authors/:id/edit' do
     @author = Author.find params[:id]
+    # @book = @author.books.create
     erb :authors_edit
+end
+
+get '/authors/:id/books/edit' do
+    @author = Author.find params[:id]
+    @book = @author.books.all
 end
 
 post '/authors/:id' do
     author = Author.find params[:id]
     author.name = params[:name]
     author.image = params[:image]
-    @book = @author.books.create
     author.save
     redirect to("/authors/#{ params[:id]}")
 end
@@ -68,46 +73,56 @@ get '/authors/:id/delete' do
 end
 ########################Books###############################
 
+#### this code is to be deleted and merged into the above.. but I am tired and Idk if it's going to happen rip )': 
+ 
+# get '/books' do
+#     @books = Book.all
+#     erb :books_index
+# end
 
-get '/books' do
-    @books = Book.all
-    erb :books_index
-end
+# get '/books/new' do
+#     erb :books_new
+# end
 
-get '/books/new' do
-    erb :books_new
-end
+# post '/books' do
+#     book = Book.new
+#     book.name = params[:name]
+#     book.importance = params[:importance]
+#     book.image = params[:image]
+#     book.save # book save via author author.book.save ???
+#     redirect to("/books/#{ book.id }")
+# end
 
-post '/books' do
-    book = Book.new
-    book.name = params[:name]
-    book.importance = params[:importance]
-    book.image = params[:image]
-    book.save # book save via author author.book.save ???
-    redirect to("/books/#{ book.id }")
-end
+# get '/books/:id' do
+#     @book = Book.find params[:id]
+#     erb :books_show
+# end
 
-get '/books/:id' do
-    @book = Book.find params[:id]
-    erb :books_show
-end
+# get '/books/:id/edit' do
+#     @book = Book.find params[:id]
+#     erb :books_edit
+# end
 
-get '/books/:id/edit' do
-    @book = Book.find params[:id]
-    erb :books_edit
-end
+# post '/books/:id' do
+#     book = Book.find params[:id]
+#     book.name = params[:name]
+#     book.importance = params[:importance]
+#     book.image = params[:image]
+#     book.save
+#     redirect to("/books/#{ params[:id]}")
+# end
 
-post '/books/:id' do
-    book = Book.find params[:id]
-    book.name = params[:name]
-    book.importance = params[:importance]
-    book.image = params[:image]
-    book.save
-    redirect to("/books/#{ params[:id]}")
-end
+# get '/books/:id/delete' do
+#     book = Book.find params[:id]
+#     book.destroy
+#     redirect to("/books")
+# end
 
-get '/books/:id/delete' do
-    book = Book.find params[:id]
-    book.destroy
-    redirect to("/books")
+def query_db sql_statement
+    puts sql_statement
+    db = SQLite3::Database.new "database.sqlite3"
+    db.results_as_hash = true
+    results = db.execute sql_statement
+    db.close
+    results
 end
