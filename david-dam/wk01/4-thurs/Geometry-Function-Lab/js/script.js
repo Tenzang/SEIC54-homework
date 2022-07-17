@@ -11,14 +11,14 @@
 
 
 const rectangleA = {
-  length: 4,
-  width: 4
+    length: 4,
+    width: 4
 };
 
 const rectangleB = {
     length: 10,
     width: 4
-  };
+};
 
 // isSquared
 
@@ -69,9 +69,9 @@ console.log(`-------------------------------------------------------------------
 
 
 const triangleA = {
-  sideA: 3,
-  sideB: 4,
-  sideC: 4
+    sideA: 3,
+    sideB: 4,
+    sideC: 4
 }
 
 const triangleB = {
