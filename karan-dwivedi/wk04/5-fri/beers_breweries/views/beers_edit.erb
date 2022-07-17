@@ -1,0 +1,17 @@
+<h1>Edit beer</h1>
+<form action="/beers/<%= @beer.id %>" method="post">
+    <label>
+        Brand:
+        <input name="brand" required value="<%= @beer["brand"] %>">
+    </label>
+    <label>
+        Kind
+        <input type = "text" name = "kind" value="<%= @beer["kind"] %>">
+    </label>
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @beer.image %>">
+    </label>
+
+    <button>Update beer</button>
+</form>
