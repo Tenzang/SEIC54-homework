@@ -1,0 +1,39 @@
+<div class="top-banner" style="background-image: url(/img/flags.jpeg)"></div>
+
+<div class="container"> 
+    <h1>New country</h1>
+
+    <form action="/countries" method="post">
+        <label>
+            Name:
+            <input name="name" required>
+        </label>
+
+        <label>
+            Capital:
+            <input name="capital">
+        </label>
+
+        <label>
+            Population:
+            <input type="number" step="any" name="population">
+        </label>
+
+        <label>
+            Banner:
+            <input type="url" name="banner">
+        </label>
+
+        <label>
+            Map:
+            <input type="url" name="map">
+        </label>
+
+        <label>
+            Flag:
+            <input type="url" name="flag">
+        </label>
+
+        <button>Add country</button>
+    </form>
+</div>

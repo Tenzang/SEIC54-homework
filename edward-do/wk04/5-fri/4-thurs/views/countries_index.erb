@@ -1,9 +1,0 @@
-<h1>The countries I've travelled solo</h1>
-
-<% @countries.each do |country| %>
-    <h3>
-        <a href="/countries/<%= country["id"] %>">
-            <%= country["name"] %>
-        </a>
-    </h3>
-<% end %>
