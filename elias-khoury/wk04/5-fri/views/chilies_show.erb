@@ -1,7 +1,7 @@
 
 <div class="showPage">
     <h1><%= @chili.name.upcase %></h1>
-    <h2>Rating: <%= @chili.rating %></h2>
+    <h2>Rating: <%= stringing(@chili.rating) %> SHUs  </h2>
 
     <div class="chiliImage">
         <img src="<%= @chili.image %>" alt="<%= @chili.name %>">
