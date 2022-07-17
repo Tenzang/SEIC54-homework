@@ -1,0 +1,20 @@
+<h1>Edit Dishes</h1>
+
+<form action="/dishes/<%= @dishes.id %>" method="post">
+    <label>
+        Dish Name:
+        <input name="name" value="<%= @dishes.name %>">
+    </label>
+
+    <label>
+        Information:
+        <input name="info" value="<%= @dishes.info %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @dishes.image %>">
+    </label>
+    
+    <button>Edit Dish</button>
+</form>
