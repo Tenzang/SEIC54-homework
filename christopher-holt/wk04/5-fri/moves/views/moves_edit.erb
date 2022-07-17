@@ -1,0 +1,35 @@
+<h1>Edit Move</h1>
+
+<form action="/moves/<%= @move.id %>" method="post">
+    <label>
+        Name:
+        <input name="name" required value="<%= @move.name %>">
+    </label>
+
+    <label>
+        Type:
+        <input name="element" required value="<%= @move.element %>">
+    </label>
+
+    <label>
+        Power:
+        <input name="strength" required value="<%= @move.strength %>">
+    </label>
+
+    <label>
+        Accuracy:
+        <input name="accuracy" required value="<%= @move.accuracy %>">
+    </label>
+
+    <label>
+        PP:
+        <input name="pp" required value="<%= @move.pp %>">
+    </label>
+
+    <label>
+        Description:
+        <input name="description" required value="<%= @move.description %>">
+    </label>
+
+    <button>Update Move</button>
+</form>
