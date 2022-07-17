@@ -1,0 +1,19 @@
+<h1>Edit show</h1>
+<form action="/shows/<%= @show.id %>" method="post">
+    <label>
+    <span class="field-title">Title:</span><br/>
+    <input name="title" class="input-field" value="<%= @show.title %>" required>
+    </label><br/>
+
+    <label>
+    <span class="field-title">Genre:</span><br/>
+    <input name="genre" class="input-field" value="<%= @show.genre %>" required>
+    </label><br/>
+
+    <label>
+    <span class="field-title">Studio:</span><br/>
+    <input name="studio" class="input-field" value="<%= @show.genre %>" required>
+    </label><br/>
+
+    <button>Edit show</button>
+</form>

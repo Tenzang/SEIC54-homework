@@ -1,0 +1,13 @@
+<h1><%= @spouse.name %></h1>
+<table>
+    <tr>
+        <td>
+            <img src="<%= @spouse.image %>" alt="<%= @spouse.name %>" style="max-width:200px; padding-right: 50px;">
+        </td>
+        <td>
+            <a href="/spouses/<%= @spouse.id %>/edit">Edit waifu/husbando</a>
+            <a href="/spouses/<%= @spouse.id %>/delete">Delete waifu/husbando</a><br/>
+            <p><%= @spouse.description %></p>
+        </td>
+    </tr>
+</table>
