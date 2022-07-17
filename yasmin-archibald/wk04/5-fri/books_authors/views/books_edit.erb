@@ -1,0 +1,18 @@
+<h1>Edit Book</h1>
+<form action="/books/<%=@books[:"id"]%>" method="post">
+    <label>
+        Name
+        <input name="name" required value="<%= @book["name"] %>">
+    </label>
+    <label>
+        Author
+        <input name="author" required value="<%= @author["author"] %>">
+    </label>
+    <label>
+        Importance
+        <input name="importance" required value="<%= @importance["importance"] %>">
+    </label>
+    <label>
+        Image
+        <input name="image" required value="<%= @image["image"]%>">
+    </label>
