@@ -1,0 +1,9 @@
+<h1>All Stars</h1>
+
+<% @stars.each do |star| %>
+    <p>
+        <a href="/stars/<%= star.id %>">
+            <%= star.name %>
+        </a>
+    </p>
+<% end %>
