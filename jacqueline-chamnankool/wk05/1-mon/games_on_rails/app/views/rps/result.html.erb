@@ -1,0 +1,15 @@
+<h1>Result</h1>
+<table>
+    <tr>
+        <th>Your Choice</th>
+        <th>Computer Choice</th>
+    </tr>
+    <tr>
+        <td><%= @throw %></td>
+        <td><%= @computer_throw %></td>
+    </tr>
+</table><br/>
+<p class="result-text"><%= @result %></p>
+
+<a href="/rps"><button class="game-button submit">Play Again</button></a><br/>
+<a href="/"><button class="game-button submit">Play Another Game</button></a>
