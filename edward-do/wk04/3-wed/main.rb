@@ -17,5 +17,5 @@ get '/bookcover' do
     @description = info["items"][1]["volumeInfo"]["description"]
     @title = info["items"][1]["volumeInfo"]["title"]
 
-    erb:bookcover
+    erb :bookcover
 end
