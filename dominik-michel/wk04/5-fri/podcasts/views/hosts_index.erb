@@ -1,0 +1,11 @@
+<h1>List of Hosts</h1>
+
+<%= @hosts.count %> hosts.
+
+<% @hosts.each do |host| %>
+    <p>
+        <a href="/hosts/<%= host.id %>">
+            <%= host.name %>
+        </a>
+    </p>
+<% end %>
