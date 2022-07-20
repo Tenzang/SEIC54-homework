@@ -50,21 +50,21 @@ end
 show_menu
 menu_choice = gets.chomp.downcase
 
-num_1 = 0
-num_2 = 0
+# $num_1 = 0
+# $num_2 = 0
 
 ###########################################################################
 def nums
     print "Choose first number: "
-    num_1 = gets.to_i
+    $num_1 = gets.to_i
     print "Choose second number: "
-    num_2 = gets.to_i
+    $num_2 = gets.to_i
 end
 
 def add
     nums
-    puts "#{ num_1 }"
-    # puts "#{ num_1 } + #{ num_2 } = #{ ans }"
+    puts "#{ $num_1 }"
+    puts "#{ $num_1 } + #{ $num_2 } = #{ $num_1 + $num_2 }"
 end
 
 # CANT MAKE THIS up there - this doesnt work
@@ -72,40 +72,40 @@ end
 
 def subtract
     print "Choose first number: "
-    num_1 = gets.to_i
+    $num_1 = gets.to_i
     print "Choose second number: "
-    num_2 = gets.to_i
-    puts num_1 - num_2
+    $num_2 = gets.to_i
+    puts $num_1 - $num_2
 end
 
 def multiply
     print "Choose first number: "
-    num_1 = gets.to_i
+    $num_1 = gets.to_i
     print "Choose second number: "
-    num_2 = gets.to_i
-    puts num_1 * num_2
+    $num_2 = gets.to_i
+    puts $num_1 * $num_2
 end
 
 def divide
     print "Choose first number: "
-    num_1 = gets.to_i
+    $num_1 = gets.to_i
     print "Choose second number: "
-    num_2 = gets.to_i
-    puts num_1/num_2.to_f
+    $num_2 = gets.to_i
+    puts $num_1/$num_2.to_f
 end
 
 def exponential
     print "Choose base number: "
-    num_1 = gets.to_i
+    $num_1 = gets.to_i
     print "Choose exponent number: "
-    num_2 = gets.to_i
-    puts num_1**num_2
+    $num_2 = gets.to_i
+    puts $num_1**$num_2
 end
 
 def sq_root
     print "Choose number: "
-    num_1 = gets.to_i
-    puts num_1**0.5
+    $num_1 = gets.to_i
+    puts $num_1**0.5
 end
 
 until menu_choice == 'q'
