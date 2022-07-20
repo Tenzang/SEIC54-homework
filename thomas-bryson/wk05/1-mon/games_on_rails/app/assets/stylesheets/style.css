@@ -1,0 +1,15 @@
+* {
+    background-color: #ccc;
+    text-align: center;
+}
+
+a {
+    border: solid black 2px;
+    padding: 4px;
+    margin: 4px;
+}
+
+nav {
+    padding: 4px;
+    margin: 20px;
+}
