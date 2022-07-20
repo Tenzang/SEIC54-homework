@@ -1,0 +1,16 @@
+<%= form_for @team do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+    <%= f.label :conference %>
+    <%= f.text_field :conference %>
+    <%= f.label :division %>
+    <%= f.text_field :division %>
+    <%= f.label :championships %>
+    <%= f.number_field :championships %>
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true %>
+
+    <%= f.submit %>
+<% end %>
