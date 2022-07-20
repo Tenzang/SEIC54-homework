@@ -1,0 +1,20 @@
+<h1>Add a mountain to the database:</h1>
+
+<form action="<%= mountains_path(@mountain.id) %>" method="post">
+
+    <label>name
+        <input value="<%= @mountain.name %>" name="name" required>
+    </label>
+    <label>image
+        <input value="<%= @mountain.image %>" type="url" name="image">
+    </label>
+    <label>height
+        <input value="<%= @mountain.height %>" type="number" name="height">
+    </label>
+    <label>country
+        <input value="<%= @mountain.country %>" type="text" name="country">
+    </label>
+
+    <button>Submit Edit</button>
+
+</form>
