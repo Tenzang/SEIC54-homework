@@ -1,0 +1,16 @@
+
+<div class="showPage">
+    <h1><%= @country.name.upcase %></h1>
+    <h2>Population: <%= stringing(@country.population) %></h2>
+    <h3>Capital: <%= @country.capital %></h3>
+
+
+
+    
+</div>
+
+<div class="form">
+    <a href="/countries/<%= @country.id %>/edit">Edit</a>
+    <a class="delete" href="/countries/<%= @country.id %>/delete">Delete</a>
+</div>
+<br><br>

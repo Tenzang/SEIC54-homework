@@ -1,0 +1,12 @@
+<h1>List of Sharks</h1>
+
+<%= @sharks.count%> Sharks.
+
+<% @sharks.each do |shark|%>
+
+<p>
+    <a href="/sharks/<%=shark["id"]%>">
+        <%=shark["name"]%>
+    </a>
+</p>
+<% end %>

@@ -1,0 +1,14 @@
+<h1>
+    <%= @jojo["first_name"]%> <%= @jojo["last_name"]%>
+</h1>
+
+<% unless @jojo["image"].nil? || @jojo["image"].empty?%>
+    <img src="<%= @jojo["image"] %>" alt="<%= @jojo["name"] %>">
+<% end %>
+
+<div class="controls">
+    <a href="/jojo/<%= @jojo["id"]%>/edit">Edit jojo</a>
+
+    <a href="/jojo/<%= @jojo["id"]%>/delete">Delete jojo</a>
+</div>
+

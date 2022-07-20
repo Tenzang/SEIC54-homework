@@ -1,0 +1,21 @@
+<h1>ADD A NEW DRIVER</h1>        
+<form action="/drivers/<%= @driver["id"] %>" method="post"> 
+
+<label> 
+Name:
+<input name = "name" required value= "<%= @driver["name"]%>"> 
+</label>
+
+<label> 
+    Podiums:
+    <input name = "podiums" value= "<%= @driver["podiums"]%>"> 
+</label>
+
+<label> 
+Image:
+<input name = "image" value="<%= @driver["image"]%>"> 
+</label>
+
+<button> Update Driver </button>
+
+</form>

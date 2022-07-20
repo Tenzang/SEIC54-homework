@@ -1,0 +1,22 @@
+<h1>Update Manga</h1>
+
+<form action="/manga/<%= @manga.id %>" method="post">
+
+    <label>
+        Name:
+        <input name="name" required value="<%= @manga.name %>">
+    </label>
+
+    <label>
+        Artist:
+        <input name="artist" value="<%= @manga.artist %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @manga.image %>">
+    </label>
+
+    <button>Update Manga</button>
+
+</form>

@@ -1,0 +1,20 @@
+<h1>Edit Pokemon</h1>
+
+<form action="/pokemon/<%= @pokemon.id %>" method="post">
+    <label>
+        Name:
+        <input name="name" required value="<%= @pokemon.name %>">
+    </label>
+
+    <label>
+        Type:
+        <input name="types" value="<%= @pokemon.types %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @pokemon.image %>">
+    </label>
+
+    <button>Update Pokemon</button>
+</form>
