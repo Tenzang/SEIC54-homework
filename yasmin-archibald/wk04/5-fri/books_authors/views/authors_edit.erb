@@ -1,0 +1,12 @@
+<h1>Edit Author</h1>
+<form action="/authors/<%=@author["id"] %>" method="post">
+    <lable>
+         Name
+        <input name="name" required value="<%= @author["name"] %>">
+   </lable>
+   <lable>
+         Image:
+         <input type="url" name="image" value="<%= @author["image"] %>">
+   </lable>
+   <button>Update Author</button>
+</form>

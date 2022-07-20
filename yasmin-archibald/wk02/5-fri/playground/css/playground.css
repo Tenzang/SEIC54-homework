@@ -1,0 +1,35 @@
+body {
+    background-color: lightcoral;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto; 
+}
+
+header {
+    transition: 0.3s all;
+    text-align: center;
+    font-size: 200%;
+    padding: 1em;
+    border-radius: 0.5px;   
+}
+
+header.active { 
+background-color: aliceblue;
+font-size: 400%;
+}
+
+header input {
+    font-size: 100%;
+
+}
+button {
+    margin: 0 auto;
+}
+
+img {
+    width: 100%; 
+    /* take 100% of the container which means it resizes with window - otherwise the page doesn't know to resize the cat with the window this is responsive design*/
+    display: block;
+    padding-top: 1em;
+}
