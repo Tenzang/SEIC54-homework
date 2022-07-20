@@ -1,0 +1,22 @@
+<h2>The results are in!</h2>
+
+<h4>Your answer: <%= @answer %> </h4>
+<h4>CPU answer: <%= @canswer %> </h4>
+
+<% if @canswer == @answer %>
+    <h3 class="spr">DRAW</h3>
+<% elsif @canswer == "Rock" and @answer == "Paper" %>
+    <h3 class="spr">Congratulations! You won!</h3>
+<% elsif @canswer == "Rock" and @answer == "Scissors" %>
+    <h3 class="spr">Congratulations! You Lost!</h3>
+
+<% elsif @canswer == "Scissors" and @answer == "Rock" %>
+    <h3 class="spr">Congratulations! You won!</h3>
+<% elsif @canswer == "Scissors" and @answer == "Paper" %>
+    <h3 class="spr">Congratulations! You Lost!</h3>
+
+<% elsif @canswer == "Paper" and @answer == "Scissors" %>
+    <h3 class="spr">Congratulations! You won!</h3>
+<% elsif @canswer == "Paper" and @answer == "Rock" %>
+    <h3 class="spr">Congratulations! You Lost!</h3>
+<% end %>

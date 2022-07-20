@@ -1,0 +1,10 @@
+<h2>Your number: <%= @number %> </h2>
+<h2>Secret number: <%= @snumber %> </h2>
+
+<% if @snumber == @number %>
+    <h2>Congratulations! You got it!</h2>
+<% else %>
+    <h2>Sorry you did not get it!</h2>
+<% end %>
+
+<a href="/secretnumber" >Try Again</a>
