@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    background-color: #292B3A;
+    color: #AFD661;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    vertical-align: middle;
+}
+
+h1 {
+    color: #D8F05E;
+    font-family: 'Lobster', cursive;
+    text-transform: lowercase;
+    font-size: 72px;
+}
+
+h2 {
+    color: #D8F05E;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+a.small-link {
+    color: #757968;
+    text-transform: lowercase;
+}
+
+a.small-link:hover {
+    color: #3A3748;
+    font-style: italic;
+}
+
+.container {
+    max-width: 960px;
+    margin: 5% auto;
+}
+
+.game-button {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #AFD661;
+    color: #3A3748;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: lowercase;
+    padding: 20px 0;
+    width: 500px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 10px;
+}
+
+.game-button:hover {
+    background-color: #D8F05E;
+    color: #757968;
+    font-style: italic;
+    cursor: pointer;
+}
+
+form {
+    margin-bottom: 100px;
+}
+
+.game-input {
+    font-size: 32px;
+    text-align: center;
+    padding: 5px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.submit {
+    font-size: 24px;
+    width: 350px;
+    padding: 10px 50px;
+    margin-bottom: 0px;
+}
+
+.result-text {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.num {
+    width: 100px;
+}
+
+table {
+    display: inline-block;
+}
+
+td {
+    font-size: 100px;
+    width: 200px;
+}
+
+.rps {
+    font-size: 100px;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    margin: 0 20px;
+}
+
+.rps:hover {
+    font-style: normal;
+}
