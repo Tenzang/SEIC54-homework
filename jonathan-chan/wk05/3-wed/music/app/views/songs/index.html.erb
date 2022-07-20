@@ -1,0 +1,12 @@
+<h1>All Songs</h1>
+<% @songs.each do |song| %>
+    <br>
+    <%= raw(song.spotify) %>
+    <ul>
+        <li>Name: <%= link_to song.name, song %></li>
+        <li>Genre: <%= song.genre %></li>
+        <li>Rating: <%= song.rating %></li>
+        <li>Released in: <%= song.released.strftime '%Y' %></li>
+    </ul>
+    <br>
+<% end %>
