@@ -1,0 +1,30 @@
+<h1> Edit Ocean </h1>
+
+<form action="<%= ocean_path %>" method="post">
+    <label>
+    Name:
+        <input name="name" value="<%= @ocean.name %>" required>
+    </label>
+
+    <label>
+    Image:
+    <input name="image" type="url" value="<%= @ocean.image %>" >
+    </label>
+
+    <label>
+    Size:
+    <input name="size" value="<%= @ocean.size %>" >
+    </label>
+
+    <label>
+    Depth:
+    <input name="depth" value="<%= @ocean.depth %>" >
+    </label>
+
+    <label>
+    Info:
+    <input name="info" id="textbox" value= "<%= @ocean.info %>" >
+    </label>
+
+    <button>Edit Ocean</button>
+</form>
