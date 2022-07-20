@@ -1,3 +1,14 @@
 <h1>Your Choice is:</h1>
 
-<p><%= @result %></p>
+<p><%= @guess %></p>
+
+<% case @guess %>
+<% when @secretnumber %>
+    <p>YOU WIN!</p>
+<% else %>
+    <p>Wrong!</p>
+<% end %>
+
+<p>The Secret Number is: <%= @secretnumber %></p>
+
+<a href="/secretnumber">Try Again?</a>

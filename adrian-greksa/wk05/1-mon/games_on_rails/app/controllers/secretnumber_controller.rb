@@ -3,7 +3,7 @@ class SecretnumberController < ApplicationController
     end
 
     def result
-        @result = params[:name]
-        raise "hell"
+        @guess = params[:guess].to_i
+        @secretnumber = rand(1..10)
     end
 end
