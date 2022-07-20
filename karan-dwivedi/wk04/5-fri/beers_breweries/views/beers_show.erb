@@ -1,0 +1,12 @@
+<h1>
+    <%= @beer.brand %>
+</h1>
+<h2> Kind: <em><%=@beer["kind"]%></em></h2>
+<% unless @beer.image.nil? || @beer.image.empty? %>
+    <img class ='feature' src="<%= @beer.image%>" alt ="<%= @beer.brand%>">
+<% end %>
+<div class ="controls">
+    <a href="/beers/<%= @beer.id %> /edit"> Edit beer</a>
+    <a href="/beers/<%= @beer.id %> /delete"> Delete beer</a>
+</div>
+   
