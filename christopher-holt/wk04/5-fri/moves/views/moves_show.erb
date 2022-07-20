@@ -1,0 +1,33 @@
+<h1>
+    <%= @move.name %>
+</h1>
+
+<h1>
+    Type:
+    <%= @move.element %>
+</h1>
+
+<h1>
+    Power:
+    <%= @move.strength %>
+</h1>
+
+<h1>
+    Accuracy:
+    <%= @move.accuracy %>
+</h1>
+
+<h1>
+    PP:
+    <%= @move.pp %>
+</h1>
+
+<h1>
+    Description:
+    <%= @move.description %>
+</h1>
+
+<div class="controls">
+    <a href="/moves/<%= @move.id %>/edit">Edit Move</a>
+    <a href="/moves/<%= @move.id %>/delete">Delete Move</a>
+</div>

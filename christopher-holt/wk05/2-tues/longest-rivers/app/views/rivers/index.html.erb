@@ -1,0 +1,7 @@
+<h1>All Rivers</h1>
+
+<% @rivers.each do |river| %>
+    <p>
+        <%= link_to river.name, river_path(river.id) %>
+    </p>
+<% end %>
