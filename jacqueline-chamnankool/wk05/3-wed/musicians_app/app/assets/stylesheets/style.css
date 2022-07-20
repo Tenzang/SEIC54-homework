@@ -1,0 +1,72 @@
+body {
+    background-color: #292B3A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f5ffc4;
+}
+
+h1 {
+    color: #D8F05E;
+}
+
+a {
+    color: #D8F05E;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #AFD661;
+    text-decoration: underline;
+}
+
+b, i {
+    color: #AFD661;
+}
+
+input, select {
+    font-size: 16px;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #D8F05E;
+    font-size: 16px;
+    font-weight: bold;
+    width: 150px;
+    padding: 8px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #AFD661;
+    color: #292B3A;
+    font-style: italic;
+}
+
+.del {
+    background-color: #610000;
+    color: white;
+    font-size: 12px;
+    width: 120px;
+}
+
+.del:hover {
+    background-color: #b30000;
+    color: white;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.thumb {
+    height: 12em;
+}
+
+.feature {
+    max-height: 30em;
+}
