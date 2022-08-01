@@ -1,0 +1,15 @@
+ <%= form_for @phone do |f| %>
+    <%= f.label :name, :required => true %>
+    <%= f.text_field :name %>
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+    <%= f.label :year %>
+    <%= f.text_field :year %>
+    <%= f.label :processor %>
+    <%= f.text_field :processor %>
+
+   <%= f.label :company_id %>
+    <%= f.select :company_id, Company.pluck(:name, :id), :include_blank => true %>
+
+    <%= f.submit %>
+ <% end%>
