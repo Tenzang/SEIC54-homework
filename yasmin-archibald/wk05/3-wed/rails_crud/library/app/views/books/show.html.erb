@@ -1,0 +1,20 @@
+
+
+<h1><%= @work.title %></h1>
+
+<%= image_tag @book.image, :class => 'feature' %>
+
+
+<h2>Title: <%= @book.title %></h2>
+
+<% if @book.author.present? %>
+    <p> Author: <%= link_to @book.author.name, @book.author %></p>
+<% end %>
+
+<p> Published: <%= @book.year_published %></p>
+
+
+<div class="controls">
+    <%= link_to 'Edit book', edit_book_path(@book) %>
+    <%= link_to 'Delete book', @book, :method => 'delete', :data => { :confirm => 'Online book burning, ok Hitler' } %>
+</div>
