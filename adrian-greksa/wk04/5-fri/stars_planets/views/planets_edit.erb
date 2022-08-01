@@ -1,0 +1,51 @@
+<h1>Edit Planet</h1>
+
+<form action="/planets/<%= @planet.id %>" method="post">
+    <label>
+        Name:
+        <input value="<%= @planet.name %>" name="name" required>
+    </label>
+
+    <label>
+        Habitable:
+        <input value="<%= @planet.habitable %>" name="habitable">
+    </label>
+
+    <label>
+        Star: 
+        <input value="<%= @planet.star %>" name="star">
+    </label>
+
+    <label>
+        Mass(M): 
+        <input value="<%= @planet.mass %>" name="mass">
+    </label>
+
+    <label>
+        Temperature: 
+        <input value="<%= @planet.temp %>" name="temp">
+    </label>
+
+    <label>
+        Period: 
+        <input value="<%= @planet.period %>" name="period">
+    </label>
+
+    <label>
+        Distance from Sun: 
+        <input value="<%= @planet.distance %>" name="distance">
+    </label>
+
+    <label>
+        Fun Fact:
+        <input value="<%= @planet.funfact %>" name="funfact">
+    </label>
+
+    <label>
+        Image url:
+        <input type="url" name="image" value="<%= @planet.image %>">
+    </label>
+
+    <button>Update Planet</button>
+
+</form>

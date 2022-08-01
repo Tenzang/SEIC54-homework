@@ -1,0 +1,9 @@
+<h1>ALL Galaxies</h1>
+
+<% @galaxies.each do |galaxy| %>
+    <p>
+        <a href="/galaxy/<%= galaxy["id"] %>">
+            <%= galaxy["name"] %>
+        </a>
+    </p>
+<% end %>

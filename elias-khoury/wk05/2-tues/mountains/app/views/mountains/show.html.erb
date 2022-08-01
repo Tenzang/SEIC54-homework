@@ -1,0 +1,13 @@
+<h1><%= @mountain.name %></h1>
+
+<ul>
+    <li>Country of origin: <%= @mountain.country %></li>
+    <li>Height: <%= @mountain.height %>m</li>
+
+</ul>
+
+<div class="config">
+    <%= link_to 'EDIT', edit_mountain_path(@mountain.id) %>
+    <%= link_to 'DELETE' delete_mountain_path(@mountain.id) %>
+
+</div>

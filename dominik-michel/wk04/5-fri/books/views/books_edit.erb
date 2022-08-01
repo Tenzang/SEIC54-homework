@@ -1,0 +1,25 @@
+<h1>Edit Book</h1>
+
+<form action="/books/<%= @book.id %>" method="post">
+
+    <label>
+        Book:
+        <input name="book" required value="<%= @book.book %>">
+    </label>
+
+     <label>
+        Ttile:
+        <input name="title" required value="<%= @book.title %>">
+    </label>
+
+     <label>
+        Genre:
+        <input name="genre" required value="<%= @book.genre %>">
+    </label>
+
+     <label>
+        Year:
+        <input type="integer" name="year" required value="<%= @book.year %>">
+    </label>
+<button>Edit Book</button>
+</form>

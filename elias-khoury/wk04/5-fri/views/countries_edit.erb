@@ -1,0 +1,24 @@
+<div class="showPage">
+<h1>Edit <%= @country.name %> </h1>
+</div>
+
+<div class="form">
+    <form action="/countries/<%= @country.id %>" method="post">
+
+        <label>
+            <input value="<%= @country.name %>" type="text" name="name" required>
+        </label>
+        <label>
+            <input value="<%= @country.population %>" type="number" name="population" required>
+        </label>
+        <label>
+            <input value="<%= @country.capital %>" type="text" name="capital" required>
+        </label>
+  
+
+        <button class="edit" >Submit</button>
+
+    </form>
+</div>
+
+

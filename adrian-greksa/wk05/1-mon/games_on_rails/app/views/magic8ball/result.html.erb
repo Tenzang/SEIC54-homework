@@ -1,0 +1,17 @@
+<h1>THE ANSWER TO YOUR QUESTION:</h1>
+<p>
+    <%= params[:question] %>
+    <% unless params[:question].end_with?('?') %>
+        ?
+    <% end %>
+</p>
+<p>
+    is:
+</p>
+<p>
+    <%= @result %>
+</p>
+
+<p>
+    <a href="/magic8ball">Play Again?</a>
+</p>

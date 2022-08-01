@@ -1,0 +1,14 @@
+<form action="/villages/<%= @village.id %>" method="post">
+    <label>
+        Name:
+        <input name="name" required value="<%= @village.name %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @village.image %>">
+    </label>
+
+    <button>Update Village</button>
+
+</form>

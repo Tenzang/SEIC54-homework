@@ -1,0 +1,18 @@
+<h2>  <%= @fish.name %> </h2>
+
+<p>Max Age: <%= @fish.max_age %> </p>
+<p>Habitat: <%= @fish.habitat %> </p>
+<p>Diet: <%= @fish.diet %> </p>
+
+<%= image_tag @fish.image if @fish.image.present? %>
+
+<p>Can be made into</p>
+
+<% @fish.dishes.each do |dish| %>
+    <%= link_to image_tag(dish.image, :class => 'thumbnail'), dish %>
+    <% end %>
+
+<div class="container">
+<%= link_to 'Edit Fish', edit_fish_path %>
+<%= link_to 'Delete Fish', @fish, :method => 'delete', :data => {:confirm => 'Are you SURE?'} %>
+</div>

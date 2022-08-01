@@ -1,0 +1,35 @@
+<h1>New River</h1>
+
+<form action="<%= rivers_path %>" method="post">
+    <label>
+        Name:
+        <input name="name" required>
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image">
+    </label>
+
+    <label>
+        Length:
+        <input type="number" name="length">
+    </label>
+
+    <label>
+        Drainage:
+        <input type="number" name="drainage">
+    </label>
+
+    <label>
+        Discharge:
+        <input type="number" name="discharge">
+    </label>
+
+    <label>
+        Outflow:
+        <input type="text" name="outflow">
+    </label>
+
+    <button>Create River</button>
+</form>

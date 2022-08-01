@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BooksOnWallStreet</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+ <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+   
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <a href="/eightball">8 Ball</a>
+      |
+      <a href="/secretnumber">Secret Number</a>
+      |
+      <a href="/tictactoe">Tic-Tac-Toe</a>
+    </nav>
+
+    <%= yield %>
+  </body>
+</html>

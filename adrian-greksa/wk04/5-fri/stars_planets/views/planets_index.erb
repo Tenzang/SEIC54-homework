@@ -1,0 +1,9 @@
+<h1>All Planets</h1>
+
+<% @planets.each do |planet| %>
+    <p>
+        <a href="/planets/<%= planet.id %>">
+            <%= planet.name %>
+        </a>
+    </p>
+<% end %>
