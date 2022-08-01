@@ -1,0 +1,17 @@
+<h1>
+    <%= @book.book %>
+</h1>
+<h2>
+    Title: <%=@book.title%>
+</h2>
+<h3>
+    Genre: <%= @book.genre %>
+</h3>
+<h3>
+    Year: <%= @book.year %>
+</h3>
+
+<div class="controls">
+    <a href="/books/<%= @book.id %>/edit">Edit Book</a>
+    <a href="/books/<%= @book.id %>/delete">Delte Book</a>
+</div>

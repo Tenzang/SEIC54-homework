@@ -1,0 +1,16 @@
+<h1>
+    <%= @ninja.name %>
+</h1>
+
+<h3>
+    <%= @ninja.title %>
+</h3>
+
+<% unless @ninja.image.nil? || @ninja.image.empty?%>
+    <img class="feature" src="<%= @ninja.image %>" alt="<%= @ninja.name %>">
+<% end %>
+
+<div class="controls">
+    <a href="/ninjas/<%= @ninja.id%>/edit">Edit Ninja</a>
+    <a href="/ninjas/<%= @ninja.id%>/delete">Delete Ninja</a>
+</div>

@@ -1,0 +1,15 @@
+<h1><%= @album.title %></h1>
+<%= image_tag @album.image, :class => "feature" %>
+<ul>
+    <li><b>Title:</b> <%= @album.title %></li>
+    <% if @album.artist.present? %>
+        <li><b>Artist:</b> <%= link_to @album.artist.name, @album.artist %></li>
+    <% end %>
+    <li><b>Date of release:</b> <%= @album.date.strftime "%B %e, %Y" unless @album.date.nil? %></li>
+    <li><b>Number of Tracks:</b> <%= @album.num_tracks %></li>
+</ul>
+
+<div class="controls">
+    <%= link_to "Edit album", edit_album_path(@album) %>
+    <%= button_to "Delete album", @album, :method => "delete", :data => { :confirm => "Are you sure?" }, :class => "btn del" %>
+</div>

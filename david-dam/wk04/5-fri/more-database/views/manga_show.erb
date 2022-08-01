@@ -1,0 +1,11 @@
+<h1> <%= @manga.name %> </h1>
+<h3> <%= @manga.artist %> </h3>
+
+<% unless @manga.image.nil? || @manga.image.empty? %> 
+    <img class="feature" src="<%= @manga.image %>" alt="<%= @manga.name %>">
+<% end %>
+
+<div class="controls">
+    <a href="/manga/<%= @manga.id %>/update">Update Manga</a>
+    <a href="/manga/<%= @manga.id %>/delete">Delete Manga</a>
+</div>

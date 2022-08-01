@@ -1,0 +1,12 @@
+<h1>All Pokemon</h1>
+
+<div class="infocard">
+    <% @pokemons.each do |pokemon| %>
+        <p>
+            <a href="/pokemons/<%= pokemon.id %>">
+                <%= pokemon.name %>
+            </a>
+            <img class="thumbnail" src="<%= pokemon.image %>">
+        </p>   
+    <% end %>
+</div>

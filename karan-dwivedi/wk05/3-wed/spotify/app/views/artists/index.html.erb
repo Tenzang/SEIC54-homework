@@ -1,0 +1,14 @@
+<h1> SEisland Paradise Festival Line Up </h1>
+
+<% @artists.each do |artist| %>
+    <%= image_tag artist.image, :class => "thumb" if artist.image.present? %>
+<ul>
+<li> Name: <%= link_to artist.name, artist %></li>
+<li> Nationality: <%= artist.nationality %></li>
+<li> Born: <%= artist.dob.strftime '%Y' %></li>
+<li> Style: <%= artist.style %></li>
+
+
+</ul>    
+
+<% end%>

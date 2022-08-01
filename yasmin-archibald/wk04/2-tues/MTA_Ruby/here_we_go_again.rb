@@ -26,7 +26,7 @@ until trip_choice == 'q'
             ##index
             starting_index = lines[line][:stops].index(starting)
             final_index = lines[line][:stops].index(final)
-            ##backwards trip
+            ##backwards trip ## more like broken trip
             if final_index < starting_index
             reverse_line_stops = lines[line][:stops].reverse
             reverse_starting_index = reverse_line_stops.index(starting)
@@ -83,9 +83,9 @@ end
  binding.pry  
 
  ## cases
- # works! All single line trips forward and back
+ # works! All single line trips forward and back ## Not anymore!! 
 
- # works! 6Line 23rd nLine 28th
+ # works double line going forwards each way! e.g. 6Line 23rd nLine 28th
 
 
  # broke lLine 8th to 6Line Grand Central, something gets funky when one is forward and one is backward .. odd because it was working fine when I had two lines but not three.

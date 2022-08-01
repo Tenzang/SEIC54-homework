@@ -1,0 +1,20 @@
+<h1>Updating The Ocean</h1>
+
+<form action="<%= ocean_path(@ocean.id) %>" method="post">
+    <label>
+    Name:
+        <input name="name" required value="<%= @ocean.name %>">
+    </label>
+
+    <label>
+    Location:
+        <input name="location" type="location" value="<%= @ocean.location %>">
+    </label>
+
+    <label>
+    Area:
+        <input name="area" type="area" value="<%= @ocean.area %>">
+    </label>
+
+    <button>Update Ocean</button>
+</form>

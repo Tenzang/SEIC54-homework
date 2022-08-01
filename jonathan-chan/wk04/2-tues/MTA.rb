@@ -10,14 +10,19 @@ starting_station = ''
 ending_line = ''
 ending_station = ''
 
-def show_lines
+def choochoo_time 
     puts "
-      o o o o o o o . . ______________________________ _____=======_||_______
-    o      _____           ||                            | |                 |
+      o o o o o o o . .     ___________________________ _____=======_||_______
+    o      _____            |                            | |                 |
   .][__n_n_|DD[  ====_____  |       NEW YORK METRO       | |                 |
  >(________|__|_[_________]_|____________________________|_|_________________|
  _/oo OOOOO oo`  ooo   ooo  'o!o!o                  o!o!o` 'o!o         o!o`
  -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-"
+end
+
+choochoo_time
+
+def show_lines
     puts "=-"*40
     puts "Please pick your start destination:"
     puts "   [1]   N-Line"
@@ -190,6 +195,7 @@ end
 #6-Line menu emd //////////////////////////////////////////////////////////////////////
 
 def show_end_lines
+    puts "=-"*40
     puts "Please pick your end destination:"
     puts "   [1]   N-Line"
     puts "   [2]   L-Line"
@@ -392,11 +398,5 @@ plan_trip starting_line, starting_station, ending_line, ending_station
 
 puts "=-"*40
 puts " Thank you for using the New York Metro (. ❛ ᴗ ❛.)"
-puts "
-      o o o o o o o . . ______________________________ _____=======_||_______
-    o      _____           ||                            | |                 |
-  .][__n_n_|DD[  ====_____  |       NEW YORK METRO       | |                 |
- >(________|__|_[_________]_|____________________________|_|_________________|
- _/oo OOOOO oo`  ooo   ooo  'o!o!o                  o!o!o` 'o!o         o!o`
- -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-"
+choochoo_time
 puts "=-"*40

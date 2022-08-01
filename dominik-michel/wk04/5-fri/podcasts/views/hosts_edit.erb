@@ -1,0 +1,15 @@
+<h1>Edit Host</h1>
+
+<form action="/hosts/<%= @host.id %>" method="post">
+
+    <label>
+        Name:
+        <input name="name" required value="<%= @host.name %>">
+    </label>
+
+     <label>
+        Podcast:
+        <input name="podcast" required value="<%= @host.podcast %>">
+    </label>
+<button>Edit Host</button>
+</form>

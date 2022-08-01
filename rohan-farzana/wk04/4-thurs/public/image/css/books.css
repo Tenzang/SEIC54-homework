@@ -1,0 +1,13 @@
+body{
+    background-color: aquamarine;
+}
+.container{
+    margin: o auto;
+    max-width: 960px;
+}
+.feature{
+    max-width: 100%;
+}
+nav{
+    text-align: center;
+}

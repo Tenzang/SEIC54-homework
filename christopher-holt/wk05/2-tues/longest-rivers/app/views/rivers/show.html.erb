@@ -1,0 +1,18 @@
+<h1>
+    <%= @river.name %>
+</h1>
+
+<%= image_tag @river.image, :class => 'feature' if @river.image.present? %>
+
+<ul>
+    <li>Name: <%= @river.name %></li>
+    <li>Length: <%= number_with_delimiter(@river.length) %></li>
+    <li>Drainage: <%= number_with_delimiter(@river.drainage) %></li>
+    <li>Discharge: <%= number_with_delimiter(@river.discharge) %></li>
+    <li>Outflow: <%= @river.outflow %></li>
+</ul>
+
+<div class="controls">
+    <%= link_to 'Edit River', edit_river_path(@river.id) %>
+    <%= link_to 'Delete River', delete_river_path(@river.id) %>
+</div>
