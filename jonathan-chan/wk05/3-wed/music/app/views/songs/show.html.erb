@@ -1,0 +1,16 @@
+<h1> <%= @song.name %> </h1>
+
+<%= raw(@song.spotify) %>
+<ul>
+    <% if @song.artist.present? %>
+    <li>Artist: <%= link_to @song.artist.name, @work.artist %></li>
+    <% end %>
+    <li>Genre: <%= @song.genre %></li>
+    <li>Rating: <%= @song.rating %></li>
+    <li>Released in: <%= @song.released.strftime'%Y' %></li>
+</ul>
+
+<div class="controls">
+    <%= link_to "Edit Song", edit_song_path(@song) %>
+    <%= link_to 'Delete Song', @song, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+</div>
