@@ -1,0 +1,7 @@
+<h1>All Recipes</h1>
+<% @recips.each do |recip| %>
+    <%= link_to image_tag(recip.image, :class => 'thumb'), recip unless recip.image.nil? %>
+    <li>Name: <%= link_to recip.name, recip %></li>
+    <li>Servings: <%= recip.serving %></li>
+    <li>Time: <%= recip.time %></li>
+<% end %>
