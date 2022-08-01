@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("cover").src = thumbnail;
     };
 
-    let title = document.getElementById("bookName").value;
+    let title = document.getElementById("book-search").value;
     xhr.open(
       "GET",
       `https://www.googleapis.com/books/v1/volumes?q=title:${title}`
