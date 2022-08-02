@@ -1,0 +1,24 @@
+<%= form_for @song do |f| %> 
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+
+    <%= f.label :rating %>
+    <%= f.text_field :rating %>
+
+    <%= f.label :released %>
+    <%= f.text_field :released %>
+
+    <%= f.label :spotify %>
+    <%= f.text_field :spotify %>
+
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+
+    <%= f.label :artist_id %>
+    <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
+
+    <%= f.submit %>
+<% end %>

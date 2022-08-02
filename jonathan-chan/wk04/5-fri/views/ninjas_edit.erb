@@ -1,0 +1,19 @@
+<form action="/ninjas/<%= @ninja.id %>" method="post">
+    <label>
+        Name:
+        <input name="name" required value="<%= @ninja.name %>">
+    </label>
+
+    <label>
+        Title:
+        <input name="title" required value="<%= @ninja.title %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @ninja.image %>">
+    </label>
+
+    <button>Update Ninja</button>
+
+</form>

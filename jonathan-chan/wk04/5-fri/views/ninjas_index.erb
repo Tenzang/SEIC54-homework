@@ -1,0 +1,9 @@
+<h1>All Ninjas</h1>
+
+<% @ninjas.each do |ninja| %>
+    <p>
+        <a href="/ninjas/<%= ninja.id %>">
+            <%= ninja.name %>
+        </a>
+    </p>
+<% end %>

@@ -1,0 +1,22 @@
+
+
+<h1>Edit movie</h1>
+
+<form action="/movies/<%= @movie.id %>" method="post">
+    <label>
+        Name:
+        <input name="name" required value="<%= @movie.name %>">
+    </label>
+
+    <label>
+        Director:
+        <input name="name" required value="<%= @movie.director %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @movie.image %>">
+    </label>
+
+    <button>Update movie</button>
+</form>

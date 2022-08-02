@@ -1,0 +1,16 @@
+<h1>Edit Brewery</h1>
+<form action="/breweries/<%= @brewery.id %>" method="post">
+    <label>
+        Name:
+        <input type="text" name="name" value="<%= @brewery.name %>">
+    </label>
+    <label>
+        State:
+        <input name="state" required value="<%= @brewery["state"] %>">
+    </label>
+    <label>
+        Year
+        <input type = "integer" name = "year" value="<%= @brewery["year"] %>">
+    </label>
+    <button>Update brewery</button>
+</form>

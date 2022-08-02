@@ -1,0 +1,11 @@
+<h1>List of Podcasts</h1>
+
+<%= @podcasts.count %> Podcasts.
+
+<% @podcasts.each do |podcast| %>
+    <p>
+        <a href="/podcasts/<%= podcast.id %>">
+            <%= podcast.host %>
+        </a>
+    </p>
+<% end %>

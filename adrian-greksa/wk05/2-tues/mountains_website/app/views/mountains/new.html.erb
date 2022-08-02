@@ -1,0 +1,30 @@
+<h1>New Mountain</h1>  
+
+<form action="<%= mountains_path %>" method="post">
+    <label>
+        Name:
+        <input type="text" name="name" required>
+    </label>
+
+    <label>
+        Image:
+        <input type="text" name="image">
+    </label>
+
+    <label>
+        Location:
+        <input type="text" name="location">
+    </label>
+
+    <label>
+        Height:
+        <input type="number" name="height">
+    </label>
+
+    <label>
+        Fun fact:
+        <input type="text" name="funfact">
+    </label>
+
+    <button>Create Mountain</button>
+</form>

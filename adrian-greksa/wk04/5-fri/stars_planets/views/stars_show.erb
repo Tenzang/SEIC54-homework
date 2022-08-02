@@ -1,0 +1,21 @@
+<h1><%= @star.name %></h1>
+
+<ul>
+    <li>Constellation: <%= @star.constellation %> </li>
+    <li>Co-ordinates: <%= @star.coordinates %> </li>
+    <li>Distance from Sun: <%= @star.distance %> </li>
+    <li>Stellar Class: <%= @star.stellar_class %> </li>
+    <li>Mass: <%= @star.mass %> </li>
+    <li>Planets: <%= @star.planets %> </li>
+    <li>Fun Fact: <%= @star.funfact %> </li>
+</ul>
+
+
+<% unless @star.image.nil? || @star.image.empty? %>
+<img class="feature" src="<%= @star.image %>" alt="<%= @star.name %>">
+<% end %>
+
+<div class="controls">
+    <a href="/stars/<%= @star.id %>/edit">Edit star</a>
+    <a href="/stars/<%= @star.id %>/delete">Delete star</a>
+</div>

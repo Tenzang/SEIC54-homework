@@ -1,0 +1,13 @@
+<h1>ALL Headphones</h1>
+
+<% @headphones.each do |headphone| %>
+
+<p>
+
+    <a href="/headphones/<%= headphone["id"]%>">
+     <%= headphone["name"]%>
+    </a>
+    </p> 
+    
+
+    <% end %>

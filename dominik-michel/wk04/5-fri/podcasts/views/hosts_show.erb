@@ -1,0 +1,11 @@
+<h1>
+    <%= @host.name %>
+</h1>
+<h2>
+    Podcast: <%=@host.podcast%>
+</h2>
+
+<div class="controls">
+    <a href="/hosts/<%= @host.id %>/edit">Edit Host</a>
+    <a href="/hosts/<%= @host.id %>/delete">Delte Host</a>
+</div>

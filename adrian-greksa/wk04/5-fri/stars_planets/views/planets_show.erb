@@ -1,0 +1,21 @@
+<h1><%= @planet.name %></h1>
+
+<ul>
+    <li>habitable: <%= @planet.habitable %> </li>
+    <li>Star: <%= @planet.star %> </li>
+    <li>Mass(M): <%= @planet.mass %> </li>
+    <li>Temperature(K): <%= @planet.temp %> </li>
+    <li>Period: <%= @planet.period %> </li>
+    <li>Distance: <%= @planet.distance %> </li>
+    <li>Fun Fact: <%= @planet.funfact %> </li>
+</ul>
+
+
+<% unless @planet.image.nil? || @planet.image.empty? %>
+    <img class="feature" src="<%= @planet.image %>" alt="<%= @planet.name %>">
+<% end %>
+
+<div class="controls">
+    <a href="/planets/<%= @planet.id %>/edit">Edit planet</a>
+    <a href="/planets/<%= @planet.id %>/delete">Delete planet</a>
+</div>

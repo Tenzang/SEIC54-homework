@@ -1,0 +1,18 @@
+<h1>
+    <%= @podcast.host %>
+</h1>
+<h2>
+    Guest: <%=@podcast.guest%>
+</h2>
+<h3>
+    Theme: <%= @podcast.theme %>
+</h3>
+<h3>
+    Link: <%= @podcast.link %>
+</h3>
+
+
+<div class="controls">
+    <a href="/podcasts/<%= @podcast.id %>/edit">Edit podcast</a>
+    <a href="/podcasts/<%= @podcast.id %>/delete">Delte podcast</a>
+</div>
