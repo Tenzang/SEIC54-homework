@@ -1,0 +1,17 @@
+<h1><%= @song.name %></h1>
+
+<ul>
+    <li>Name:<%= @song.name %></li>
+    <% if @song.band.present?%>
+    <li>Band: <%= link_to @song.band.name, @song.band %></li>
+    <% end %>
+    <li>Language:<%= @song.language %></li>
+    <li>Genre:<%= @song.genre %></li>
+    <li>Length: <%= @song.length %></li>
+</ul>
+
+
+<div class="controler">
+    <%= link_to 'Edit Song', edit_song_path(@song) %>
+    <%= link_to 'Delete Song', @song, :method => 'delete', :data => {:confrim => 'Are you sure sure?'} %>
+</div>
