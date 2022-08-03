@@ -46,15 +46,15 @@ $('#search').on('submit', function(event) {
     $('#images').html('')
 });
 
-$(window).on('scroll', _.throttle(function() {
+$(window).on('scroll', _.debounce(function() {
     // calculate the scrollBottom (how close we are to the end of the document)
     const scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
     console.log(scrollBottom)
     // if (scrollBottom < 600)
         // searchFlickr again for more photos
-    if (scrollBottom < 0.5 ) {
+    if (scrollBottom < 600 ) {
         const searchTerms = $('#query').val();    
         searchFlickr(searchTerms);
         page++;
     }
-}, 500));
+}, 200));
