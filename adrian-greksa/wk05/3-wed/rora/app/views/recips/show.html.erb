@@ -1,0 +1,18 @@
+<h1><%= @recip.name %></h1>
+
+<%= image_tag @recip.image, :class => 'feature' %>
+
+<div class="controls">
+    <%= link_to 'Edit recipe', edit_recip_path(@recip) %>
+    <%= link_to 'Delete recipe', @recip, :method => 'delete', :data => { :confirm => 'Are you sure?' }%>
+</div>
+
+
+<ul>
+    <li>Ingredients: <%= @recip.ingredients %></li>
+    <li>Serving: <%= @recip.serving %></li>
+    <li>Time: <%= @recip.time %></li>
+</ul>
+
+<h2>Method</h2>
+<p><%= @recip.method %></p>

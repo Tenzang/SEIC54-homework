@@ -1,0 +1,12 @@
+<h1>All Foods</h1>
+
+<% @foods.each do |food| %>
+    <%= image_tag food.image, :class => 'thumb' unless food.image.nil? %>
+    <ul>
+        <li>Name: <%= link_to food.name, food %></li>
+        <li>Species: <%= food.species %></li>
+        <li>Other names: <%= food.othername %></li>
+        <li>Density: <%= food.density %></li>
+        <li>Funfact: <%= food.funfact %></li>
+    </ul>
+<% end %>

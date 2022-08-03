@@ -1,0 +1,10 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+img {
+    box-sizing: border-box;
+    display: block;
+    padding: 1em;
+}
