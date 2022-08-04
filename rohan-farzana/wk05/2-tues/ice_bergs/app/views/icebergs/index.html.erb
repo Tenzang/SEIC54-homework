@@ -1,0 +1,10 @@
+<h1>All The Icebergs</h1>
+<ul>
+    <% @icebergs.each do |iceberg| %>
+        <li>
+            <%= link_to iceberg.name, iceberg_path(iceberg.id) %>
+            it will be stable for  
+            <%= pluralize iceberg.stability, 'minute' %>
+        </li>
+    <% end %>
+</ul>
