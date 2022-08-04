@@ -11,7 +11,7 @@ const arr = [1, 100, 3, 600, 5, 6, 99];
 //     max = arr[index];
 //   }
 //   return findMax(arr, index + 1, max);
-// }
+// } // not deleting this monstrosity, its been through enough as it is.
 
 function findMax(arr) {
   if (arr.length === 1) {
@@ -31,10 +31,12 @@ findMax([1, 2, 3]);
 console.log(findMax(arr));
 
 // factorial of 5 is equal to 1 * 2 * 3 * 4 * 5 = 120.
+function oneLineFactorial(num) {
+  return num === 0 ? 1 : num * factorial(num - 1);
+}
+console.log(`${oneLineFactorial(5)} thanks internet!`);
 
 function factorial(n, ln = 1, f = 1) {
-  // n and lesser n
-  // This function returns the factorial of a given number.
   if (ln === n) {
     f *= ln;
     return f;
@@ -51,22 +53,23 @@ function fibonacci(n, a = 1, b = 1) {
   } else {
     return fibonacci(n - 1, b, a + b);
   }
-
-  // This function returns the Nth number in the fibonacci sequence.
-  // https://en.wikipedia.org/wiki/Fibonacci_number
-  // For this function, the first two fibonacci numbers are 1 and 1
 }
-console.log(fibonacci(20))
+console.log(fibonacci(20));
 
-function coinFlips() {
-  // This function returns an array of all possible outcomes from flipping a coin N times.
-  // Input type: Integer
-  // For example, coinFlips(2) would return the following:
-  // ["HH", "HT", "TH", "TT"]
-  // H stands for Heads and T stands for tails
-  // Represent the two outcomes of each flip as "H" or "T"
+function coinFlips(flipsNum) {
+  if (flipsNum === 0) {
+    return outcomes;
+  } else {
+  }
 }
 
+// This function returns an array of all possible outcomes from flipping a coin N times.
+// Input type: Integer
+// For example, coinFlips(2) would return the following:
+// ["HH", "HT", "TH", "TT"]
+// H stands for Heads and T stands for tails
+// Represent the two outcomes of each flip as "H" or "T"
+//////////////////////////////////////////////////////////////////////////////////////////////
 function letterCombinations() {
   // This function returns an array of all combinations of the given letters
   // Input type: Array of single characters
