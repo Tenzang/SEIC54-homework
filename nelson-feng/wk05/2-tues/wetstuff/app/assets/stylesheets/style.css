@@ -1,0 +1,16 @@
+body {
+    background-image: url('https://media.giphy.com/media/3oKIPaGG4PDQgQDFZe/giphy.gif');
+    background-size: cover;
+}
+
+button {
+    display: block;
+}
+
+a {
+    color: white;
+}
+
+h1 {
+    color:rgb(233, 233, 245);
+}

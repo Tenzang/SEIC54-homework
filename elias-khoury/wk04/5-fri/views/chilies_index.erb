@@ -1,0 +1,16 @@
+
+<div class="showPage">
+<h1>Chilies </h1>
+</div>
+
+<div class="indexPage">
+
+    
+   
+
+    <% @chilies.each do |c| %>
+        <a href="/chilies/<%= c.id %>"><%= c.name %></a>    
+    <% end %>
+<br><br>
+    <h3>*Do not try these at home*</h3>
+</div>

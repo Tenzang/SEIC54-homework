@@ -1,0 +1,20 @@
+<h1>Edit Bird</h1>
+<form action="/coolbirds/<%=@coolbird["id"] %>" method="post">
+    <lable>
+         Name
+        <input name="name" required value="<%= @coolbird["name"] %>">
+   </lable>
+   <lable>
+         Coolness
+         <input name="coolness" value="<%= @coolbird["coolness"] %>">
+   </lable>
+   <lable>
+         Reason They're Cool
+         <input name="reason" value="<%= @coolbird["reason"] %>">
+   </lable>
+   <lable>
+         Image:
+         <input type="url" name="image" value="<%= @coolbird["image"] %>">
+   </lable>
+   <button>Update Birds (only cool ones please!)</button>
+</form>

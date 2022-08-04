@@ -1,0 +1,10 @@
+<% @coolbirds.each do |bird| %> 
+    <p> 
+        <a href="/coolbirds/<%=bird["id"]%>">
+            <%= bird["name"]%> 
+        </a>
+        <p>
+        <%= bird["coolness"]%>
+        </p>
+    </p>
+<% end %>

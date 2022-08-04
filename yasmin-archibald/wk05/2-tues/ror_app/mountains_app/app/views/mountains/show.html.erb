@@ -1,0 +1,13 @@
+<h1> <%= @mountain.name %> </h1>
+
+<%= image_tag @mountain.image, :class => 'image' if @mountain.image.present? %>
+<ul>
+    <li> Name:<%= @mountain.name %> </li>
+    <li> Location:<%= @mountain.location %> </li>
+    <li> Summit:<%= @mountain.summit %> </li>
+    <li> Population:<%= @mountain.population %> </li>
+</ul>
+<div class="controls">
+    <%= link_to 'Edit Mountain', edit_mountain_path(@mountain.id) %>
+    <%= link_to 'Delete Mountain', delete_mountain_path(@mountain.id) %>
+</div>

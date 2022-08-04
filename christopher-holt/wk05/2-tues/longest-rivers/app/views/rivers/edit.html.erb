@@ -1,0 +1,35 @@
+<h1>Edit River</h1>
+
+<form action="<%= river_path(@river.id) %>" method="post">
+    <label>
+        Name:
+        <input name="name" required value="<%= @river.name %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @river.image %>">
+    </label>
+
+    <label>
+        Length:
+        <input type="number" name="length" value="<%= @river.length %>">
+    </label>
+
+    <label>
+        Drainage:
+        <input type="number" name="drainage" value="<%= @river.drainage %>">
+    </label>
+
+    <label>
+        Discharge:
+        <input type="number" name="discharge" value="<%= @river.discharge %>">
+    </label>
+
+    <label>
+        Outflow:
+        <input type="text" name="outflow" value="<%= @river.outflow %>">
+    </label>
+
+    <button>Update River</button>
+</form>

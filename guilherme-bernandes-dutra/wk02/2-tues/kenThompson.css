@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    overflow-x: hidden;
+}
+
+
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+    color: yellow;
+    
+    
+  }
+ 
+
+h2 {
+    text-align: right;
+    font-size: 18px;
+    color: yellow;
+    right: 5px;   
+}
+
+.background{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/1b/Ken_Thompson_and_Dennis_Ritchie--1973.jpg");
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+    
+}
+
+
+
+
+h3 {
+    position: relative;
+    font-family: 'Dosis', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    top: 200px;
+    color:black;
+    background-color: aliceblue
+    
+
+}
+
+iframe {
+    position: relative;
+    left: 25em;
+    top: 13.0em;
+      
+}

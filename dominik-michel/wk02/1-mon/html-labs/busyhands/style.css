@@ -1,0 +1,163 @@
+body{
+    font-size: 12px;
+	line-height: 17px;
+	font-family: 'Times New Roman', Times, serif;
+	color: #656565;
+	margin: 0;
+}
+
+.container{
+   
+    width: 950px;
+    margin: 0 auto ;
+    /* flex-wrap: wrap; */
+}
+
+nav{
+    display: inline-block;
+    background-color: black;
+    width: 100vw;
+    margin:0 0 20px;
+    height: 10%;
+} 
+ nav ul li{
+display: inline-block;
+margin: 15px ;
+}
+
+nav li a{
+    color:white;
+    text-decoration: none;
+    margin:auto;
+    font-weight: bold;
+    display: block;
+}
+nav li a:hover{
+    color:blue;
+    text-decoration: none;
+    margin:auto;
+}
+
+
+
+.logo{
+    display: block;
+    top: 100px;
+    height: 35%;
+} 
+
+
+
+
+
+.photobanner{
+    margin: 0 auto;
+    
+}
+
+
+
+
+.Request{
+       border: 1px solid grey;
+       height: 80px;
+       width: 100%;
+       margin:10px auto;
+}
+.Request img{
+    float: right;
+    margin: 0 ;
+}
+.Request p{
+    float: right;
+}
+
+.home-box img{
+    border:5px solid rgb(194, 188, 188);
+    padding: 0px 0px 0px 0px;
+    margin: 0px auto;
+}
+
+/* div.home-box{
+    display:flex;
+    justify-content: flex-end;
+    vertical-align: top;
+    text-align: left;
+    width: 290px;
+} */
+
+.home-box{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    
+}
+
+.caption{
+    display: block;
+}
+
+
+
+
+
+footer{
+    width: 1200px;
+    background-color: black;
+}
+.companybottom{
+    justify-content: flex-end;
+}
+
+
+
+
+
+
+a{
+    color: rgb(68, 68, 236);
+}
+
+#socialMedia {
+	float: right;
+}
+
+#socialMedia ul li {
+	 display:inline-block;
+	 width:60px;
+	 height:60px;
+	 text-indent:-9999em;
+}
+
+#socialMedia ul li.linkedIn {
+	background:url(images/socialNav.png) 0px 64px;
+}
+#socialMedia ul li.twitter {
+	background:url(images/socialNav.png) -60px 64px; 
+}
+
+#socialMedia ul li.facebook {
+	background:url(images/socialNav.png) -120px 64px; 
+}
+
+#socialMedia ul li.rss {
+	background:url(images/socialNav.png) -180px 64px; 
+}
+
+
+
+#socialMedia ul li.linkedIn:hover {
+	background:url(images/socialNav.png) 0px 0px; 
+}
+
+#socialMedia ul li.twitter:hover {
+	background:url(images/socialNav.png) -60px 0px; 
+}
+
+#socialMedia ul li.facebook:hover {
+	background:url(images/socialNav.png) -120px 0px; 
+}
+
+#socialMedia ul li.rss:hover {
+	background:url(images/socialNav.png) -180px 0px; 
+}

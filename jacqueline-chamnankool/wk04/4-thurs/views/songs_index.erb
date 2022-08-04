@@ -1,0 +1,16 @@
+<h1>Songs</h1>
+<% @songs.each do |song| %>
+    <table>
+        <tr>
+            <td>
+                <img class="jacket" src="<%= song["jacket"] %>">
+            </td>
+            <td class="song-info">
+                <a class="title-link" href="/songs/<%= song["id"] %>"><%= song["title"] %></a><br/>
+                <b>Artist(s):</b> <%= song["artist"] %><br/>
+                <b>BPM:</b> <%= song["BPM"] %><br/>
+                <b>Level:</b> <%= song["level"] %><br/>
+            </td>
+        </tr>
+    </table><br/>
+<% end %>

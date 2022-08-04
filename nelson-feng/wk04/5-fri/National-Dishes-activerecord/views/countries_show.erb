@@ -1,0 +1,13 @@
+<h1> <%= @countries.name %> </h1>
+<h2> Continent:  <%=@countries.continent %> </h2>
+
+<p> <%= @countries.info %> </p>
+
+<% unless @countries.image.nil? || @countries["image"].empty? %>
+    <img class="feature" src="<%= @countries.image %>" alt="<%= @countries.name %>">
+<% end %>
+
+<div class="controls">
+    <a href="/countries/<%= @countries.id %>/edit"> Edit countries</a>
+    <a href="/countries/<%= @countries.id %>/delete"> Delete countries</a>
+</div>

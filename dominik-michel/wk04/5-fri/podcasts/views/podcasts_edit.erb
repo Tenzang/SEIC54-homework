@@ -1,0 +1,25 @@
+<h1>Edit Podcast</h1>
+
+<form action="/podcasts/<%= @podcast.id %>" method="post">
+
+    <label>
+        Host:
+        <input name="host" required value="<%= @podcast.host %>">
+    </label>
+
+     <label>
+        Guest:
+        <input name="guest" required value="<%= @podcast.guest %>">
+    </label>
+
+     <label>
+        Theme:
+        <input name="theme" required value="<%= @podcast.theme %>">
+    </label>
+
+     <label>
+        Link:
+        <input type="url" name="link" required value="<%= @podcast.link %>">
+    </label>
+<button>Edit Podcast</button>
+</form>

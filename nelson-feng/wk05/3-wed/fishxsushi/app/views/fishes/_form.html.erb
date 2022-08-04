@@ -1,0 +1,19 @@
+<%= form_for @fish do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+
+    <%= f.label :max_age %>
+    <%= f.text_field :max_age %>
+
+    <%= f.label :diet %>
+    <%= f.text_field :diet %>
+
+    <%= f.label :habitat %>
+    <%= f.text_field :habitat %>
+
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+
+    <%= f.submit %>
+<% end %>

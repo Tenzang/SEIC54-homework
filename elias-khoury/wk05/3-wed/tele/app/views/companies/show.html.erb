@@ -1,0 +1,13 @@
+<h1><%= @company.name %></h1>
+<h2><%= @company.country %></h2>
+
+<h3>Phones</h3>
+<% @company.phones.each do |phone|%>
+<%= link_to phone.name, phone %>
+<% end%>
+<br>
+<br>
+<div class="controls">
+    <%= link_to 'Edit', edit_company_path(@company.id) %>
+    <%= link_to 'delete', @company, :method => 'delete', :data => {:confirm => 'You sure about that fam?'} %>
+</div>

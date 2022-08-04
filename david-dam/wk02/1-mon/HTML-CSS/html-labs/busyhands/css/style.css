@@ -1,0 +1,183 @@
+body {
+    margin: 0 auto;
+}
+
+/* ------------------------nav------------------------ */
+header {
+    background-color: black;
+    display: block;
+}
+
+nav {
+    width: 100%;
+	/* border-top: dashed #999 1px;
+	border-bottom: dashed #999 1px; */
+	display: inline-block;
+    margin: 15px;
+}
+
+ul li {
+    float: left;
+    display: inline;
+    margin-right: 20px;	
+}
+
+li a {
+    width: 100px;
+    padding: 10px 0px;
+    margin-top: -11px   
+}
+
+a {
+	color:#f2f9ff;
+	text-decoration:none;
+}
+
+/* ------------------------nav------------------------ */
+
+
+/* --------Social media------------- */
+
+#socialMedia {
+	float: right;
+}
+
+#socialMedia ul li {
+	display:inline-block;
+	width:60px;
+	height:60px;
+	background:blue;	
+	text-indent:-9999em;
+}
+
+#socialMedia ul li.linkedIn {
+	background:url(../images/socialNav.png) 0px 64px;
+}
+#socialMedia ul li.twitter {
+	background:url(../images/socialNav.png) -60px 64px; 
+}
+
+#socialMedia ul li.facebook {
+	background:url(../images/socialNav.png) -120px 64px; 
+}
+
+#socialMedia ul li.rss {
+	background:url(../images/socialNav.png) -180px 64px; 
+}
+
+
+
+#socialMedia ul li.linkedIn:hover {
+	background:url(../images/socialNav.png) 0px 0px; 
+}
+
+#socialMedia ul li.twitter:hover {
+	background:url(../images/socialNav.png) -60px 0px; 
+}
+
+#socialMedia ul li.facebook:hover {
+	background:url(../images/socialNav.png) -120px 0px; 
+}
+
+#socialMedia ul li.rss:hover {
+	background:url(../images/socialNav.png) -180px 0px; 
+}
+
+
+/* --------Social media------------- */
+
+/* ---------------------body--------------------- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 11px 0px;
+}
+
+#container {
+    max-width: 800px;
+    background-color: white;
+    color: black;
+    display: block;
+    margin: 0 auto;;
+}
+
+#banner {
+    max-width: 800px;
+}
+
+#logo {
+    padding: 10px;
+}
+
+#para {
+    /* box-shadow: gray 5px inset ; */
+    border: solid gray 1px;
+    margin: 25px 0px 25px 0px;
+    display: flex;
+}
+
+#button {
+    padding: 20px;
+}
+
+#homeboxes {
+    display: flex;
+    /* border: #f2f9ff solid 1px; */
+    width: auto;
+}
+
+.homebox {
+    margin: 0px 15px;
+    margin: -5px 12px 20px 12px;
+}
+
+
+.homehead {
+    font-size: 17px;
+}
+
+.homepic {
+    width: 100%;
+    border: #aaa9a9 solid 3px;
+}
+
+
+
+/* ---------------------body--------------------- */
+
+
+/* -------------Footer------------- */
+
+footer {
+    display: flex;
+    height: 380px;
+    background-color: black;
+    color: #f2f9ff;
+
+}
+
+#footer {
+    display: flex;
+    margin: 40px 300px;
+}
+
+#box-footer {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.blogroll {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-widget {
+    max-width: 400px;
+}

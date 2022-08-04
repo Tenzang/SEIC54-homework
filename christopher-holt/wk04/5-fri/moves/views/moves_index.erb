@@ -1,0 +1,12 @@
+<h1>All Moves</h1>
+
+<div class="infocard">
+
+    <% @moves.each do |move| %>
+        <p>
+            <a href="/moves/<%= move.id %>">
+                <%= move.name %>
+            </a>
+        </p>
+    <% end %>
+</div>

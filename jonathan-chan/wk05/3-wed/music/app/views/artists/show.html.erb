@@ -1,0 +1,11 @@
+<h1> <%= @artist.name %> </h1>
+
+<%= image_tag @artist.image%>
+<ul>
+    <li>Date of Birth: <%= @artist.dob.strftime'%B %e, %Y' %></li>
+</ul>
+
+<div class="controls">
+    <%= link_to "Edit Artist", edit_artist_path(@artist) %>
+    <%= link_to 'Delete Artist', @artist, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+</div>

@@ -1,0 +1,11 @@
+<h1>All books</h1>
+
+<% @books.each do |book| %>
+<p>
+    <a href="books/<%= book["id"] %>">
+    <%= book["name"] %>
+    
+    </a>
+</p>
+
+<% end %>

@@ -1,0 +1,51 @@
+<h1>Edit Star</h1>
+
+<form action="/stars/<%= @star.id %>" method="post">
+    <label>
+        Name:
+        <input value="<%= @star.name %>" name="name" required>
+    </label>
+
+    <label>
+        Constellation:
+        <input value="<%= @star.constellation %>" name="constellation">
+    </label>
+
+    <label>
+        Coordinates: 
+        <input value="<%= @star.coordinates %>" name="coordinates">
+    </label>
+
+    <label>
+        Distance: 
+        <input value="<%= @star.distance %>" name="distance">
+    </label>
+
+    <label>
+        Stellar Class: 
+        <input value="<%= @star.stellar_class %>" name="stellar_class">
+    </label>
+
+    <label>
+        Mass: 
+        <input value="<%= @star.mass %>" name="mass">
+    </label>
+
+    <label>
+        Number of Planets: 
+        <input value="<%= @star.planets %>" name="planets">
+    </label>
+
+    <label>
+        Fun Fact:
+        <input value="<%= @star.funfact %>" name="funfact">
+    </label>
+
+    <label>
+        Image url:
+        <input type="url" name="image" value="<%= @star.image %>">
+    </label>
+
+    <button>Edit Star</button>
+
+</form>

@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+}
+body {
+    background: linear-gradient(90deg, #b6b6b6 50%, #878787 50%);
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+nav{
+    text-align: right;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    background-color: rgb(120, 120, 120);
+    padding: 3px;
+}
+
+nav ul{
+    margin-right: 2em;
+}
+
+nav li{
+    list-style: none;
+    display: inline;
+}
+
+nav .sublink{
+    text-decoration: none;
+    color: black;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-size: 125%;
+    transition: color 1s;
+}
+
+nav .sublink:hover{
+    text-decoration: none;
+    color: white;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-size: 125%;
+}
+
+.title {
+    margin-right: 9.25em;
+    font-size: 150%;
+    text-decoration: none;
+    color: black;
+    transition: color 1s;
+}
+.title:hover {
+    margin-right: 9.25em;
+    font-size: 150%;
+    text-decoration: none;
+    color:white;
+    transition: color 1s;
+}
+
+.container img {
+    z-index: 3;
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    right: 31.5%;
+    width: 35%;
+    margin: 15px;
+    transition: opacity 1s;
+    border-radius: 10px;
+}
+
+.container img:hover {
+    opacity: 0.1;
+    border-radius: 10px;
+}
+
+.biobox{
+    display: inline-block;
+    width: 375px;
+    height: 450px;
+    background-color:#f5f5f5;
+    padding: 1em;
+    border-radius: 15px;
+}
+.topbox{
+    z-index: 2;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 33em;
+}
+
+.career{
+    z-index: 2;
+    color: rgb(83, 81, 81);
+}
+
+#sidesbio{
+    background-color: rgb(83, 81, 81);
+    color: rgb(83, 81, 81);
+    transition: background-color 1s;
+    border-radius: 15px;
+}
+
+#sidesbio:hover{
+    display: inline-block;
+    width: 375px;
+    height: 450px;
+    background-color:#f5f5f5;
+    padding: 1em;
+    border-radius: 15px;
+}
+
+

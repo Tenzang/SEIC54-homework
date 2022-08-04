@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(52, 59, 59);
+    background-size: cover;
+
+}
+
+a {
+    color: white
+}
+
+.links {
+    display: block;
+}
+
+.thumbnail {
+    height: 10em;
+}
+

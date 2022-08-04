@@ -1,0 +1,13 @@
+<%= form_for @dish do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+
+    <%= f.label :fish_id %>
+    <%= f.select :fish_id, Fish.pluck(:name, :id), :include_blank => true %>
+
+    <%= f.submit %>
+<% end %>

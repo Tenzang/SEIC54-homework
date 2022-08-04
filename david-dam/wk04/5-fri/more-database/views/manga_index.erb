@@ -1,0 +1,9 @@
+<h1>Manga</h1>
+
+<% @manga.each do |manga| %>
+    <p>
+        <a href="/manga/<%= manga.id %>">
+            <%= manga.name %>
+        </a>
+    </p>
+<% end %>

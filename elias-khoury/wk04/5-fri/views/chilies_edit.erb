@@ -1,0 +1,26 @@
+<div class="showPage">
+<h1>Edit <%= @chili.name %> </h1>
+</div>
+
+<div class="form">
+    <form action="/chilies/<%= @chili.id %>" method="post">
+
+        <label>
+            <input value="<%= @chili.name %>" type="text" name="name" required>
+        </label>
+        <label>
+            <input value="<%= @chili.rating %>" type="number" name="rating" required>
+        </label>
+        <label>
+            <input value="<%= @chili.image %>" type="text" name="image" required>
+        </label>
+        <label>
+            <input value=<%= @chili.video %> type="text" name="video">
+        </label>
+
+        <button class="edit" >Submit</button>
+
+    </form>
+</div>
+
+

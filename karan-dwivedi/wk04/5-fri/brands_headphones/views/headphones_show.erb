@@ -1,0 +1,12 @@
+<h1>
+    <%= @headphone.name %>
+</h1>
+<h2> Brand <em><%=@headphone["brand"]%></em></h2>
+<h2> Price <em><%=@headphone["price"]%></em></h2>
+<h2> Rating <em><%=@headphone["rating"]%></em></h2>
+
+<div class ="controls">
+    <a href="/headphones/<%= @headphone.id %> /edit"> Edit headphone</a>
+    <a href="/headphones/<%= @headphone.id %> /delete"> Delete headphone</a>
+</div>
+   

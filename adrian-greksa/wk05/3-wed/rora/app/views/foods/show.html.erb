@@ -1,0 +1,25 @@
+<h1><%= @food.name %></h1>
+
+<%= image_tag @food.image, :class => 'feature' unless @food.image.nil? %>
+
+<ul>
+    <li>Name: <%= @food.name %></li>
+    <li>Species: <%= @food.species %></li>
+    <li>Other names: <%= @food.othername %></li>
+    <li>Density: <%= @food.density %></li>
+    <li>Funfact: <%= @food.funfact %></li>
+</ul>
+
+<h2>Recipes</h2>
+<ul>
+    <% @food.recips.each do |recip| %>
+        <li>
+            <%= link_to recip.name, recip %>
+        </li>
+    <% end %>
+</ul>
+
+<div class="controls">
+    <%= link_to 'Edit food', edit_food_path %>
+    <%= button_to 'Delete Food', @food, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>
