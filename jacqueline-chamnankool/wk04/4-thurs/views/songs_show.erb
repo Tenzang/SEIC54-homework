@@ -1,0 +1,19 @@
+<h1><%= @song["title"] %></h1>
+<iframe class="vid" width="960" height="515" src="<%= @song["video"] %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<table class="song-info">
+    <tr>
+        <td>
+            <img class="jacket" src="<%= @song["jacket"] %>">
+        </td>
+        <td class="song-info">
+            <a class="title-link" href="/songs/<%= @song["id"] %>"><%= @song["title"] %></a><br/>
+            <b>Artist(s):</b> <%= @song["artist"] %><br/>
+            <b>BPM:</b> <%= @song["BPM"] %><br/>
+            <b>Level:</b> <%= @song["level"] %><br/>
+        </td>
+    </tr>
+</table>
+
+<a href="/songs/<%= @song["id"] %>/edit">Edit song</a>
+<a href="/songs/<%= @song["id"] %>/delete">Delete song</a>

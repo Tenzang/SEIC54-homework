@@ -1,0 +1,47 @@
+<h1>
+    <%= @pokemon.name %>
+</h1>
+
+<h1>
+    Type:
+    <%= @pokemon.types %>
+</h1>
+
+<h1>
+    Level:
+    <%= @pokemon.level %>
+</h1>
+
+<h1>
+    HP:
+    <%= @pokemon.HP %>
+</h1>
+
+<h1>
+    Attack:
+    <%= @pokemon.Attack %>
+</h1>
+
+<h1>
+    Defense:
+    <%= @pokemon.Defense %>
+</h1>
+
+<h1>
+    Special:
+    <%= @pokemon.Special %>
+</h1>
+
+<h1>
+    Speed:
+    <%= @pokemon.Speed %>
+</h1>
+
+<% unless @pokemon.image.nil? || @pokemon.image.empty? %>
+    <img class="feature" src="<%= @pokemon.image %>" alt="<%= @pokemon.name %>">
+<% end %>
+
+<div class="controls">
+    <a href="/pokemons/<%= @pokemon.id %>/edit">Edit Pokemon</a>
+    <a href="/pokemons/<%= @pokemon.id %>/delete">Delete Pokemon</a>
+</div>

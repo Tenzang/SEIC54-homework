@@ -63,7 +63,7 @@ main img {
 
 aside {
     display: inline-block;
-    width: 21%;
+    width: 16%;
     vertical-align: top;
     background-color: #cfc;
     padding: 1em;
@@ -77,4 +77,9 @@ aside ul {
 
 img {
     max-width: 50%;
+}
+
+a {
+    background-color: #effa1e;
+    border-style: dotted;
 }

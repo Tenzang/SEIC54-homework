@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Kaisei+Opti:wght@700&display=swap');
+
+
+body {
+    background-color: #222222;
+    background-image: url("https://images.immediate.co.uk/production/volatile/sites/4/2020/08/GettyImages-154932300-crop-ab054fe.jpg?quality=90&webp=true&resize=940,400");
+    margin: 0;
+    padding: 0;
+    font-family: 'Antic Didone', serif;
+}
+
+.container {
+    max-width: 1000px; /* Use this to rescale for smaller screens. */
+    margin: 0 auto; /* center the container */
+    background-color: #ccc;
+    padding: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+
+.john {
+    width: 340px;
+    max-width: 340px;
+    height: 400px;
+}
+
+
+.atom {
+    width: 100%;
+    background-image: url("https://www.clipartmax.com/png/full/2-23633_oxygen-atom-cartoon-atom-icon.png");
+    background-color: #222;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+}
+
+nav a {
+    color: black;
+    text-align: center;
+    font-family: 'Kaisei Opti', serif;
+    padding: 120px;
+}
+
+h3 {
+    text-align: center;
+    size: 40px;
+    font-style: normal;
+}
+
+h2 {
+    text-align: center;
+    position: top;
+    top: 50%;
+    left: 50%;
+    margin: -5px;
+    ;
+}
+
+.main {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #dcdcdc;
+    font-size: 300%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-family: 'Antic Didone', serif;
+    font-family: 'Kaisei Opti', serif;
+}
+
+main {
+    display: inline-block;
+    width: 75%;
+}
+
+a   {
+    text-decoration: none;
+}
+
+#hometown {
+    text-align: center;
+    width: 260px;
+}
+
+.question:hover + .hide {
+    display: block;
+    color: red;
+    text-align: center;
+}
+
+#sellers {
+    max-width: 300px;
+    height: 380px;
+}
+
+.hide {
+    display: none;
+    text-align: center;
+}
+
+button {
+    border: #222;
+    border-radius: 9px;
+    background-color: #aaa;
+    font-size: 16px;
+}
+
+
+main img {
+    display: block;
+    margin: 0 auto;
+    height: 300px;
+    width: auto;
+    border-radius: 1em;
+}
+
+main .half {
+    display: inline-block;
+    margin: 0;
+    width: 45%;
+    padding: 10px;
+    vertical-align: top;
+}
+
+main img .budapest {
+    height: 300px;
+    width: auto;
+}
+
+#budapest {
+    height: 300px;
+    width: auto;
+}
+
+aside {
+    display: inline-block;
+    width: 19%;
+    vertical-align: top;
+    margin: 9px;
+    background-color: #99949494;
+    padding: 1em;
+    box-shadow: -1px -4px 6px 0px; black; /* makes it pop */
+    border-radius: 0.8em;
+}
+
+.hometown {
+    width: 90%;
+}
+
+aside ul {
+    padding-left: 1em;
+}

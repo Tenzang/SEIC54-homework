@@ -1,0 +1,13 @@
+<%= form_for @song do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+    <%= f.label :genre %>
+    <%= f.text_field :genre%>
+    <%= f.label :rating %>
+    <%= f.text_field :rating, :required => true %>
+    <%= f.label :embed %>
+    <%= f.text_field :embed %>
+    <%= f.label :artist %>
+    <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
+    <%= f.submit %>
+<% end%>

@@ -1,0 +1,16 @@
+<h1> Edit Author</h1>
+
+<form action="/authors/<%= @author.id %>" method="post">
+    <label>
+        Name:
+        <input name="name" required value="<%= @author.name %>">
+    </label>
+
+     <label>
+        Nationality:
+        <input name="nationality" required value="<%= @author.nationality %>">
+    </label>
+
+    <button>Edit Author</button>
+    
+</form>

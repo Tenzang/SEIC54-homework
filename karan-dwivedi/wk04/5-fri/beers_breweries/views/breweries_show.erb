@@ -1,0 +1,11 @@
+<h1>
+    <%= @brewery.name %>
+</h1>
+<h2> State: <em><%=@brewery["state"]%></em></h2>
+<h2> Year Founded: <em><%=@brewery["year"]%></em></h2>
+
+<div class ="controls">
+    <a href="/breweries/<%= @brewery.id %> /edit"> Edit brewery</a>
+    <a href="/breweries/<%= @brewery.id %> /delete"> Delete brewery</a>
+</div>
+   

@@ -1,0 +1,15 @@
+     <% @info["items"].each do |item| %>
+       
+       <div class="titles">
+        <h2>
+      <% book = item["volumeInfo"] %>
+      <%= book["title"] %>  By  <%= book["authors"].first %>
+        </h2>
+        </div>
+
+        <div class="pictures">
+     <img src="<%= book["imageLinks"]["thumbnail"] %>" >
+        
+        </div>
+
+    <% end %>

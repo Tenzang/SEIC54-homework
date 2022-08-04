@@ -1,0 +1,19 @@
+<h1> What songs will be playing this year? </h1>
+
+<% @songs.each do |song| %>
+<li> Name: <%= link_to song.name, song %></li>
+
+<li> Artist: <%= song.artist %></li>
+
+<li> Genre: <%= song.genre %></li>
+
+<li> Rating: <%= song.rating %></li>
+
+<a href="<%= song.embed %>">
+<li> Listen Now! </li>
+</a>
+
+
+</ul>    
+
+<% end%>

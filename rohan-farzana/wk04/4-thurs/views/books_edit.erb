@@ -1,0 +1,26 @@
+<h1>Edit Book</h1>
+
+<form action="/books/<%= @book["id"] %>" method="post">
+
+<label>
+Name: 
+<input name="name" required value="<%= @book["name"] %>">
+</label>
+
+<label>
+Author:
+<input name="auhtor" required value="<%= @book["auhtor"] %>">
+</label>
+
+<label>
+
+Image: 
+    <input type="url" name="image" value="<%= @book["image"] %>">
+
+</label>
+
+
+<button>Update Book</button>
+
+
+</form>

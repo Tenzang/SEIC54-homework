@@ -1,0 +1,17 @@
+<h1><%= @phone.name %></h1>
+
+<h2><%=number_to_currency @phone.price %></h2>
+
+<h3><%= @phone.year %></h3>
+<h3><%= @phone.processor %></h3>
+
+<% if @phone.company.present?%>
+<h4>Company:<%= link_to @phone.company.name, @phone.company %></h4>
+<% end%>
+
+
+<div class="controls">
+    <%= link_to 'Edit', edit_phone_path(@phone.id) %>
+    <%= link_to 'Delete', @phone, :method => 'delete', :data => {:confirm => 'You sure about that fam?'} %>
+
+</div>

@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+body {
+    background-color: rgb(211, 204, 196);
+    padding: 0;
+    margin: 0;
+    font-family: 'Titan One', cursive;;
+
+}
+
+.container {
+    max-width: 960px;/*This sets the width of then body, everything will fit with 960px, *//*This says, shrink the div if the screen is made smaller*/
+    margin: 0 auto;/*This center the entire the divison */
+    background-color: antiquewhite;
+    padding: 1em;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 1em;
+}
+
+
+nav {
+    text-align: right;
+}
+
+nav a {
+    color: burlywood;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: rgb(141, 79, 27);
+}
+
+h1 {
+    text-align: center;
+    background-color: burlywood;
+    color: antiquewhite;
+    padding: 0.5em;
+    font-size: 400%;
+    text-transform: uppercase;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 5px 0px 10px black;
+}
+
+main {
+    display: inline-block;
+    width: 75%;
+}
+
+main img {
+    display: block; /*We want to center the img and we cannot set a width or height to images, thhey have a default of inline but we didnt want that */
+    margin: 0 auto;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+aside {
+    display: inline-block;
+    width: 21%;
+    vertical-align: top;
+    background-color:rgb(141, 79, 27);
+    padding: 1em;
+    box-shadow: 5px 0px 7px black;/*Makes things "POP" when people ask, or if you want to*/
+    border-radius: .5em;
+}
+
+aside ul {
+    padding-left: 5px;
+}
+
+aside ul li {
+    list-style: none;
+}

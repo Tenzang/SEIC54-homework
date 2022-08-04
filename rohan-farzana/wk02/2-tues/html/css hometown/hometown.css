@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@500&family=Open+Sans&family=Poppins:wght@300;400&family=Rubik+Moonrocks&display=swap');
+
+body{
+    background-color: aliceblue;
+    padding :0;
+    margin: 0;
+}.container{
+    max-width: 960px;
+    margin: 0 auto;
+    
+}
+
+.one{
+    margin-top: 130px;
+    width: 35%;
+    height: 350px;
+    
+    float: left;
+}
+.two{
+    width: 55%;
+    height: 500px;
+      
+    float: left;
+    margin-top: 70px;
+}
+h3{
+    
+    margin-top: 40px;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+     font-size: 16px;
+    color: #0f2f44;
+   
+   
+}
+

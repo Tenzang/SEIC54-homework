@@ -1,0 +1,50 @@
+<h1>Edit Pokemon</h1>
+
+<form action="/pokemons/<%= @pokemon.id %>" method="post">
+    <label>
+        Name:
+        <input name="name" required value="<%= @pokemon.name %>">
+    </label>
+
+    <label>
+        Type:
+        <input name="types" required value="<%= @pokemon.types %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @pokemon.image %>">
+    </label>
+
+    <label>
+        Level:
+        <input name="level" required value="<%= @pokemon.level %>">
+    </label>
+
+    <label>
+        HP:
+        <input name="HP" required value="<%= @pokemon.HP %>">
+    </label>
+
+    <label>
+        Attack:
+        <input name="Attack" required value="<%= @pokemon.Attack %>">
+    </label>
+
+    <label>
+        Defense:
+        <input name="Defense" required value="<%= @pokemon.Defense %>">
+    </label>
+
+    <label>
+        Special:
+        <input name="Special" required value="<%= @pokemon.Special %>">
+    </label>
+    
+    <label>
+        Speed:
+        <input name="Speed" required value="<%= @pokemon.Speed %>">
+    </label>
+
+    <button>Update Pokemon</button>
+</form>

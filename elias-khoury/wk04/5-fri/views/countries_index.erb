@@ -1,0 +1,16 @@
+
+<div class="showPage">
+<h1>Countries </h1>
+</div>
+
+<div class="indexPage">
+
+    
+   
+
+    <% @countries.each do |c| %>
+        <a href="/countries/<%= c.id %>"><%= c.name %></a>    
+    <% end %>
+<br><br>
+    <h3></h3>
+</div>
