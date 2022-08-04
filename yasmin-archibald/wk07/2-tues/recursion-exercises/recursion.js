@@ -72,15 +72,9 @@ function coinFlips(flipsNum) {
   }
 }
 console.log(
-  `coinFlips(3) again, thanks internet. I followed a solution outlined on stackoverflow`
+  `${coinFlips(5)} again, thanks internet. I followed a solution outlined on stackoverflow`
 );
-// This function returns an array of all possible outcomes from flipping a coin N times.
-// Input type: Integer
-// For example, coinFlips(2) would return the following:
-// ["HH", "HT", "TH", "TT"]
-// H stands for Heads and T stands for tails
-// Represent the two outcomes of each flip as "H" or "T"
-//////////////////////////////////////////////////////////////////////////////////////////////
+
 function letterCombinations() {
   // This function returns an array of all combinations of the given letters
   // Input type: Array of single characters
