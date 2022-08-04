@@ -31,10 +31,6 @@ findMax([1, 2, 3]);
 console.log(findMax(arr));
 
 // factorial of 5 is equal to 1 * 2 * 3 * 4 * 5 = 120.
-function oneLineFactorial(num) {
-  return num === 0 ? 1 : num * factorial(num - 1);
-}
-console.log(`${oneLineFactorial(5)} thanks internet!`);
 
 function factorial(n, ln = 1, f = 1) {
   if (ln === n) {
@@ -47,6 +43,15 @@ function factorial(n, ln = 1, f = 1) {
 }
 console.log(factorial(5));
 
+function oneLineFactorial(num) {
+  return num === 0 ? 1 : num * factorial(num - 1);
+}
+console.log(
+  `${oneLineFactorial(
+    5
+  )} thanks internet! also I guess it is technically three lines hmm`
+);
+
 function fibonacci(n, a = 1, b = 1) {
   if (n == 1 || n == 2) {
     return b;
@@ -57,12 +62,18 @@ function fibonacci(n, a = 1, b = 1) {
 console.log(fibonacci(20));
 
 function coinFlips(flipsNum) {
-  if (flipsNum === 0) {
-    return outcomes;
+  if (flipsNum <= 0) {
+    return [""];
   } else {
+    return [
+      ...coinFlips(flipsNum - 1).map((r) => "H" + r),
+      ...coinFlips(flipsNum - 1).map((r) => "T" + r),
+    ];
   }
 }
-
+console.log(
+  `coinFlips(3) again, thanks internet. I followed a solution outlined on stackoverflow`
+);
 // This function returns an array of all possible outcomes from flipping a coin N times.
 // Input type: Integer
 // For example, coinFlips(2) would return the following:
