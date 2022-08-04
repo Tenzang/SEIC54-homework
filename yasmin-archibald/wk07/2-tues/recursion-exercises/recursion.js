@@ -45,11 +45,18 @@ function factorial(n, ln = 1, f = 1) {
 }
 console.log(factorial(5));
 
-function fibonacci() {
+function fibonacci(n, a = 1, b = 1) {
+  if (n == 1 || n == 2) {
+    return b;
+  } else {
+    return fibonacci(n - 1, b, a + b);
+  }
+
   // This function returns the Nth number in the fibonacci sequence.
   // https://en.wikipedia.org/wiki/Fibonacci_number
   // For this function, the first two fibonacci numbers are 1 and 1
 }
+console.log(fibonacci(20))
 
 function coinFlips() {
   // This function returns an array of all possible outcomes from flipping a coin N times.
