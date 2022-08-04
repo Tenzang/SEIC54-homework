@@ -1,4 +1,12 @@
+const state = {
+    currentPage: 1, 
+    lastPageReached: false,
+};
+
 const searchFlickr = function(keywords){
+
+    if(state.lastPageReached) return;
+
     console.log('searching for', keywords);
 
 
@@ -8,9 +16,13 @@ const searchFlickr = function(keywords){
         api_key: '2f5ac274ecfac5a455f38745704ad084',
         text: keywords,
         format: 'json',
+        page: state.currentPage++, 
         nojsoncallback: 1
     }).done(showImages).done(function(response){
         console.log(response);
+        if (response.photos.page >= response.photos.pages){
+            state.lastPageReached = true;
+        }
     });
 };
 const showImages = function(results){
@@ -21,27 +33,40 @@ const showImages = function(results){
     });
 };
 
-const generateURL = function(p){
+const generateURL = function (p){
     return [
+        'http://farm',
         p.farm,
+        '.static.flickr.com/',
         p.server,
+        '/',
         p.id,
+        '_',
         p.secret,
+        '_q.jpg'
     ].join('');
 };
 
+
 $(document).ready(function(){
     $('#search').on('submit', function(event){
-        event.preventDefalut();
+        event.preventDefault();
+
+        $('#image').empty();
+        state.currentPage = 1;
+        state.lastPageReached = false;
 
         const searchTerms = $('#query').val();
         searchFlickr(searchTerms);
     });
+
+    const relaxedSearchFlickr = _.debounce(searchFlickr, 4000, true);
+
     $(window).on('scroll', function(){
         const scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
         if (scrollBottom < 600){
             const searchTerms = $('#query').val();
-            searchFlickr(searchTerms);
+            relaxedSearchFlickr(searchTerms);
         }
     });
 });
