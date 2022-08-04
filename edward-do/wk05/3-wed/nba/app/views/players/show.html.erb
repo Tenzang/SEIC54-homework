@@ -8,7 +8,7 @@
     <p>Team: <%= link_to @player.team.name, @player.team %></p>
 <% end %>
 <p>Nationality: <%= @player.nationality %></p>
-<p>Date of Birth: <%= @player.dob %></p>
+<p>Date of Birth: <%= @player.dob.strftime '%e %B, %Y' unless @player.dob.nil? %></p>
 <p>Height: <%= @player.height %></p>
 <p>Weight: <%= @player.weight %> kg</p>
 <p>Position: <%= @player.position %></p>
