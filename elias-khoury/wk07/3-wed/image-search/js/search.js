@@ -1,17 +1,31 @@
-let page = 1;
+
+// move global variables into their namesspace
+const state = {
+    page: 1,
+    lastPageReached: false,
+    requestInProgress: false
+}
 
 const searchFlickr = function(keywords) {
+    if (state.lastPageReached || state.requestInProgress) {
+        return;
+    }
     console.log('search for', keywords);
     const flickrURL = 'https://api.flickr.com/services/rest';
+    state.requestInProgress = true;
     $.getJSON(flickrURL, {
         method: 'flickr.photos.search',
         api_key: '2f5ac274ecfac5a455f38745704ad084',
         text: keywords,
         format: 'json',
         nojsoncallback: 1, //please dont be bored enough to read up this
-        page: page
+        page: state.page++
     }).done(showImages).done(function(response){
         console.log(response);
+        if (response.photos.page >= response.photos.pages){
+            state.lastPageReached = true;
+        }
+        state.requestInProgress = false;
     })
 }
 
@@ -41,12 +55,14 @@ const generateURL = function(p) {
 
 $('#search').on('submit', function(event) {
     event.preventDefault(); //disables the form from being submitted to server
+    $('#images').empty(); 
+    state.page = 1;
+    state.lastPageReached = false;
     const searchTerms = $('#query').val();
     searchFlickr(searchTerms);
-    $('#images').html('')
 });
 
-$(window).on('scroll', _.debounce(function() {
+$(window).on('scroll',function() {
     // calculate the scrollBottom (how close we are to the end of the document)
     const scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
     console.log(scrollBottom)
@@ -55,6 +71,6 @@ $(window).on('scroll', _.debounce(function() {
     if (scrollBottom < 600 ) {
         const searchTerms = $('#query').val();    
         searchFlickr(searchTerms);
-        page++;
     }
-}, 200));
+
+});
