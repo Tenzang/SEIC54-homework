@@ -1,8 +1,21 @@
 function bubbleSort(array) {
-  let swapHappened;
+  let swap = false;
+  if (!sorted) {
+    sorted = true;
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] > array[i + 1]) {
+        let c = array[i];
+        array[i] = array[i + 1];
+        array[j + 1] = c;
+        swap = true;
+      }
+      if (swap) {
+        return array;
+      }
+    }
+  }
   // Make some sort of loop that keeps happening if there were any swaps
   // that happened this turn
-  _.each(array);
 
   // reset swapHappened to false each time so we can detect if a swap
   // happened in this specific iteration.
@@ -18,7 +31,7 @@ function bubbleSort(array) {
 
   // After both loops have exited, remember to return the array
   return array;
-}
+} //  _.each(array, ); idk if underscore is that helpful here
 
 function insertionSort(array) {
   // Loop through each element
