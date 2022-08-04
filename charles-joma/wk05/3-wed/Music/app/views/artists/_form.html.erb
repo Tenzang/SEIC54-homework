@@ -1,0 +1,17 @@
+
+
+<%=form_for @artist do |f|%>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :record_label %>
+    <%= f.text_field :record_label %>
+    <%= f.label :albums %>
+    <%= f.text_field :albums %>
+    <%= f.label :dob, 'Date of birth' %>
+    <%= f.text_field :dob, :placeholder => 'YYYY-MM-DD' %>
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true %>
+    <%= f.submit "Lets Rock Baby" %>
+    
+<% end %>

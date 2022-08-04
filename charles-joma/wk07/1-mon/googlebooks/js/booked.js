@@ -1,6 +1,7 @@
 const button = document.getElementById("fetch");
 const bookinput = document.getElementById('input_value');
-
+const wordButton = document.getElementById('fetchBook');
+const wordInput = document.getElementById('word_input');
 
 button.addEventListener("click", function(e){
     e.preventDefault();

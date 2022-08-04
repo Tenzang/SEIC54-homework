@@ -1,0 +1,46 @@
+/*
+// The Base case   
+function countDown(num){
+    // The Base case is, is the statewmne that says when the function can stop calling itself and exit
+    if(num < 0){ // First check if the given number is already less than 
+        return;
+    }
+    console.log(num) // This is The Action, this is the section between The base case and the recursion
+    return countDown(num - 1); // This is the Recursion stage of a function, 
+                                // in this stage we feed in the next number by calling the function on itself
+                                // but provding the function (num - 1) as an argument                               
+}
+
+// CORRECT ANSWER 
+1. Count the number 3, then call the function again but subtracting 1 from it
+2. The function then again makes sure that 2 is still greater than 0
+3. Counts the number and then again subtracts 1 from the number 2
+4. Checks again that 1 is still greater than 0, then again calls countDown with the number 1
+5. The countdown check 0 against 0 and then since it is even and again calls countdown again
+6. It is then confirmed that -1 id smaller than 0, That is when the the stop sequence is returned
+
+
+
+// WRITING RECURSIVE FUNCTIONS
+// STEPS.
+#1 Define the function and parameters 
+#2 define the base case and return the computed result
+#3. Perform the action step
+#4. return the function with new arguments to make progress toward the base case
+
+
+// HELPER FUNCTIONS
+function sumArrayOfNums(arr){ // The same funciton but have helpers here to store some values
+let index = 0;
+let sum = 0;
+function rSum(){ // This means the recurring function has to hold less 
+        if(index === arr.length){
+            return sum;
+        }
+        sum += arr[index];
+        index++;
+        return rSum();
+        }
+    return rSum();
+}
+*/

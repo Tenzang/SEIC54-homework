@@ -1,61 +1,38 @@
 
+const url = 'https://www.datamuse.com/api/'
 
-const jsonButton = document.querySelector("#generate");
-const buttonContainer = document.querySelector(".buttonContainer")
-const display = document.querySelector("#displayContainer")
+const inputField = document.getElementById('word_input')
+const submit = document.getElementById("submit")
+const responseField = document.getElementById('responseField')
 
-const diffButtons = ["Another One", "More" , "We the best" , "You is smart" , "You is loyal"];
+const getSuggestion = () => {
+    const wordQuery = inputField.value
+    const endpoint = url + wordQuery
 
-//console.log(diffButtons)
-//const response = fetch("https://www.googleapis.com/books/v1/volumes?q=title");
-//console.log(response);
+    fetch(endpoint, {
+        mode: "no-cors",
+        cache: 'no-cache' 
+    }).then(response => {
+        if(response.ok){
+            return response.json()
+        }
+        throw new Error('Request failed!')
+    }, networkError => {
+        console.log(networkError.message)
+    })
+}
 
-const generateJson = async () => {
-    try {
-        const response = await fetch("https://www.googleapis.com/books/v1/volumes?q=title");
-    if(response.ok){
-        const jsonResponse = await response.json();
-        renderResponse(jsonResponse)
-        changeButton();
-     }
-    } catch(error) {
-        console.log(error)
-    }
-}; 
+const displaySuggestions = (event) => {
+    event.preventDefault();
+while(responseField){
+    responseField.removeChild(responseField.firstChild);
+}
+getSuggestion()
+}
 
-const formatJson = function(resjson){
-    let resJson = JSON.stringify(resJson)
-    let counter = 0;
-    return resJson.split('').map(char => {
-        switch(char){
-            case ',':
-                return `,\n${' '.repeat(counter * 2 )}`;
-                case '{':
-                    counter += 1;
-                    return `\n${' '.repeat(counter * 2)}`;
-                    case '}':
-                        counter -= 1;
-                    return `\n${' '.repeat(counter * 2)}}`;
-                    default:
-                    return char;
-            }
-        })
-    .join('');
-};
-        
-const renderResponse = function(jsonResponse){
-    const jsonSelection = Math.floor(Math.random() * 4);
-        display.innerHTML = `<prev>${formatJson(jsonResponse[jsonSelection])}</prev>`;
-};
+submit.addEventListener('click', displaySuggestions);
 
 
-const changeButton = function(){
-    const newText = Math.floor(Math.random() * 7);
-    jsonButton.innerHTML = `${collection[newText]}!`;
-};
-
-
-jsonButton.addEventListener('click', generateJson);
 
 
 
