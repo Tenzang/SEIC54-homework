@@ -1,11 +1,13 @@
 function bubbleSort(array) {
+  let swapHappened;
   // Make some sort of loop that keeps happening if there were any swaps
   // that happened this turn
+  
 
   // reset swapHappened to false each time so we can detect if a swap
   // happened in this specific iteration.
 
-  // Make another loop (inside the first one) to go through one 
+  // Make another loop (inside the first one) to go through one
   // round of swapping from the start of the list to the end
 
   // Inside inner loop:
@@ -37,13 +39,13 @@ function insertionSort(array) {
   return array;
 }
 
-// Test Script below, DO NOT TOUCH 
+// Test Script below, DO NOT TOUCH
 
-mocha.setup('bdd');
+mocha.setup("bdd");
 const expect = chai.expect;
 
-describe('Bubble Sort', () => {
-  it('should sort the array', () => {
+describe("Bubble Sort", () => {
+  it("should sort the array", () => {
     const myArray = [12, 6, 3, 7, 13, 8];
     const sorted = bubbleSort(myArray);
     expect(sorted).to.deep.equal([3, 6, 7, 8, 12, 13]);
@@ -53,8 +55,8 @@ describe('Bubble Sort', () => {
   });
 });
 
-describe('Insertion Sort', () => {
-  it('should sort the array', () => {
+describe("Insertion Sort", () => {
+  it("should sort the array", () => {
     const myArray = [12, 6, 3, 7, 13, 8];
     const sorted = insertionSort(myArray);
     expect(sorted).to.deep.equal([3, 6, 7, 8, 12, 13]);
