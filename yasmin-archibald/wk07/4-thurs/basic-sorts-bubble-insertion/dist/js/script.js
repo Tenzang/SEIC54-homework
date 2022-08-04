@@ -2,7 +2,7 @@ function bubbleSort(array) {
   let swapHappened;
   // Make some sort of loop that keeps happening if there were any swaps
   // that happened this turn
-  
+  _.each(array);
 
   // reset swapHappened to false each time so we can detect if a swap
   // happened in this specific iteration.
