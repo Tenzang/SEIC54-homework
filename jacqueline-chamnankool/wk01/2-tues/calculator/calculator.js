@@ -7,6 +7,7 @@ function squareNumber(num) {
 function halfNumber(num) {
     let result = num/2;
     console.log("Half of " + num + " is " + result + ".");
+    return result;
 }
 
 function areaOfCircle(radius) {

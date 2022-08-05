@@ -20,10 +20,10 @@ menu_choice = gets.chomp.downcase
 
 def get_two_nums
     print "→ Enter your first number: "
-    firstNum = gets.chomp.to_i
+    first_num = gets.chomp.to_i
     print "→ Enter your second number: "
-    secondNum = gets.chomp.to_i
-    return [firstNum, secondNum]
+    second_num = gets.chomp.to_i
+    return [first_num, second_num]
 
     #"Enter your numbers:" # if u wanted to do more than 2 numbers
     #9, 3, 2, 4
