@@ -34,15 +34,20 @@ function fibonacci(number){
     return fibonacci(number - 1) + fibonacci(number -2);
 }
 
-function coinFlips(){
+function coinFlips(flips){
+    let combinations = [];
+    if (flips <= 1) {
+        return [''];
+    }
+    let flip = ["HH", "HT", "TH", "TT"]
+
     
-    if ()
 
 
 
     // This function returns an array of all possible outcomes from flipping a coin N times.
     // Input type: Integer
-    // For example, coinFlips(2) would return the following:
+    // For example, coinFlips(2) would return   the following:
     // ["HH", "HT", "TH", "TT"]
     // H stands for Heads and T stands for tails
     // Represent the two outcomes of each flip as "H" or "T"
