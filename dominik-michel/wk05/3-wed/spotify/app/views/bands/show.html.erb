@@ -1,0 +1,20 @@
+<h1><%= @band.name %></h1>
+
+<%= image_tag @band.image, :class => 'feature' if @band.image.present?%>
+<ul>
+    <li>Name:<%= @band.name %></li>
+    <li>Country:<%= @band.country %></li>
+</ul>
+
+<% @band.songs.each do |song| %>
+    <%= link_to song.name,song %>
+    <% end %>
+
+
+<div class="controls">
+    <%= link_to 'Edit', edit_band_path(@band) %>
+    <%= link_to 'Delete',@band, :method => 'delete', :data => {:confirm => 'Are you sure?'}  %>
+</div>
+
+
+

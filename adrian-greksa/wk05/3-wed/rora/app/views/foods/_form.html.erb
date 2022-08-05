@@ -1,0 +1,15 @@
+<%= form_for @food do |f| %>
+    <%= f.label :name, :required => true %>
+    <%= f.text_field :name %>
+    <%= f.label :species %>
+    <%= f.text_field :species %>
+    <%= f.label :othername %>
+    <%= f.text_field :othername %>
+    <%= f.label :density %>
+    <%= f.text_field :density %>
+    <%= f.label :funfact %>
+    <%= f.text_field :funfact %>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+    <%= f.submit %>
+<% end %>
