@@ -11,6 +11,7 @@ function insertionSort (items) {
       }
     }
   }
+
   return items;
 }
 
