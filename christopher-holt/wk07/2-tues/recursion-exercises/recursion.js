@@ -2,52 +2,24 @@
 // You will have to figure out what parameters to include
 // All functions must use recursion
 
-function findMax(array){
-    let index = 0
-    let large = array[index]
-    
-    function rSum(){
-        if (index === array.length) {
-            return large;
-        }
-        if (array[index] > large) {
-            large = array[index]
-        }
-        index ++
-        return rSum();
-    }
-    return rSum();
+function findMax(){
+    // This function returns the largest number in a given array.
 }
 
-function factorial(x){
-    if (x === 0) {
-        return 1;
-    } else {
-        return x * factorial(x-1)
-    }
+function factorial(){
+    // This function returns the factorial of a given number.
 }
 
-function fibonacci(number){
-    if (number < 2) {
-        return number;
-    }
-    return fibonacci(number - 1) + fibonacci(number -2);
+function fibonacci(){
+    // This function returns the Nth number in the fibonacci sequence.
+    // https://en.wikipedia.org/wiki/Fibonacci_number
+    // For this function, the first two fibonacci numbers are 1 and 1
 }
 
-function coinFlips(flips){
-    let combinations = [];
-    if (flips <= 1) {
-        return [''];
-    }
-    let flip = ["HH", "HT", "TH", "TT"]
-
-    
-
-
-
+function coinFlips(){
     // This function returns an array of all possible outcomes from flipping a coin N times.
     // Input type: Integer
-    // For example, coinFlips(2) would return   the following:
+    // For example, coinFlips(2) would return the following:
     // ["HH", "HT", "TH", "TT"]
     // H stands for Heads and T stands for tails
     // Represent the two outcomes of each flip as "H" or "T"

@@ -1,0 +1,18 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+body {
+    text-align: center;
+    background-color: bisque;
+}
+
+form {
+    display: inline-block;
+}
+
+.image {
+    margin: 1px;
+    border-style: groove;
+}
