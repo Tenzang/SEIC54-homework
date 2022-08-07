@@ -20,6 +20,7 @@ class Board extends React.Component {
       />
     );
   }
+
   render() {
     return (
       <div>
@@ -47,12 +48,10 @@ class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      history: [
-        {
-          squares: Array(9).fill(null),
-        },
-      ],
-      xIsNext: true,
+      history: [{
+        squares: Array(9).fill(null)
+      }],
+      xIsNext: true
     };
   }
 
@@ -63,24 +62,27 @@ class Game extends React.Component {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
-    squares[i] = this.state.xIsNext ? "X" : "O";
+    squares[i] = this.state.xIsNext ? 'X' : 'O';
     this.setState({
-      history: history.concat([{ squares: squares }]),
+      history: history.concat([{
+        squares: squares
+      }]),
       xIsNext: !this.state.xIsNext,
     });
   }
-
+  
   render() {
     const history = this.state.history;
-    const current = history[history.length - 2];
+    const current = history[history.length - 1];
     const winner = calculateWinner(current.squares);
 
     let status;
     if (winner) {
-      status = "Winner: " + winner;
+      status = 'Winner: ' + winner;
     } else {
-      status = "Next player: " + (this.state.xIsNext ? "X" : "O");
+      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
+
     return (
       <div className="game">
         <div className="game-board">
@@ -98,7 +100,7 @@ class Game extends React.Component {
   }
 }
 
-//////////////////////////////////
+// ========================================
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Game />);
