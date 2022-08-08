@@ -15,30 +15,40 @@ const Typer = () => {
 
     useEffect(() => {
         let interval;
-        if (running) {
+        if (running) { // if the running state is true, start the timer
         interval = setInterval(() => {
             setTime((prevTime) => prevTime + 1);
-        }, 1000);
+        }, 1000); // the time state increments by 1 every second
         } else if (!running) {
-        clearInterval(interval);
+        clearInterval(interval); // stop the interval if running is false
         }
         return () => clearInterval(interval);
     }, [running]);
 
 
     const calculateWPM = () => {
-        setWpm(Math.floor((chars / 5) * 60 / time) || 0);
+        setWpm(Math.floor((chars / 5) * 60 / time) || 0); // words per minute is the total characters typed correctly divided by 5 times 60 divided by the total seconds elapsed
     }
 
     const fetchQuote = () => {
-        axios("https://api.kanye.rest/").then((response) => {
+        axios("https://api.kanye.rest/").then((response) => { // a quote by kanye west
             setQuote(response.data.quote.toLowerCase());
-            console.log(quote);
         });
     }
 
     const _handleSubmit = (e) => {
         e.preventDefault();
+        setRunning(false); // stops the timer 
+        if (input === quote) { // adds score as the length of characters in the quote if correct
+            setScore(score + quote.length)
+        } else {
+            setScore(score)
+        }
+        setInput(''); // clears input
+        fetchQuote();
+    }
+
+    if (input === quote && input.length > 0) { // auto submits without needing to press enter if the input matches the entire quote
         setRunning(false);
         if (input === quote) {
             setScore(score + quote.length)
@@ -47,23 +57,23 @@ const Typer = () => {
         }
         setInput('');
         fetchQuote();
-    }
+    }  
 
     const _handleInput = (e) => {
-        // console.log(e.target.value);
-        setRunning(true);
+        setRunning(true); // starts the timer when a user starts typing
         setInput(e.target.value);
-        const quoteByChar = quote.split('').slice(0, input.length).join('')
-        if (input === quoteByChar) {
+        const quoteByChar = quote.split('').slice(0, input.length).join('') // slices the quote to the current length of the input
+        if (input === quoteByChar) { // to be compared with the input
+            setChars(chars + 1); // only add characters to the char count on a correct keystroke
             setResult('nice')
             setStyle('green')
         } else {
             setResult('nahh')
             setStyle('red')
         }
-        setChars(chars + 1);
-        calculateWPM();
+        calculateWPM(); 
     }
+
 
     const reset = () => {
         fetchQuote();
@@ -77,7 +87,7 @@ const Typer = () => {
         setRunning(false);
     }
 
-    useEffect(fetchQuote, []);
+    useEffect(fetchQuote, []); // load one quote at page load(en)
 
     return (
         <div>
@@ -87,10 +97,8 @@ const Typer = () => {
                 <h3>wpm: { wpm }</h3>
                 <h3>score: { score }</h3>
             </div>
-            {/* <button onClick={ fetchQuote }>agane</button> */}
             <form onSubmit={ _handleSubmit }>
-                <input type="text" required autoFocus onChange={ _handleInput } value={ input } />
-                {/* <input type="submit" value="go" /> */}
+                <input type="text" autoFocus onChange={ _handleInput } value={ input } />
             </form>
             <h3>{ result }</h3>
             <button onClick={ reset }>reset</button>

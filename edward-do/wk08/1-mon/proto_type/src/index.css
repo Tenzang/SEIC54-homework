@@ -1,4 +1,5 @@
 body {
+  background-color: rgb(144, 144, 203);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -23,11 +24,11 @@ input[type="text"] {
 }
 
 .green {
-  color: green;
+  color: rgb(95, 250, 198);
 }
 
 .red {
-  color: red;
+  color: rgb(181, 0, 0);
 }
 
 .stats {

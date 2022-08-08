@@ -4,14 +4,6 @@ import axios from 'axios';
 import Typer from './Typer';
 
 class ProtoType extends Component {
-    constructor() {
-        super();
-        this.state = {
-            quote: ''
-        };
-    }
-    
-
     render () {
         return (
             <div>
