@@ -6,7 +6,7 @@ const settings = {
 	"url": "https://lingua-robot.p.rapidapi.com/language/v1/entries/en/",
 	"method": "GET",
 	"headers": {
-		"X-RapidAPI-Key": "5a30312a0cmshd06400ccc8f6806p163943jsnd3b498b8bed2",
+		"X-RapidAPI-Key": "secrit",
 		"X-RapidAPI-Host": "lingua-robot.p.rapidapi.com"
 	}
 };

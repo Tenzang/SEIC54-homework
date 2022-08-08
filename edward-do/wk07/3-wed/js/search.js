@@ -17,7 +17,7 @@ const searchFlickr = function (keywords) {
     state.requestInProgress = true;
     $.getJSON(flickrURL, {
         method: 'flickr.photos.search',
-        api_key: '2f5ac274ecfac5a455f38745704ad084',
+        api_key: 'secrit',
         text: keywords,
         format: 'json',
         page: state.currentPage++,
