@@ -33,7 +33,7 @@ function guessLetter(guess) {
                 //it is possible to end with $0 depending on how many incorrect guesses the user makes
                 console.log(`→ Your final reward: $${reward}`);
             }
-        } else if (wordLetters.indexOf(guess) === -1 && allGuesses.indexOf(guess) === -1) {
+        } else {
             hangman++;
             printDashes();
             console.log(guess, "is not a correct guess.");
@@ -77,22 +77,21 @@ function printHangman() {
     console.log(`${" ".repeat(3)}O${" ".repeat(3)}|`);
     console.log(`${" ".repeat(2)}/|\\${" ".repeat(2)}|`);
     console.log(`${" ".repeat(2)}/ \\${" ".repeat(2)}|`);
-    console.log();
 }
 
 //WINNING TESTS
-guessLetter("F"); //yes
-guessLetter("O"); //yes
-guessLetter("P"); //no
-guessLetter("X"); //yay
-
-//LOSING TESTS - shows hangman
 // guessLetter("F"); //yes
-// guessLetter("A"); //no
-// guessLetter("B"); //no
 // guessLetter("O"); //yes
-// guessLetter("L"); //no
-// guessLetter("M"); //no
-// guessLetter("N"); //no
-// guessLetter("V"); //no
-// guessLetter("P"); //wah
+// guessLetter("P"); //no
+// guessLetter("X"); //yay
+
+// //LOSING TESTS - shows hangman
+guessLetter("F"); //yes
+guessLetter("A"); //no
+guessLetter("B"); //no
+guessLetter("O"); //yes
+guessLetter("L"); //no
+guessLetter("M"); //no
+guessLetter("N"); //no
+guessLetter("V"); //no
+guessLetter("P"); //wah

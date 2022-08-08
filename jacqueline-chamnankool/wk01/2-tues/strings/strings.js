@@ -36,7 +36,7 @@ function fixStart(str) {
     //need global g modifier
     let firstChar = str[0];
     //allows using variable in replace function
-    var reg = new RegExp(firstChar, "g");
+    let reg = new RegExp(firstChar, "g");
     let result = firstChar + str.slice(1).replace(reg, "*");
     return result;
 }
@@ -70,7 +70,6 @@ substring with 'good' and return the result.
 If it doesn't find 'not' and 'bad' in the right sequence (or at all), 
 just return the original sentence. */
 function notBad(str) {
-    //let re = /(not).*(?= bad)/g;
     let not = "not";
     let bad = "bad";
     let re = new RegExp(`${not}.*${bad}`, "g");

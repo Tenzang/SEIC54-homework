@@ -2,12 +2,20 @@
 // You will have to figure out what parameters to include
 // All functions must use recursion
 
-function findMax(){
-    // This function returns the largest number in a given array.
+function findMax(array, i=0, max=array[i]){
+    if (i > array.length) {
+        return max;
+    }
+    if (array[i] > max) {
+        max = array[i];
+    }
+    i++;
+    return findMax(array, i, max);
 }
 
-function factorial(){
-    // This function returns the factorial of a given number.
+function factorial(num){
+    if (num === 1) return 1; 
+    return num * factorial(num-1);
 }
 
 function fibonacci(){

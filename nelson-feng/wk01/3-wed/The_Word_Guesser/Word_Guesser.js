@@ -18,7 +18,7 @@
 //letters to check that your program works.
 
 const array1 = ['F','O','X'];
-const array2 = ["F","",""]
+const array2 = ["","",""]
 
 const guessLetter = function (guessedLetter) {
     for (let i = 0; i < array1.length; i++){
@@ -31,6 +31,7 @@ const guessLetter = function (guessedLetter) {
         
             console.log("There are ${} letters left to find!")
     }
+}
 }
 
 console.log(guessLetter("F"));
