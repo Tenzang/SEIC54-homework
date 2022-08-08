@@ -19,6 +19,10 @@ console.log("-----------------------------------");
 /* Define a function maxOfThree that takes three numbers as arguments and
  returns the largest of them. */
 function maxOfThree(num1, num2, num3) {
+    /* we're supposed to work with conditionals but
+    another solution is to just 
+    return Math.max(num1, num2, num3); */
+    
     let largest = num1;
 
     if (num2 > largest) {
