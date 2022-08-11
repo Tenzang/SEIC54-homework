@@ -16,11 +16,11 @@ const Typer = () => {
     useEffect(() => {
         let interval;
         if (running) { // if the running state is true, start the timer
-        interval = setInterval(() => {
+            interval = setInterval(() => {
             setTime((prevTime) => prevTime + 1);
-        }, 1000); // the time state increments by 1 every second
+            }, 1000); // the time state increments by 1 every second
         } else if (!running) {
-        clearInterval(interval); // stop the interval if running is false
+            clearInterval(interval); // stop the interval if running is false
         }
         return () => clearInterval(interval);
     }, [running]);
@@ -60,10 +60,8 @@ const Typer = () => {
     }  
 
     const _handleInput = (e) => {
-        setRunning(true); // starts the timer when a user starts typing
-        setInput(e.target.value);
-        const quoteByChar = quote.split('').slice(0, input.length).join('') // slices the quote to the current length of the input
-        if (input === quoteByChar) { // to be compared with the input
+        const quoteByChar = quote.split('').slice(0, e.target.value.length).join(''); // slices the quote to the current length of the input
+        if (e.target.value === quoteByChar) { // to be compared with the input - BUGGED. need 2 incorrect chars before it's detected as wrong
             setChars(chars + 1); // only add characters to the char count on a correct keystroke
             setResult('nice')
             setStyle('green')
@@ -72,6 +70,8 @@ const Typer = () => {
             setStyle('red')
         }
         calculateWPM(); 
+        setRunning(true); // starts the timer when a user starts typing
+        setInput(e.target.value); // asynchronous
     }
 
 
