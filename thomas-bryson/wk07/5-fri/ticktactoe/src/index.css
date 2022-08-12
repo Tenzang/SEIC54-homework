@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.gameBoard .box {
+    width: 31%;
+    background-color: #7da9cf;
+    text-align: center;
+    display: inline-block;
+    background-size: contain;
+    padding-bottom: 31%;
+    border-radius: 5px;
+}
+
+.knot {
+    background-image: url("https://drive.google.com/uc?export=download&id=1KJuBwYGVPtge29-m-kRtABukGLeoTP5t");
+    background-size: contain;
+    background-position: center;
+}
+
+.cross {
+    background-image: url("https://drive.google.com/uc?export=download&id=1LRFW-Gr3jkTJJH7y2-zy5Rj5G5H75RyC");
+    background-size: contain;
+    background-position: center;
+}
+
+.cache {
+    width: 1px;
+    height: 1px;
+}
+
+.gameBoard {
+    width: 100%;
+    margin: 0 auto;
+    background-color: black;
+    padding: 18px 2px;
+    border-radius: 20px;
+    margin: 16px 0px 0px 50px
+}
+
+.gameArea {
+    margin: auto;
+    max-width: 1000px;
+    align-content: center;
+    background-color: #ccc;
+}
+
+body {
+    box-sizing: content-box;
+    background-color: #ccc;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+h1 {
+    font-family: 'Grandstander', cursive;
+    font-size: 112px;
+    background-color: #83aacd;
+    width: 46px;
+    border: aliceblue;
+    border-width: 38px;
+    margin: 23px;
+    padding: 62px 0px 0px 0px;
+    text-align: left;
+    position: fixed;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 931px)
+{
+    h1{ display:none; }
+}
+
+h2 {
+    text-align: left;
+    padding: 10px 24px;
+}
+
+span {
+    font-size: larger;
+    text-align: end;
+    display: inline-block;
+    width: 26px;
+}
+
+.whosTurn {
+    font-style: italic;
+    color: rgb(61, 73, 97);
+}
+
+.gameBoard-container {
+    display: inline-block;
+    width: 52%;
+    margin: auto;
+    text-align: center;
+    padding-top: 2px;
+    min-inline-size: 275px;
+    width: clamp(275px, 60%, 741px);
+}
+
+.canClick:hover {
+    transition: 0.5s all;;
+    background: radial-gradient(rgb(205, 219, 232) 18%, #7da9cf 82%);
+}
+
+.button-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.winner {
+    text-align: center;
+    font-size: 160px;
+    margin: 0 auto;
+    position: absolute;
+    top: 36%;
+    left: 18%;
+    display: none;
+    color: rgb(255, 203, 72);
+    opacity: 97%;
+    font-family: 'Grandstander', cursive;
+}
+
+@media only screen and (max-width: 490px)
+{
+    .winner{font-size: 80px;}
+    .winner{top: 48%}
+    .winner{left:0%}
+}
+
+.animate__bounceInLeft {
+    --animate-delay: 1.5s;
+}
