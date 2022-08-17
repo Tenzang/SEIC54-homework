@@ -1,0 +1,23 @@
+<h1>
+    <%= @team.name %>
+</h1>
+
+<%= image_tag @team.image, :class => 'feature' %>
+
+<p>Location: <%= @team.location %></p>
+<p>Conference: <%= @team.conference %></p>
+<p>Division: <%= @team.division %></p>
+<p>Championships: <%= @team.championships %></p>
+
+<h3>Players:</h3>
+
+<% @team.players.each do |player| %>
+    <p><%= link_to player.name, player %></p>
+<% end %>
+
+</br>
+
+<div class="controls">
+    <%= link_to 'Edit team', edit_team_path(@team) %>
+    <%= link_to 'Delete team', @team, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>

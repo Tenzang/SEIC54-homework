@@ -1,0 +1,45 @@
+<div class="top-banner" style="background-image: url(<%= @country["banner"] %>)">
+    <h1>
+        <%= @country["name"] %>
+    </h1>
+</div>
+
+<div class="container"> 
+    <div class="vertical-container">
+        <h1>Edit country</h1>
+
+        <form action="/countries/<%= @country["id"] %>" method="post">
+            <label>
+                Name:
+                <input name="name" required value="<%= @country["name"] %>">
+            </label>
+
+            <label>
+                Capital:
+                <input name="capital" value="<%= @country["capital"] %>">
+            </label>
+
+            <label>
+                Population:
+                <input type="number" step="any" name="population" value="<%= @country["population"] %>">
+            </label>
+
+            <label>
+                Banner:
+                <input type="url" name="banner" value="<%= @country["banner"] %>">
+            </label>
+
+            <label>
+                Map:
+                <input type="url" name="map" value="<%= @country["map"] %>">
+            </label>
+
+            <label>
+                Flag:
+                <input type="url" name="flag" value="<%= @country["flag"] %>">
+            </label>
+
+            <button>Update country</button>
+        </form>
+    </div>
+</div>

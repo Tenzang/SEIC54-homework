@@ -1,0 +1,25 @@
+.thumb {
+    max-height: 10em;
+}
+
+.feature {
+    max-height: 20em
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    text-align: right;
+}
+
+label {
+    display: block;
+}

@@ -1,0 +1,5 @@
+<h1>All NBA teams</h1>
+
+<% @teams.each do |team| %>
+    <%= link_to image_tag(team.image, :class => 'thumb'), team %>
+<% end %>
