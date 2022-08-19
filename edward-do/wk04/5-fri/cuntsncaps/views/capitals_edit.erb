@@ -1,0 +1,30 @@
+<div class="top-banner" style="background-image: url(<%= @capital["skyline"] %>)">
+    <h1>
+        <%= @capital["name"] %>
+    </h1>
+</div>
+
+<div class="container"> 
+    <div class="vertical-container">
+        <h1>Edit capital</h1>
+
+        <form action="/capitals/<%= @capital["id"] %>" method="post">
+            <label>
+                Name:
+                <input name="name" required value="<%= @capital["name"] %>">
+            </label>
+
+            <label>
+                Population:
+                <input type="number" step="any" name="population" value="<%= @capital["population"] %>">
+            </label>
+
+            <label>
+                Skyline:
+                <input type="url" name="skyline" value="<%= @capital["skyline"] %>">
+            </label>
+
+            <button>Update capital</button>
+        </form>
+    </div>
+</div>

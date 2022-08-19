@@ -1,0 +1,17 @@
+<div class="top-banner" style="background-image: url(https://www.whitecase.com/sites/default/files/images/hero/2022/05/the-future-of-smart-cities-in-latin-america-hero-1600x600.jpg)">
+    <h1>Capitals</h1>
+</div>
+
+<div class="container"> 
+    <div class="vertical-container">
+        <% @capitals.each do |capital| %>
+            <a href="/capitals/<%= capital["id"] %>">
+                <div class="banner" style="background-image: url(<%= capital["skyline"] %>)">
+                    <h1>
+                        <%= capital["name"] %>
+                    </h1>
+                </div>
+            </a>
+        <% end %>
+    </div>
+</div>

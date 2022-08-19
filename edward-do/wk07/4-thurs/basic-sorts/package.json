@@ -1,0 +1,20 @@
+{
+  "name": "exercises",
+  "version": "1.0.0",
+  "description": "Exercises for basic sorts",
+  "main": "BubbleSort.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^6.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6"
+  }
+}

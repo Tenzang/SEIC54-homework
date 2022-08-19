@@ -1,0 +1,12 @@
+<h1>
+    <%= @mountain.name %>
+</h1>
+<h2>
+    <%= @mountain.native_name %>
+</h2>
+<h3>
+    <%=  %>
+</h3>
+
+<%= image_tag @mountain.image, :class => 'feature' if @mountain.image.present? %>
+
