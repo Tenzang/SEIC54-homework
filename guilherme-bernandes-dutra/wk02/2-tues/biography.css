@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    overflow-x: hidden;
+    background-color: rgb(223, 197, 158);
+}
+
+h3 {
+    position: relative; 
+    font-size: 18px;
+    color: yellow;
+    right: -1230px;   
+    top: -265px
+}
+img {
+    position: relative;
+    max-width:200px ;
+    max-height: 300px;
+
+}
+h1{
+    position: relative;
+    right: -495px;
+    top: -295px;
+    font-size: 40px;
+
+}
+ .overview {
+    position: relative;
+    right: -475px;
+    top: -270px;
+    width: 40%;
+    font-size: 20px;
+}
+
+h2 {
+    position: relative;
+    right: -535px;
+    top: -230px;
+}
+
+.education {
+    position: relative;
+    top: -235px; 
+    right: -450px;   
+    width: 40%;
+    font-size: 20px;
+
+
+}

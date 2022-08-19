@@ -1,0 +1,19 @@
+<%= form_for @recip do |f| %>
+    <%= f.label :name, :required => true %>
+    <%= f.text_field :name %>
+    <%= f.label :ingredients %>
+    <%= f.text_field :ingredients %>
+    <%= f.label :serving %>
+    <%= f.text_field :serving %>
+    <%= f.label :time %>
+    <%= f.text_field :time %>
+    <%= f.label :method %>
+    <%= f.text_field :method %>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+
+    <%= f.label :food_id %>
+    <%= f.select :food_id, Food.pluck(:name, :id), :include_blank => true %>
+
+    <%= f.submit %>
+<% end %>

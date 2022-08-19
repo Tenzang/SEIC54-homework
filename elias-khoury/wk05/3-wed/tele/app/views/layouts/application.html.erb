@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tele</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+    <%= link_to 'Phones', phones_path %>
+    <%= link_to 'New Phone' , new_phone_path %>
+    __
+    <%= link_to 'Companies', companies_path %>
+    <%= link_to 'New Company', new_company_path %>
+
+
+    </nav>
+    <div class="body">
+      <%= yield %>
+    </div>
+  </body>
+</html>

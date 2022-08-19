@@ -1,0 +1,22 @@
+<h1>People</h1>
+
+<form action="/people" method="post">
+
+    <label>
+        Name:
+        <input name="name" required value="<%= @person["name"] %>">
+    </label>
+
+    <label>
+        World:
+        <input name="world" value="<%= @person["world"] %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @person["image"] %>">
+    </label>
+
+    <button>Edit person</button>
+
+</form>

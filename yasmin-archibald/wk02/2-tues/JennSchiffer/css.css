@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300&family=Roboto+Slab:wght@200&display=swap');
+
+/* font-family: 'Anek Latin', sans-serif;
+this one for the title
+
+font-family: 'Roboto Slab', serif; this one for the body*/
+
+div.container {
+    max-width: 940px;
+    min-width: 720px;
+    margin: 10px auto 10px auto;
+    padding: 20px;
+    border: 4px double #000;
+    background-color: #ffffff;
+    table-layout: fixed;
+}
+button {
+    position: fixed;
+    max-width: 4em;
+    margin-left: 77%;
+    position: fixed;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    
+}
+body {
+    background-color: azure;
+    font-family: 'Roboto Slab';
+}
+h1, h2 {
+    font-family: "Anek Latin";
+}
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 1em;
+}
+h2 {
+    font-size: 20px;
+}
+nav {
+    text-align: left;
+}
+a {
+    margin-left: 1em;
+}
+.column1 {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100%;
+    width: 45%;
+    margin: 0 auto;
+    margin-left: 2.5em;
+    padding-right: 1em;
+  
+}
+.column2 {
+    box-sizing: content-box;
+    display: inline-block;
+    height: 100%;
+    width: 45%;
+    margin: 0 auto;
+    margin-right: 2em;
+    padding-right: 1em;
+
+}
+
+img {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+ul {
+    list-style:decimal
+}

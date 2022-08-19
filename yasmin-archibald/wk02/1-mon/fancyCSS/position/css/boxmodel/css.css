@@ -1,0 +1,27 @@
+/* * {
+    box-sizing: border-box;
+} 
+
+don't do this on a legacy project, but a new one you can if you want to do a rule for the whole site for every element at a top level
+
+box-sizing means width and height set the rules regardless of padding and border.. which normally messes it up*/
+
+body {
+    background-color: pink;
+}
+.old {
+    width: 262px;
+    height:262px;
+    border: 4px solid black;
+    background-color: aqua;
+    padding: 15px;
+    margin: 4px;
+}
+.new {
+box-sizing: border-box;
+height: 300px;
+width: 300px;
+border: 4px solid black;
+padding: 50px;
+background-color: purple;
+}

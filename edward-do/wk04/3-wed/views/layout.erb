@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books!</title>
+    <link rel="stylesheet" type="text/css" href="<%= url('/css/styles.css') %>">
+</head>
+<body>
+
+        <header>
+            <div class="space"></div>
+            <nav>
+                <img src="<%= url('/img/galogo.png') %>" alt="General Assembly logo">
+                <div class="navLinks">
+                    <a href="/">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact</a>
+                </div>
+            </nav>
+            <img src="<%= url('/img/books.jpg') %>" alt="stonks">
+        </header>
+
+   <div class="container"> 
+        <%= yield %>
+    </div>
+</body>
+</html>

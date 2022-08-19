@@ -1,0 +1,9 @@
+<h1><%= @brand.name %></h1>
+
+<%= image_tag @brand.image, :class => 'feature' if @brand.image.present? %>
+
+<ul>
+    <li>Name: <%= @brand.name %> </li>
+    <li>Country: <%= @brand.country %> </li>
+    <li>Year: <%= @brand.year %> </li>
+</ul>

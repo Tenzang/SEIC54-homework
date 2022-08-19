@@ -1,0 +1,18 @@
+<h1><%= @galaxy["name"] %></h1>
+
+<ul>
+    <li>Other names: <%= @galaxy["othernames"] %> </li>
+    <li>Constellation: <%= @galaxy["constellation"] %> </li>
+    <li>Distance from Earth: <%= @galaxy["distance"] %> </li>
+    <li>Co-ordinates: <%= @galaxy["coordinates"] %> </li>
+    <li>Fun Fact: <%= @galaxy["funfact"] %> </li>
+</ul>
+
+<% unless @galaxy["image"].nil? || @galaxy["image"].empty? %>
+    <img class="feature" src="<%= @galaxy['image'] %>" alt="<%= @galaxy['name'] %>">
+<% end %>
+
+<div class="controls">
+    <a href="/galaxy/<%= @galaxy["id"] %>/edit">Edit Galaxy</a>
+    <a href="/galaxy/<%= @galaxy["id"] %>/delete">Delete Galaxy</a>
+</div>

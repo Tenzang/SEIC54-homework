@@ -1,0 +1,21 @@
+<h1><%= @artist.name %></h1>
+
+<%= image_tag @artist.image, :class => "feature" if @artist.image.present? %>
+<ul>
+<li> Name: <%= link_to @artist.name %></li>
+<li> Nationality: <%= @artist.nationality %></li>
+<li> Born: <%= @artist.dob.strftime '%Y' %></li>
+<li> Style: <%= @artist.style %></li>
+<ul>
+
+<%= @artist.songs.each do |song| %>
+    <%= link_to song_path(song.name), song %>
+    <% end  %>
+
+<div class = "controls">
+<%= link_to 'Edit Artist', edit_artist_path(@artist) %>
+<%= link_to 'Delete Artist', @artist, :method => 'delete' %>
+
+
+
+</div>

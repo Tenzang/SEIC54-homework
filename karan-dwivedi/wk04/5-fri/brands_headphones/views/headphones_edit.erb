@@ -1,0 +1,21 @@
+<h1>Edit Headphones</h1>
+<form action="/headphones/<%= @headphone.id %>" method="post">
+    <label>
+        Name:
+        <input name="name" required value="<%= @headphone["name"] %>">
+    </label>
+    <label>
+        Brand
+        <input type = "text" name = "brand" value="<%= @headphone["brand"] %>">
+    </label>
+    <label>
+        Price
+        <input type = "text" name = "price" value="<%= @headphone["price"] %>">
+    </label>
+    <label>
+        Rating
+        <input type = "text" name = "rating" value="<%= @headphone["rating"] %>">
+    </label>
+
+    <button>Update headphones</button>
+</form>

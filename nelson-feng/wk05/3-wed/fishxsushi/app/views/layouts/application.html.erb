@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fishxsushi</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= link_to 'Home', root_path %>
+    ||
+    <%= link_to 'All Fish', fishes_path %>
+    <%= link_to 'New Fish', new_fish_path %>
+    ||
+    <%= link_to 'All Dish', dishes_path %>
+    <%= link_to 'New Dish', new_dish_path %>
+
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<h1>Add a mountain to the database:</h1>
+
+<form action="<%= mountains_path %>" method="post">
+
+    <label>name
+        <input name="name" required>
+    </label>
+    <label>image
+        <input type="url" name="image">
+    </label>
+    <label>height
+        <input type="number" name="height">
+    </label>
+    <label>country
+        <input type="text" name="country">
+    </label>
+    <button>Add Mountain</button>
+</form>

@@ -1,0 +1,15 @@
+<h1> Rápido y los furios </h1>
+
+<%#for each driver, render them into a variable 'driver'%>
+<% @drivers.each do |driver| %> 
+
+    <p> 
+    <a href="/drivers/<%=driver["id"]%>"> <%#this is which page the link will take you to%>
+    <%#this is what will display%>
+    <%=driver["name"]%> 
+    </a> 
+    </p>
+
+
+    <% end %>
+    <%# You have to close with echo as you have begun the statement with echo as well %>

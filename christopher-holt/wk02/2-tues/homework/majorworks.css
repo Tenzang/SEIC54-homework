@@ -1,0 +1,101 @@
+/* Requirements
+At least 3 pages (example: biography, trivia, hometown)
+At least 1 Google Font
+Whatever HTML and CSS you desire
+Keep your code clean and DRY
+Start working with semantic elements: http://html5doctor.com/lets-talk-about-semantics/
+No Javascript! Even if you know how to use jQuery, see how far you can push this with pure HTML + CSS
+Don't worry about responsiveness -- desktop resolution is fine
+Your research should aim to reveal at least two things about each person:
+Why Joel admires them
+Something Joel doesn't already know about them */
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
+body {
+    color: #90c4db;
+    margin: 0;
+    padding: 0;
+    background-color: #383535;
+}
+
+.container {
+    width: 960px;
+    margin: 130px auto 20px auto;
+    background-image: url("../Images/background-image.jpeg");
+    border: 2px solid #000000;
+    padding: 1em;
+    border-radius: 1em;
+    background-repeat: no-repeat;
+    background-size: 70em;
+    background-position: center;
+}
+
+.secondBox {
+    width: 87%;
+    height: 320px;
+    box-shadow: 0px 0px 20px 10px #435936;
+    border-radius: 0.5em;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+main {
+    display: flex;
+    padding: 40px 0px 0px 60px;
+    width: 100%;
+}
+
+main img {
+    margin: 0 auto;
+    display: flex;
+    height: 240px;
+    padding: 0px 50px 50px 50px;
+}
+
+main p img {
+    margin: 0 auto;
+    height: 0px;
+    visibility: hidden;
+}
+
+nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 40px;
+}
+nav li a {
+    color: #90c4db;
+}
+
+nav li a:hover, nav li a.current {
+    color: #f87676;
+}
+
+aside {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding: 1em;
+    box-shadow: 0px 15px 15px black;
+    border-radius: 0.5em;
+}
+
+aide ul {
+    padding-left: 16px;
+}

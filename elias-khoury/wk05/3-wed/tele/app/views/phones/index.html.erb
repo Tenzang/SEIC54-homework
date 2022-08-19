@@ -1,0 +1,8 @@
+<h1>Welcome to the world of phones</h1>
+<h2>Explore all our options</h2>
+
+<ul>
+<% @phones.each do |phone| %>
+    <li>Model name: <%= link_to phone.name, phone %></li>
+<% end %>
+</ul>

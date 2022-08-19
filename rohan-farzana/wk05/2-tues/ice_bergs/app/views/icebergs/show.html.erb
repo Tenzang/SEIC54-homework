@@ -1,0 +1,20 @@
+<h1>
+    <%= @iceberg.name %>
+</h1>
+
+<%= image_tag @iceberg.image, :class => 'feature' if @iceberg.image.present? %>
+
+<ul>
+    <li>Name: <%= @iceberg.name %></li>
+    <li>bubbles: <%= @iceberg.bubbles %></li>
+    <li>Stability: <%= @iceberg.stability %></li>
+    <li>Colors: <%= @iceberg.colors %></li>
+    <li>Shapes: <%= @iceberg.shapes %></li>
+    
+</ul>
+
+<div class="controls">
+    <%= link_to 'Edit iceberg', edit_iceberg_path(@iceberg.id) %>
+    <%= link_to 'Delete iceberg', delete_iceberg_path(@iceberg.id) %>
+
+</div>

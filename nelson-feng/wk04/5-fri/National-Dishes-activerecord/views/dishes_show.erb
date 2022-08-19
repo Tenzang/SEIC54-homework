@@ -1,0 +1,12 @@
+<h1> <%= @dishes.name %> </h1>
+
+<p> <%= @dishes.info %> </p>
+
+<% unless @dishes.image.nil? || @dishes["image"].empty? %>
+    <img class="feature" src="<%= @dishes.image %>" alt="<%= @dishes.name %>">
+<% end %>
+
+<div class="controls">
+    <a href="/dishes/<%= @dishes.id %>/edit"> Edit Dishes</a>
+    <a href="/dishes/<%= @dishes.id %>/delete"> Delete Dishes</a>
+</div>

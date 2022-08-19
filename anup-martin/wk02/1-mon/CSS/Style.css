@@ -1,0 +1,12 @@
+
+
+body {
+    background-color: aliceblue;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    font-size: 400%; /*other units px, pt, em */
+    color: purple#31946a;  /* hex code or name of color/*
+}
+       

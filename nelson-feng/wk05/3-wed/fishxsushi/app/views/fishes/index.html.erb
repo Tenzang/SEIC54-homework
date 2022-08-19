@@ -1,0 +1,6 @@
+<h1>All Fishies</h1>
+
+<% @fishes.each do |fish|%>
+    <%= link_to fish.name, fish , :class => 'links' %>
+    <%= link_to image_tag(fish.image, :class => 'thumbnail'), fish %>
+<% end %>

@@ -1,0 +1,6 @@
+<h1>All Dishes</h1>
+
+<% @dishes.each do |dish|%>
+    <%= link_to dish.name, dish, :class => 'links' %>
+    <%= link_to image_tag(dish.image, :class => 'thumbnail'), dish %>
+<% end %>

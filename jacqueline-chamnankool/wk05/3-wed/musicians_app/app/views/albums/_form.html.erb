@@ -1,0 +1,18 @@
+<%= form_for @album do |f| %>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title, :required => true %><br/>
+
+    <%= f.label :artist_id %><br/>
+    <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %><br/>
+
+    <%= f.label :date, "Date of release" %><br/>
+    <%= f.text_field :date, :placeholder => "YYYY-MM-DD" %><br/>
+
+    <%= f.label :num_tracks %><br/>
+    <%= f.number_field :num_tracks %><br/>
+
+    <%= f.label :image %><br/>
+    <%= f.url_field :image, :required => true %><br/>
+
+    <%= f.submit :class => "btn" %>
+<% end %>

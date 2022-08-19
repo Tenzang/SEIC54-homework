@@ -1,0 +1,43 @@
+body{
+	background-color: rgb(255, 255, 255);
+	line-height: 17px;
+	color: #656565;
+}
+
+h1{
+	font-family: 'Lora', serif;
+}
+#date {
+	color: rgb(54, 161, 214);
+}
+
+#readmore{
+	text-decoration: none;
+}
+#productphoto{
+	display: block;
+	margin: auto;
+	width: 950px;
+}
+#lorem{
+	text-align: justify;
+}
+
+#branding{
+	border: solid rgb(158, 158, 158) 4px;
+	padding: 1px;
+	display: inline;
+}
+
+/* 
+
+## Style Hints: 
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/

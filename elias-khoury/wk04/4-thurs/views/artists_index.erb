@@ -1,0 +1,10 @@
+<h1>All the greatest people are listed below!</h1>
+<p>Select an artist to view their profile</p>
+
+<% @artists.each do |artist| %>
+<p>
+    <a href="/artist/<%= artist["id"]%>"><%= artist["name"] %></a>
+</p>
+
+
+<% end %>

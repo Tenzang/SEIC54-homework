@@ -1,0 +1,12 @@
+<h2> <%= @dish.name %> </h2>
+
+<%= image_tag @dish.image if @dish.image.present? %>
+
+<% if @dish.fish.present? %>
+<p> Fish: <%= link_to @dish.fish.name, @dish.fish %> </p>
+<% end %>
+
+<div class="container">
+<%= link_to 'Edit Dish', edit_dish_path %>
+<%= link_to 'Delete Dish', @dish, :method => 'delete', :data => {:confirm => 'Are you SURE?'} %>
+</div>

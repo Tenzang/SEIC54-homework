@@ -1,0 +1,4 @@
+<h1>All waifus/husbandos</h1>
+<% @spouses.each do |spouse| %>
+    <a class="content-link" href="/spouses/<%= spouse["id"] %>"><%= spouse["name"] %></a><br/>
+<% end %>

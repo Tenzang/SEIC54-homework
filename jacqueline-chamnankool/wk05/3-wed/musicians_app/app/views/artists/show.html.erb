@@ -1,0 +1,17 @@
+<h1><%= @artist.name %></h1>
+<%= image_tag @artist.image, :class => "feature" if @artist.image.present? %>
+<ul>
+    <li><b>Name:</b> <%= @artist.name %></li>
+    <li><b>Genre:</b> <%= @artist.genre %></li>
+    <li><b>Label:</b> <%= @artist.label %></li>
+    <li><b>Years:</b> <%= @artist.years %></li>
+</ul>
+
+<% @artist.albums.each do |album| %>
+    <%= link_to image_tag(album.image, :class => 'thumb'), album %>
+<% end %>
+
+<div class="controls">
+    <%= link_to "Edit artist", edit_artist_path(@artist) %>
+    <%= button_to "Delete artist", @artist, :method => "delete", :data => { :confirm => "Are you sure?" }, :class => "btn del" %>
+</div>

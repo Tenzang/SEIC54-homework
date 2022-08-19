@@ -1,0 +1,38 @@
+<form action="/galaxy/<%= @galaxy['id'] %>" method="post">
+    <label>
+        Name:
+        <input name="name" value="<%= @galaxy["name"] %>" required>
+    </label>
+
+    <label>
+        Othernames:
+        <input name="othernames" value="<%= @galaxy["othernames"] %>">
+    </label>
+
+    <label>
+        Constellation: 
+        <input name="constellation" value="<%= @galaxy["constellation"] %>">
+    </label>
+
+    <label>
+        Distance: 
+        <input name="distance" value="<%= @galaxy["distance"] %>">
+    </label>
+
+    <label>
+        Coordinates: 
+        <input name="coordinates" value="<%= @galaxy["coordinates"] %>">
+    </label>
+
+    <label>
+        Fun Fact:
+        <input name="funfact" value="<%= @galaxy["funfact"] %>">
+    </label>
+
+    <label>
+        Image url:
+        <input type="url" name="image" value="<%= @galaxy["image"] %>">
+    </label>
+
+    <button>Update Galaxy</button>
+</form>

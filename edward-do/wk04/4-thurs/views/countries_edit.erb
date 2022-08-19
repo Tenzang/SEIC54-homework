@@ -1,0 +1,25 @@
+<h1>Edit country</h1>
+
+<form action="/countries/<%= @country["id"] %>" method="post">
+    <label>
+        Name:
+        <input name="name" required value="<%= @country["name"] %>">
+    </label>
+
+    <label>
+        Capital:
+        <input name="capital" value="<%= @country["capital"] %>">
+    </label>
+
+    <label>
+        Population:
+        <input type="number" name="population" value="<%= @country["population"] %>">
+    </label>
+
+    <label>
+        map:
+        <input type="url" name="map" value="<%= @country["map"] %>">
+    </label>
+
+    <button>Update country</button>
+</form>

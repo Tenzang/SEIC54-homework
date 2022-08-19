@@ -1,0 +1,47 @@
+body {
+    background-image: url("https://media.giphy.com/media/96rdXbLHNq4V2/giphy.gif");
+    background-size: cover;
+    background-color: rgb(185, 160, 141);
+}
+a {
+    color: rgb(240, 218, 218);
+    padding-right: 2em;
+}
+
+
+#eightbutton {
+    display: block;
+}
+
+#eightinput {
+    background-color: rgb(53, 53, 53);
+}
+
+#secretbutton {
+    margin: 2px;
+}
+
+@-webkit-keyframes roll {
+    from { -webkit-transform: rotate(0deg) }
+    to   { -webkit-transform: rotate(360deg) }
+    }
+    
+    @-moz-keyframes roll {
+    from { -moz-transform: rotate(0deg) }
+    to   { -moz-transform: rotate(360deg) }
+    }
+    
+    @keyframes roll {
+    from { transform: rotate(0deg) }
+    to   { transform: rotate(360deg) }
+    }
+    
+    button:hover{
+    -moz-animation-name: roll;
+    -moz-animation-duration: 4s;
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-name: roll;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: 1;
+    }
+

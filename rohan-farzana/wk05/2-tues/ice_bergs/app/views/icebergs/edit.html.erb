@@ -1,0 +1,34 @@
+<h1>Edit iceberg</h1>
+
+<form action="<%= iceberg_path(@iceberg.id) %>" method="post">
+<label>
+Name 
+<input name="name"  value="<%= @iceberg.name %>">
+</label>
+<label>
+Image 
+<input type="url" name='image'  value="<%= @iceberg.image %>">
+</label>
+<label>
+bubbles
+<input type="number" name='bubbles'  value="<%= @iceberg.bubbles %>">
+</label>
+<label>
+stability
+<input type="number" name='stability'  value="<%= @iceberg.stability %>">
+</label>
+Colors
+<input type="text" name='colors'  value="<%= @iceberg.colors %>">
+<label>
+Shapes
+<input type="text" name='Shapes'  value="<%= @iceberg.shapes %>">
+</label>
+
+<button>Update Option</button>
+</form>
+
+
+
+
+
+

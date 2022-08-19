@@ -1,0 +1,16 @@
+<h1>
+    <%= @pokemon.name %>
+</h1>
+
+<h2>
+    Type: <em><%= @pokemon.types %></em>
+</h2>
+
+<% unless @pokemon.image.nil? || @pokemon.image.empty? %>
+    <img class="feature" src="<%= @pokemon.image %>" alt=" <%= @pokemon.name %>">
+<% end %>
+
+<div class="controls">
+    <a href="/pokemon/<%= @pokemon.id %>/edit">Edit Pokemon</a>
+    <a href="/pokemon/<%= @pokemon.id %>/delete">Delete Pokemon</a>
+</div>

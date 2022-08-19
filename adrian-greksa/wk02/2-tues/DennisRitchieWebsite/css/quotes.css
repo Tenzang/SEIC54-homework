@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #ccc;
+    padding: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+nav {
+    text-align: right;
+}
+
+nav a {
+    color: rgb(18, 6, 255);
+}
+
+h1 {
+    text-align: center;
+    background: linear-gradient(-45deg, #000, #e73c7e, #ff0808, #23d5ab);
+    color: rgb(45, 23, 210);
+    font-size: 400%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-family: 'Diplomata SC', cursive;
+    box-shadow: 0px 15px 15px black;
+    border-radius: 1em;
+    text-shadow: 5px 2px #b5ff08;
+}
+
+main {
+    display: inline-block;
+    width: 75%;
+}
+
+    p {
+        margin: 2px;
+        padding: 5px;
+        float: left;
+    }
+
+    #firstquote:hover {
+        transition: 2s;
+        color: red;
+        font-style: italic;
+        font-size: xxx-large;
+        text-justify: auto;
+    }
+
+    .quote {
+        width: 300px;
+        height: 200px;
+        display: inline-block;
+        overflow-wrap: break-word;
+    }
+
+    aside {
+        display: inline-block;
+        width: 21%;
+        vertical-align: top;
+        background-color: #cfc;
+        padding: 1em;
+        box-shadow: 0px 15px 15px black;
+        border-radius: 1em;
+    }
+
+    .thumbnail:hover { 
+        transform: scale(2);
+        background-color: #b5ff08;
+    }
+
+aside ul {
+    padding-left: 16px;
+}
+
+img {
+    max-width: 50%;
+}
+a {
+    background-color: #effa1e;
+    border-style: dotted;
+}
