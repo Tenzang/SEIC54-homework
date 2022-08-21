@@ -1,0 +1,58 @@
+body {
+	font-size: 12px;
+}
+
+h1 {
+	color: #7b7b7bbb;
+	font-family: "Times New Roman", serif;
+	line-height: 17px;
+	font-size: 30px;
+	margin-left: 85px;
+	padding-top: 15px;
+}
+
+a :hover {
+	Color: #20222a;
+}
+
+#container {
+	max-height: 1000px;
+}
+
+div p, h2 {
+	margin-left: 85px;
+	max-width: 67%;
+	font-family: "Times New Roman", serif;
+	color: #898989;
+	padding: 2px;
+	line-height: 18px;
+}
+
+.brands {
+	margin-left: 85px;
+}
+
+.brands img {
+	border: solid 4px #aeaaac;
+	margin-left: 4px;
+}
+
+#container img {
+	margin-left: 85px;
+}
+
+h2 {
+	color: #5a5a5a;
+	font-family: "Times New Roman", serif;
+}
+
+.copy {
+	margin: 0px 0px 2px 8px;
+	display: block;
+	color: #909090;
+	font-family: "Times New Roman", serif;
+}
+
+#date {
+	color: #528ec6;
+}
