@@ -1,0 +1,13 @@
+<%= form_for @player do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+    <%= f.label :dob, 'Date of birth' %>
+    <%= f.text_field :dob, :placeholder => 'YYYY-MM-DD' %>
+    <%= f.label :team %>
+    <%= f.text_field :team %>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+    <%= f.submit %>
+<% end %>

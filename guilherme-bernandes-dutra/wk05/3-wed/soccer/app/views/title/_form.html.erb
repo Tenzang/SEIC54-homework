@@ -1,0 +1,11 @@
+<%= form_for @title do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+    <%= f.label :type_of_title, 'type of title'%>
+    <%= f.text_field :type_of_title, :placeholder => 'national/international' %>
+    <%= f.label :year %>
+    <%= f.integer_field :year%>
+    <%= f.label :image %>
+    <%= f.url_field :image%>
+    <%= f.submit%>
+<% end %>
