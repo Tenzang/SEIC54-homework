@@ -1,0 +1,13 @@
+<%= form_for @artist do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+    <%= f.label :dob, 'Date of birth' %>
+    <%= f.text_field :dob, :placeholder => 'YYYY-MM-DD' %>
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+    <%= f.submit %>
+<% end %>

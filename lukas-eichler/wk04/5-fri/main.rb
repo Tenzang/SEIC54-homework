@@ -100,3 +100,25 @@ get '/films/:id' do
     erb :films_show
 end
 
+# EDIT
+get '/films/:id/edit' do 
+    @film = Film.find params[:id]
+    erb :films_edit
+end
+
+# UPDATE
+post '/films/:id' do 
+    film = Film.find params[:id] 
+    film.title = params[:title] 
+    film.description = params[:description]
+    film.image = params[:image] 
+    film.save 
+    redirect to ("/films/#{ params[:id] }")
+end
+
+# DELETE
+get '/films/:id/delete' do 
+    film = Film.find params[:id]
+    film.destroy
+    redirect to('/films')
+end 
