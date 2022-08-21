@@ -1,0 +1,32 @@
+var isMovingLeft = false;
+let maxWidth = window.innerWidth - 296;
+var catRight;
+var newLeft = 0;
+
+const catWalk = function () {
+  if (isMovingLeft) return;
+  newLeft += 10;
+  $('#cat').css('left', newLeft);
+  if (parseInt($('#cat').css('left')) >= maxWidth && !isMovingLeft) {
+    isMovingLeft = true;
+    $('#cat').css('transform', 'scaleX(-1)');
+    clearInterval(catWalk);
+    setInterval(walkBack, 50);
+    $("#cat").stop();
+  }
+};
+
+setInterval(catWalk, 50);
+
+var walkBack = function () {
+  if (!isMovingLeft) return;
+  newLeft -= 10;
+  $('#cat').css('left', newLeft);
+  if (parseInt($('#cat').css('left')) <= 0 && isMovingLeft) {
+    isMovingLeft = false;
+    $('#cat').css('transform', 'scaleX(+1)');
+    clearInterval(walkBack);
+    setInterval(catWalk, 50);
+    $("#cat").stop();
+  }
+};
