@@ -1,0 +1,30 @@
+<div class="top-banner" style="background-image: url(<%= @capital["skyline"] %>)">
+    <h1>
+        <%= @capital["name"] %> 
+    </h1>
+</div>
+
+<div class="container"> 
+    <div class="vertical-container">
+        <div class="country-info">
+            <% unless @capital["capital"].nil? || @capital["capital"].empty? %>
+                <p>
+                   <strong>Capital city:</strong> <%= @capital["capital"] %>
+                </p>
+            <% end %>
+
+            <% unless @capital["population"].nil? %>
+                <p>
+                   <strong>Population:</strong> <%= @capital["population"] %> million
+                </p>
+            <% end %>
+        </div>
+
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/75FEaRjZTKLhTrFGsfMUXR?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+        <div id="controls">
+            <a href="/capitals/<%= @capital["id"] %>/edit">Edit capital</a>
+            <a href="/capitals/<%= @capital["id"] %>/delete">Delete capital</a>
+        </div>
+    </div>
+</div>

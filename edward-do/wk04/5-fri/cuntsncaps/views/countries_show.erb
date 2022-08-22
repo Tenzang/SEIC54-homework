@@ -1,0 +1,36 @@
+<div class="top-banner" style="background-image: url(<%= @country["banner"] %>)">
+    <h1>
+        <%= @country["name"] %> 
+        </br>
+        <% unless @country["flag"].nil? || @country["flag"].empty? %>
+            <img class="flag" src="<%= @country["flag"] %>" alt="<%= @country["name"] %>">
+        <% end %>
+    </h1>
+</div>
+
+<div class="container"> 
+    <div class="vertical-container">
+        <div class="country-info">
+            <% unless @country["capital"].nil? || @country["capital"].empty? %>
+                <p>
+                   <strong>Capital city:</strong> <a href="/capitals/<%= @country[:id] %>"><%= @country["capital"] %></a>
+                </p>
+            <% end %>
+
+            <% unless @country["population"].nil? %>
+                <p>
+                   <strong>Population:</strong> <%= @country["population"] %> million
+                </p>
+            <% end %>
+        </div>
+
+        <% unless @country["map"].nil? || @country["map"].empty? %>
+            <img class="map" src="<%= @country["map"] %>" alt="<%= @country["name"] %>">
+        <% end %>
+
+        <div id="controls">
+            <a href="/countries/<%= @country["id"] %>/edit">Edit country</a>
+            <a href="/countries/<%= @country["id"] %>/delete">Delete country</a>
+        </div>
+    </div>
+</div>

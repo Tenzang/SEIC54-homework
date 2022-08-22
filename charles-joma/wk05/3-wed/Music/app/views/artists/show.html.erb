@@ -1,0 +1,17 @@
+<h1> <%= @artist.name %> </h1>
+
+<%= image_tag @artist.image, :class => 'feature' if @artist.image.present? %>
+
+<ul>
+    <li>Name: <%= @artist.name %> </li>
+    <li>D.O.B: <%= @artist.dob %></li>
+    <li>Record Label: <%= @artist.record_label %> </li>
+    <li>Albums: <%= @artist.albums %></li>
+</ul>
+
+<div class="controls">
+    <%= link_to "Edit Artist", edit_artist_path(@artist)%>
+    |
+    <%= link_to "Delete Artist", @artist, :method => 'delete', :data => { :confirm => "Are you sure ? "}%>
+</div>
+

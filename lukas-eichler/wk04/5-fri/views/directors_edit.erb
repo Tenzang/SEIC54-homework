@@ -1,0 +1,18 @@
+<h1>
+    Edit director
+</h1>
+
+<form action="/directors/<%= @director.id %>" method="post">
+    <label>
+        Name:
+        <input name="name" required value="<%= @director.name %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @director.image %>">
+    </label>
+
+    <button>Update director</button>
+
+</form>

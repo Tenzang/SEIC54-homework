@@ -1,0 +1,16 @@
+<h1>
+    <%= @drummachine["model"] %>
+</h1>
+
+<h2>
+    Brand: <em><%= @drummachine["brand"] %></em>
+</h2>
+
+<% unless @drummachine["image"].nil? || @drummachine["image"].empty? %>
+    <img class="feature" src="<%= @drummachine["image"] %>" alt="<%= @drummachine["model"] %>">
+<% end %>
+
+<div class="controls">
+    <a href="/drummachines/ <%= @drummachine["id"] %>/edit">Edit Drum Machine</a>
+    <a href="/drummachines/ <%= @drummachine["id"] %>/delete">Delete Drum Machine</a>
+</div>

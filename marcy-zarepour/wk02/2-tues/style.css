@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200&family=Roboto+Condensed&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color:#000;
+}
+header{
+background-color: black;
+  
+}
+img{
+    width: 400px;
+    box-shadow: 20px 10px 5px rgb(192, 183, 183);
+
+}
+.profile{
+    border-radius: 50%;
+}
+nav{
+    text-align: center;
+    font-size: 250%;
+
+   
+}
+nav li{
+    display: inline;
+    padding-left: 1em;
+    padding-right: 1em;  
+    
+    
+}
+nav a{
+    text-decoration: none;
+    color:#ccc;
+    text-shadow: 2px 2px;
+    cursor: pointer; 
+
+    
+    
+    
+
+}
+nav a :hover{
+    color:red;
+}
+h1{
+    text-align: left;
+}
+ main{
+    background-color: rgb(219, 219, 213);
+    padding-left: 1em;
+    padding-bottom: 1em;
+ }
+ main img{
+    display:block;
+    margin:0 auto;
+ }
+ 
+ .content{
+    padding-bottom: 1em;
+ }
+ /* .career{
+    display: inline;
+ } */
+ .awards{
+    width: 400px;
+    height: 400px;
+   
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-direction: reverse;  
+  }
+  
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }

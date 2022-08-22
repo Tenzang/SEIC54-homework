@@ -1,0 +1,11 @@
+<h1> Top Artists </h1>
+
+
+<% @artists.each do |artist|%>
+    <p>
+        <a href="/artists/<%= artist.id%>" > 
+            <%= artist.name%>
+        </a>
+    </p>
+
+<% end %>
