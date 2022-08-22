@@ -1,5 +1,5 @@
 const expect  = require('chai').expect;
-const quickSort = require('../MergeSort');
+const quickSort = require('../QuickSort');
 
 describe('Quick Sort', ()=>{
     it('should sort the array', ()=>{

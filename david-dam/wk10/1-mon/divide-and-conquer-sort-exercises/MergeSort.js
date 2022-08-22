@@ -1,5 +1,13 @@
 function mergeSort(arr) {
-  // YOUR CODE HERE
+  if (arr.length <= 1) {
+		return arr;
+	}
+  
+	const midPoint = Math.floor(arr.length / 2);
+	const leftArr = arr.slice(0, midPoint);
+	const rightArr = arr.slice(midPoint);
+
+	return merge(mergeSort(leftArr), mergeSort(rightArr));
 }
 
 
