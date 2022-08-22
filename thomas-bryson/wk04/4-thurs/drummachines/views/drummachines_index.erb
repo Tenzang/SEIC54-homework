@@ -1,0 +1,10 @@
+<h1>All Drum Machines</h1>
+
+<% @drummachines.each do |drummachine| %>
+    <p>
+        <a href="/drummachines/<%= drummachine["id"] %>">
+        <%= drummachine["model"] %>
+        </a>
+    </p>
+
+<% end %>

@@ -1,0 +1,90 @@
+body {
+    background-image: url("//busyhands/images/bg_body.jpg");
+}
+
+.nav-bar {
+    background-color: black;
+    width: 110%;
+    height: 60px;
+    position: fixed;
+    font-display: baseline;
+    box-shadow: 3px 4px 2px 2px black;
+    margin-top: -8px;
+    margin-left: -2%;
+}
+
+.button {
+    color: white;
+    display: table-cell;
+    width: 0px;
+    height: 35px;
+    margin: 23px 10px;
+    margin-left: 5%;
+    font-size: 17px;
+    white-space: nowrap;
+    padding: 20px;
+}
+
+.button:hover {
+    background-image: url("../images/bg_nav_rollover.png");
+    image-orientation: flip;
+    position: relative;
+    margin-top: 20px;
+    color: #8dd0f9;
+    transition-timing-function: cubic-bezier(0.185, 0.54, 0.84, 1);
+    transition-duration: 0.3s;
+}
+
+.container {
+    margin-left: 6%;
+}
+
+.logo {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 85px 85px 30px 85px;
+}
+
+
+.media {
+    position: absolute;
+    clip: rect(65px,238px,200px,-7px);
+    top: 32px;
+    margin-left: 350px;
+}
+
+.banner {
+    margin-left: 92px;
+}
+
+.quote {
+}
+
+.request-quote {
+    padding: 75px;
+    display: inline-block;
+    width: 50.5em;
+    border: solid 0.5px;
+}
+
+.container-bottom {
+    margin-left: 86px;
+}
+
+.box {
+    display: inline-grid;
+    padding-right: 4.4em;
+}
+
+h1 {
+    color: #303030;
+}
+
+.blue-button {
+    position:relative;
+}
+
+.container-bot {
+    display: inline-block;
+    margin-left: 92px;
+}
