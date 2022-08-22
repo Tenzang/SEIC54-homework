@@ -10,13 +10,12 @@ const catWalk = function () {
   if (parseInt($('#cat').css('left')) >= maxWidth && !isMovingLeft) {
     isMovingLeft = true;
     $('#cat').css('transform', 'scaleX(-1)');
-    clearInterval(catWalk);
-    setInterval(walkBack, 50);
-    $("#cat").stop();
+    clearInterval(timerId);
+    timerId = setInterval(walkBack, 50);
   }
 };
 
-setInterval(catWalk, 50);
+var timerId = setInterval(catWalk, 50);
 
 var walkBack = function () {
   if (!isMovingLeft) return;
@@ -25,8 +24,7 @@ var walkBack = function () {
   if (parseInt($('#cat').css('left')) <= 0 && isMovingLeft) {
     isMovingLeft = false;
     $('#cat').css('transform', 'scaleX(+1)');
-    clearInterval(walkBack);
-    setInterval(catWalk, 50);
-    $("#cat").stop();
+    clearInterval(timerId);
+    timerId = setInterval(catWalk, 50);
   }
 };
