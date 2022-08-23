@@ -29,7 +29,7 @@ class PokemonSearch extends Component {
             const weight = results.data.weight;
             const ability = results.data.abilities[0].ability.name
             const ability2 = results.data.abilities[1].ability.name
-            debugger //<==== use this to look into the data
+            // debugger <==== use this to look into the data
             this.setState({name: name, type: type, height: height, weight: weight, ability: ability, ability2: ability2})
         });
     }
