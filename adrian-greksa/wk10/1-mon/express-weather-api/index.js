@@ -14,17 +14,12 @@ server.get('/', (req, res) => {
 server.get('/info', (req, res) => {
     weather.find({search: req.query.city, degreeType: 'C'}, function(err, result) {
         if(err) console.log(err);
-        debugger;
-        console.log(result)
-        // const { current, forecast } = result[0]
-        const city = result[0].location.name
-        const {temperature: temp, skytext: weather} = result[0].current
+        console.log(JSON.stringify(result, null, 2));
 
-        // forecastDays.forEach((d) => {
+        const {temperature: temp, skytext: weather, observationpoint: city} = result[0].current;
+        const forecast = result[0].forecast;
 
-        // });
-
-        res.render('info.ejs', {temp, weather, city})
+        res.render('info.ejs', {temp, weather, city, forecast});
     })
 });
 

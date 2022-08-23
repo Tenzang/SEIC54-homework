@@ -14,5 +14,17 @@
         <li>Current Weather: <%= weather %></li>
     </ul>
 
+    <% forecast.forEach(day => { %>
+        <div>
+            <h3>Forcast for: <%= day.day %></h3>
+            <ul>
+                <li>Low: <%= day.low %></li>
+                <li>High: <%= day.high %></li>
+                <li>Sky: <%= day.skytextday %></li>
+                <li>Rain(%): <%= day.precip %></li>
+            </ul>
+        </div>
+    <% }); %>
+
 </body>
 </html>
