@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head')%>
+<body>
+    <%- include('partials/nav')%>
+    <h1>Random User</h1>
+    <button><a href="/random">Click Here for Random User</a></button>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    
+    <h1>Choose Your own Topic</h1>
+    <form action="/blurb">
+        <input type="search" name="blurb" placeholder="Type Something..." />
+        <button>Search Topic</button>
+    </form>
+</body>
+</html>
