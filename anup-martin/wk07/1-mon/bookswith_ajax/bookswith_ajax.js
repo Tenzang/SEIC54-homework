@@ -16,7 +16,7 @@ const getBookTitle = function () {
     xhr.send();
 };
 
-document.getElementById('see-info').addEventListener('click', getBookTitle);
+document.getElementById('Info').addEventListener('click', getBookTitle);
 
 
 
