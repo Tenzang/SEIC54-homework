@@ -1,0 +1,43 @@
+body {
+    background-color: #ccc;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+.intro {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+.feature {
+    max-width: 50%;
+}
+.container {
+    max-width: 960px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img {
+    max-width: 200px;
+}
+
+p   {
+    text-align: right;
+    padding-top: 20px;
+}

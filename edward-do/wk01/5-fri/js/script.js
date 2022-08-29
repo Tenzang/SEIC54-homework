@@ -15,10 +15,10 @@ const planTrip = function(startLine, startStop, destLine, destStop) {
     const changeAtUS = `Change at Union Square.`;
     const sameLineStopsA = startLineArray.slice(startStopIndex + 1, sameDestStopIndex +1);
     const sameLineStopsB = startLineArray.slice(sameDestStopIndex, startStopIndex);
-    const firstStops = startLineArray.slice(startStopIndex + 1, startLineArray.indexOf('Union Square') + 1);
-    const secondStopsA = startLineArray.slice(startLineArray.indexOf('Union Square'), startStopIndex); 
-    const secondStopsB = destLineArray.slice(destLineArray.indexOf('Union Square') + 1, diffDestStopIndex + 1);
-    const secondStopsC = destLineArray.slice(diffDestStopIndex, destLineArray.indexOf('Union Square'));
+    const firstStopsA = startLineArray.slice(startStopIndex + 1, startLineArray.indexOf('Union Square') + 1);
+    const firstStopsB = startLineArray.slice(startLineArray.indexOf('Union Square'), startStopIndex); 
+    const secondStopsA = destLineArray.slice(destLineArray.indexOf('Union Square') + 1, diffDestStopIndex + 1);
+    const secondStopsB = destLineArray.slice(diffDestStopIndex, destLineArray.indexOf('Union Square'));
     let stopsTotal = 0;
 
     if (startLine === destLine) {
@@ -31,20 +31,20 @@ const planTrip = function(startLine, startStop, destLine, destStop) {
         }
     } else {
         if (startStopIndex < startLineArray.indexOf('Union Square')) { 
-          console.log(`${firstMessage + firstStops.join(', ')}.`);
+          console.log(`${firstMessage + firstStopsA.join(', ')}.`);
           console.log(changeAtUS);
-          stopsTotal += firstStops.length;
+          stopsTotal += firstStopsA.length;
         } else {
-            console.log(`${firstMessage + secondStopsA.reverse().join(', ')}.`);
+            console.log(`${firstMessage + firstStopsB.reverse().join(', ')}.`);
             console.log(changeAtUS);
-            stopsTotal += secondStopsA.length;
+            stopsTotal += firstStopsB.length;
         }
         if (destLineArray.indexOf('Union Square') < diffDestStopIndex) { 
-            console.log(`${secondMessage + secondStopsB.join(', ')}.`);
-            stopsTotal += secondStopsB.length;
+            console.log(`${secondMessage + secondStopsA.join(', ')}.`);
+            stopsTotal += secondStopsA.length;
         } else {
-            console.log(`${secondMessage + secondStopsC.reverse().join(', ')}.`); 
-            stopsTotal += secondStopsC.length;
+            console.log(`${secondMessage + secondStopsB.reverse().join(', ')}.`); 
+            stopsTotal += secondStopsB.length;
         }
     }
     console.log(`${stopsTotal} stops in total.`);

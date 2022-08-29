@@ -1,0 +1,14 @@
+<h1>All Artists</h1>
+
+
+<% @artists.each do |artist| %>
+    <%= image_tag artist.image, :class => 'thumb' if artist.image.present? %>
+    <ul>
+        <li>Name: <%= link_to artist.name, artist_path(artist)%></li>
+        <li>Record Label: <%= artist.record_label %></li>
+        <li>Albums: <%= artist.albums %></li>
+        <% unless artist.dob.nil?%>
+            <li>Date of Birth: <%= artist.dob.strftime '%A %B %e, %Y'%> </li>
+        <% end %>
+    </ul>
+<% end %>

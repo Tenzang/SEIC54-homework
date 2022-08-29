@@ -1,0 +1,20 @@
+<h1>Edit Drum Machine</h1>
+
+<form action="/drummachines/<%= @drummachine["id"] %>" method="post">
+<label>
+    Model:
+    <input name="name" required value="<%= @drummachine["model"] %>">
+</label>
+
+<label>
+    Brand:
+    <input name="brand" value="<%= @drummachine["brand"] %>">
+</label>
+
+<label>
+    Image:
+    <input type="url" name="image" value="<%= @drummachine["image"] %>">
+</label>
+
+<button>Update Drum Machine</button>
+</form>

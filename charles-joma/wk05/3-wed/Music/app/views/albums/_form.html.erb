@@ -1,0 +1,13 @@
+<%= form_for @albums do |a| %>
+
+    <%= a.label :name %>
+    <%= a.text_field :name %>
+    <%= a.label :albums %>
+    <%= a.text_field :albums %>
+    <%= a.label :dob, 'Date of Birth' %>
+    <%= a.text_field :dob, :placeholder => 'YYYY-MM-DD'%>
+    <%= a.label :image %>
+    <%= a.url_field :image, :required => true %>
+    <%= a.submit "Put him on the line up"%>
+
+<% end %>

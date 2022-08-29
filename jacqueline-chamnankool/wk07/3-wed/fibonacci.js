@@ -10,4 +10,3 @@ const fibonacci = function (n, memo = []) {
 console.log(fibonacci(10));
 console.log(fibonacci(40));
 console.log(fibonacci(60));
-

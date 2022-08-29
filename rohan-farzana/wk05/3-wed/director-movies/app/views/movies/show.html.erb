@@ -1,0 +1,24 @@
+<h1><%= @movie.name %></h1>
+
+<%= image_tag @movie.image, :class => 'feature' %>
+
+<ul>
+
+    <li>Name: <%= @movie.name %></li>
+    <li>Genre: <%= @movie.genre %></li>
+    <li>Release: <%= @movie.release.strftime '%B %e, %Y' if @movie.release.present? %></li>
+    <li>Box-Office: <%= @movie.Box_office%></li>
+
+</ul>
+<% @movie.directors.each do |movie| %>
+<%= link_to image_tag(director.image, :class => 'thumb') %>
+<% end %>
+
+ <div class="controls">
+ <%= link_to 'Edit movie', edit_movie_path(@movie) %>
+ <%= link_to 'Delete movie', @movie, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+ 
+ </div>
+
+
+ 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Games</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="space"></div>
+      <nav>
+        <img src="/assets/galogo.png" alt="General Assembly logo">
+        <div class="navLinks">
+          <a href="/">Home</a>
+          |
+          <a href="/games">Games</a>
+          |
+          <a href="/games/magic8ball">Magic 8 Ball</a>
+          |
+          <a href="/games/secretnumber">Secret Number</a>
+          |
+          <a href="/games/rockpaperscissors">Rock Paper Scissors</a>
+        </div>
+      </nav>
+    </header>
+    <%= yield %>
+  </body>
+</html>

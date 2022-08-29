@@ -1,0 +1,20 @@
+<h1> Edit Artist </h1>
+
+<form action="/albums/<%= @album.id %>" method="post">
+    <label>
+        Name:
+        <input name="name" required value="<%= @albums.name%>">
+    </label>
+
+    <label>
+        Author:
+        <input name="author" value="<%= @album.author%>">
+    </label>
+
+    <label>
+        Image:
+        <input name="image" type="url" value="<%= @album.image %>">
+    </label>
+
+    <button> Update </button>
+</form>

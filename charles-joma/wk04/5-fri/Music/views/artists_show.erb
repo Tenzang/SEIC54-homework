@@ -1,0 +1,18 @@
+<h1> 
+    <%= @artist.name %>
+</h1>
+
+<h2>
+    Record Label: <%= @artist.label%>
+</h2>
+
+
+<% unless @artist.image.nil? || @artist.image.empty? %>
+    <img class="feature" src="<%= @artist.image %>" alt="<%= @artist.name %>" >
+<% end %>
+
+<div class="controls">
+    <a href="/artists/<%=@artist.id%>/edit"> Edit Artist</a>
+    |
+    <a href="/artists/<%=@artist.id%>/delete"> Delete Artist</a>
+</div>
