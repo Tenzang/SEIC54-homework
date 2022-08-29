@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Info</title>
+</head>
+<body>
+
+    <h1>WEATHER STATS</h1>
+    <ul>
+        <li>Name: <%= city %></li>
+        <li>Current Temp (C): <%= temp %></li>
+        <li>Current Weather: <%= weather %></li>
+    </ul>
+
+    <% forecast.forEach(day => { %>
+        <div>
+            <h3>Forcast for: <%= day.day %></h3>
+            <ul>
+                <li>Low: <%= day.low %></li>
+                <li>High: <%= day.high %></li>
+                <li>Sky: <%= day.skytextday %></li>
+                <li>Rain(%): <%= day.precip %></li>
+            </ul>
+        </div>
+    <% }); %>
+
+</body>
+</html>
