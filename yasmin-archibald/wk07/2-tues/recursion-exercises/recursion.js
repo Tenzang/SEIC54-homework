@@ -89,6 +89,12 @@ module.exports = {
   coinFlips,
   letterCombinations,
 };
+<<<<<<< HEAD
+
+
+
+
+=======
 =======
 
 function findMax(){
@@ -128,3 +134,4 @@ module.exports = {
     coinFlips,
     letterCombinations
 }
+>>>>>>> cc57548b326860f1c976297673edf1d7a4997de0
