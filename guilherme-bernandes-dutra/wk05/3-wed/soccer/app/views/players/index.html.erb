@@ -1,0 +1,12 @@
+<h1>All players</h1>
+
+<% @players.each do |player| %>
+    <%= image_tag player.image, :class=>  'thumb' if player.image.present? %>
+    <ul>
+        <li>Name: <%= link_to player.name, player%></li>
+        <li>Nationality: <%= player.nationality %></li>
+        <li>Date of birth: <%= player.dob %></li>
+        <li>Team: <%= player.team %></li>
+    </ul>
+
+<% end %>
